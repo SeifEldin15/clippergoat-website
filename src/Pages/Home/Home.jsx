@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import StartClippingBtn from '../../components/StartClippingBtn/StartClippingBtn';
 import HeroSectionLanding from "../../components/HeroSectionLanding/HeroSectionLanding";
 import PricingSection from "../../components/PricingSection/PricingSection";
 import LogoSlideshow from "../../components/LogoSlideshow/LogoSlideshow";
@@ -36,19 +35,12 @@ import imgs11 from "../../assets/New folder/Influncers Top row/XQC.mp4";
 import imgs12 from "../../assets/New folder/Influncers Top row/Yodit Yemane .webp";
 import SlideshowTop from "../../components/SlideshowTop/SlideshowTop";
 import Footer from "../../components/Footer/Footer";
-
 import herovideo from "../../assets/videos/Updated final.mp4";
-
 import herovideophone from "../../assets/videos/9;16 hero.mp4";
 
 import "./Home.css";
 
-
-
 const Home = () => {
-
-
-
   const INFLUENCERS = [
     {
       src: Beast,

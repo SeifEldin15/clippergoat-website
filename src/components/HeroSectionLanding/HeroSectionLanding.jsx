@@ -14,6 +14,9 @@ function HeroSectionLandingHero() {
               Unlock Endless Virality with ClipperGoat!
             </span>
           </h1>
+          <p className="clippergoat-hero-price">
+           For just $120
+          </p>
           <p className="clippergoat-hero-subtitle">
             Repurpose your most viral clips 1000 times a month using our
             AI-powered Short Form Editor. Perfect for any industry, ClipperGoat

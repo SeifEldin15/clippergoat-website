@@ -70,8 +70,19 @@
 .cta-hero-1{
   max-width: 350px ;
 }
+.clippergoat-hero-price{
+  margin-bottom: 20px;;
+  display: none;
+}
 
 @media screen and (max-width: 1000px) {
+  .clippergoat-hero-subtitle{
+    display: none;
+  }.clippergoat-hero-price{
+    display: block;
+  font-size:48px;
+
+  }
   .clipper-hero-left{
     display: flex;
     flex-direction: column;
@@ -99,18 +110,27 @@
   }
   .clippergoat-hero-title {
     font-size: 33px !important;
-    margin-top:90px;
+    margin-top:120px;
     line-height: 1.2;
     margin-bottom: 20px;
     height: auto !important;
   }
+  .clippergoat-hero-price{
+  font-size:32px;
 
+  }
 } 
 @media screen and (max-width: 400px) {
-
+  .clipper-hero-left{
+    opacity: 0.9;
+  }
+  .clippergoat-hero-price{
+    font-size:22px;
+  
+    }
 .clippergoat-hero-title {
     font-size: 29px !important;
-    margin-top:90px;
+    margin-top:150px !important;
     line-height: 1.2;
     margin-bottom: 20px;
     height: auto !important;
