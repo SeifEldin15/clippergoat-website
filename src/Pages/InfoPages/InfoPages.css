@@ -16,6 +16,11 @@
 .Pirvacy-Container h1{
     margin-bottom:50px;
 }
+.custom-header-subtitle-no-centner {
+  font-size: 1.2rem;
+  color: #65a0ff;
+  font-weight: bold;
+}
 @media (max-width: 700px) {
 /* .Pirvacy-Container{
     text-align: center;

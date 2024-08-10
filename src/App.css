@@ -120,12 +120,7 @@ video::-webkit-media-controls {
   margin-right: auto;
   margin-top: 20px;
 }
-/* 
-.custom-header-subtitle-no-centner {
-  font-size: 1.2rem;
-  color: #65a0ff;
-  font-weight: bold;
-} */
+
 
 .Container-Width {
   max-width: 1400px;
