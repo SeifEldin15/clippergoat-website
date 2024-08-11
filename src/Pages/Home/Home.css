@@ -46,12 +46,26 @@
   transition: filter 0.5s ease;
 }
 .blurred {
-  filter: blur(20px);
-  background-color: rgba(20, 110, 255, 0.5);
+  background-image: url('../../assets/background-blur-large.webp');
+  width:100%;
+  background-size: cover;
+  background-position: center;
 }
-
-.loaded {
-  filter: blur(0);
+@media (max-width: 900px) {
+  .blurred {
+    background-image: url('../../assets/background-blur-avg.webp');
+    width:100%;
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media (max-width: 500px) {
+  .blurred {
+    background-image: url('../../assets/background-blur-small.webp');
+    width:100%;
+    background-size: cover;
+    background-position: center;
+  }
 }
 .home-hero-video {
   color: white;

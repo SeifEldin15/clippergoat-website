@@ -84,7 +84,11 @@ const ServiceContainer = () => {
             className: "text-repeat-color",
         },
     ];
+    const [isLoaded, setIsLoaded] = useState(false);
 
+    const handleVideoLoad = () => {
+      setIsLoaded(true);
+    };
     return (
         <div
             className="information-container Container-Spacing"
@@ -130,6 +134,7 @@ const ServiceContainer = () => {
                         <div className="video-box-container ">
                             <div className="video-box">
                                 <video
+                                    className={` ${isLoaded ? "" : "blurred"}`}
                                     loading="lazy"
                                     src={item.videoSrc}
                                     autoPlay

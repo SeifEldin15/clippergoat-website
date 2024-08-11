@@ -48,13 +48,13 @@ function PricingSection() {
     {
       title: "Clippreneur",
       price: "120",
-      description: "Ideal for solo short-form editors managing 1-6 accounts.",
+      description: "Ideal for solo editors managing 1-6 accounts, focused on streamlined content creation.",
       features: [
         "300 Credits",
-        "300 Video Cleans or 300 Downloads",
+        "300 Video Cleans or Downloads",
         "Meta Magic: (Metadata Removal + AI Video Editor)",
         "AI Advanced Photoshop Video Editor",
-        "Updated to Bypass July 7th IG Patch on Content Detection",
+        "Bypass July 7th IG Patch on Content Detection",
         "25% Affiliate Commission",
       ],
       soonToCome: [
@@ -67,7 +67,7 @@ function PricingSection() {
     {
       title: "Agency",
       price: "300",
-      description: "Designed for agency owners or creators operating 10+ accounts and posting multiple times a day.",
+      description: "Ideal for solo editors managing 1-6 accounts, focused on streamlined content creation.",
       features: [
         "1000 Credits",
         "Includes 1000 Short Video Downloads",
@@ -87,11 +87,11 @@ function PricingSection() {
     {
       title: "Enterprise",
       price: "997",
-      description: "Tailored for creators or agencies requiring a dedicated team to deliver customized solutions. This package ensures your content aligns with the latest trends and algorithms, facilitating significant business growth.",
+      description: "Tailored for agencies needing custom solutions to maximize content and growth.",
       features: [
         "4000 Credits",
         "4000 Video Downloads",
-        "Includes all Features in Clippreneur & Agency",
+        "Includes all Features You Can Get in Clippreneur & Agency",
         "Custom Integrations and Automations",
         "Personalized Enhancements and Optimizations",
       ],
@@ -99,6 +99,8 @@ function PricingSection() {
         "Account Management",
         "Advanced Analytics",
         "Full Suite of Automation Tools",
+        "Includes Upcoming Features You Can Get in Clippreneur & Agency",
+
       ],
     },
   ];

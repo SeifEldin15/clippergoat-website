@@ -72,7 +72,7 @@ const FAQ = () => {
       answer: "ClipperGoat can help you generate passive income by automating the reposting of your viral content, keeping your social media channels active and engaging without constant effort."
     },
     {
-      question: "What is the price of ClipperGoat?,",
+      question: "What is the price of ClipperGoat?",
       answer: "ClipperGoat offers three pricing plans: Clippreneur: $120/month for 300 credits Agency: $300/month for 1000 credits Enterprise: $997/month for 4000 credits"
     },
     {
