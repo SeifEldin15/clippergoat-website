@@ -261,7 +261,7 @@ const Home = () => {
           </p>
         </div>
         <div className="Container-Spacing"></div>
-        <Slider />
+        <Slideshow items={items} />
         <div className="Container-Spacing">
           <PricingSection />
         </div>
@@ -273,7 +273,7 @@ const Home = () => {
           ClipperGoat revolutionizes social media management, driving traffic and engagement across all social media platforms. Users praise its powerful tools for optimizing content and maximizes reach.
           </p>
         </div>
-        <Slideshow items={items} />
+        <Slider />
       </div>
       <div>
         <div className="Container-Spacing-Lg" id="faq-section">
