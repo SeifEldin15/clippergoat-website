@@ -125,14 +125,19 @@ const Navbar = () => {
               )}
             </li>
           ))}
-          <li className='nav-buttons-small glow-text-test nav-buttons-small'>
-            Login 
-          </li>
+<li className='nav-buttons-small glow-text-test nav-buttons-small'>
+  <a href="https://app.clippergoat.com/" onClick={closeMenu}>
+    Login
+  </a>
+</li>
         </ul>
       </div>
       {screenSize !== 'small' && (
         <div className="nav-buttons">
-          <button className="register-btn glow-text-test">Login</button>
+<a href="https://app.clippergoat.com/" className="register-btn glow-text-test">
+  Login
+</a>
+
         </div>
       )}
     </nav>
