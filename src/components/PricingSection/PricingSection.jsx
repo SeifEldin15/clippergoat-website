@@ -99,7 +99,7 @@ function PricingSection() {
         "Account Management",
         "Advanced Analytics",
         "Full Suite of Automation Tools",
-        "Includes Upcoming Features You Can Get in Clippreneur & Agency",
+        "Includes Upcoming Features You Can Get in Clippreneur & in Agency",
 
       ],
     },
