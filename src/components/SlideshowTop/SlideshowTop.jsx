@@ -49,6 +49,7 @@ const ImageSlide = memo(({ src, title, description }) => {
         <video
           src={src}
           autoPlay
+          preload
           loop
           muted
           playsInline
@@ -58,7 +59,7 @@ const ImageSlide = memo(({ src, title, description }) => {
         />
       ) : (
         <img
-          loading=""
+          preload
           src={src}
           alt={`slidetop ${title}`}
           className="slide-media"
