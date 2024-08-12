@@ -12,7 +12,7 @@ const ChallengeCard = () => {
         <div className="challenge-btn-phone">
           <StartClippingBtn
             text="Challenge Accepted"
-            to="/reviving-clips"
+            to="/leaderboard"
           />
         </div>
       </div>
