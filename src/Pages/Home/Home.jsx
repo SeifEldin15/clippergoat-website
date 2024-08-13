@@ -201,8 +201,8 @@ const Home = () => {
           playsInline
         >
 
-          <source src={"https://clippergoat.nyc3.digitaloceanspaces.com/assets/Updated final-BDiza0Ii.mp4"} media="(max-width: 600px)" type="video/mp4" />
-          <source src={"https://clippergoat.nyc3.digitaloceanspaces.com/assets/9_16 hero-BSZAWict.mp4"} media="(min-width: 601px)" type="video/mp4" />
+          <source src={"https://clippergoat.nyc3.digitaloceanspaces.com/assets/9_16 hero-BSZAWict.mp4"} media="(max-width: 600px)" type="video/mp4" />
+          <source src={"https://clippergoat.nyc3.digitaloceanspaces.com/assets/Updated final-BDiza0Ii.mp4"} media="(min-width: 601px)" type="video/mp4" />
           <track kind="captions" srclang="en" label="English captions" />
           Your browser does not support the video tag.
         </video>
