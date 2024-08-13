@@ -191,16 +191,27 @@ const Home = () => {
     <>
     <BackToTopPhone />
       <div className="home-hero-video">
-        <AutoPlayVideo 
-          sources={heroVideoSources} 
-          className="video-hero"
-        />
+      <video
+          poster=""
+          className={`video-hero ${isLoaded ? "loaded" : "blurred"}`}
+          autoPlay
+          onLoadedData={handleVideoLoad}
+          loop
+          muted
+          playsInline
+        >
+
+          <source src={"https://clipper-goat-ten.vercel.app/Updated final.mp4"} media="(max-width: 600px)" type="video/mp4" />
+          <source src={"https://clipper-goat-ten.vercel.app/9;16 hero.mp4"} media="(min-width: 601px)" type="video/mp4" />
+          <track kind="captions" srclang="en" label="English captions" />
+          Your browser does not support the video tag.
+        </video>
         <div className="overlay"></div>
         <Navbar />
         <HeroSectionLanding />
-
       </div>
       <div>
+        
         
      <div className="challenge-card-phone">
      <ChallengeCard />
