@@ -1,54 +1,34 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Slider.css';
-import imgs44 from '../../assets/New folder/clippergoat reviews/Comedy Reels.png';
-import imgs45 from '../../assets/New folder/clippergoat reviews/Cooking Youtube.png';
-import imgs46 from '../../assets/New folder/clippergoat reviews/Crypto Shorts.png';
-import imgs47 from '../../assets/New folder/clippergoat reviews/DIY Youtube.png';
-import imgs48 from '../../assets/New folder/clippergoat reviews/Ecom Affiliate.png';
-import imgs49 from '../../assets/New folder/clippergoat reviews/facebook short.png';
-import imgs50 from '../../assets/New folder/clippergoat reviews/Finance & Investment Reels.png';
-import imgs51 from '../../assets/New folder/clippergoat reviews/Fitness Affiliate.png';
-import imgs52 from '../../assets/New folder/clippergoat reviews/Gambaling Affilate.png';
-import imgs53 from '../../assets/New folder/clippergoat reviews/Gambaling Affilate.png';
-import imgs54 from '../../assets/New folder/clippergoat reviews/Gaming Reels.png';
-import imgs55 from '../../assets/New folder/clippergoat reviews/Influncer .png';
-import imgs56 from '../../assets/New folder/clippergoat reviews/Prank Youtube .png';
-import imgs57 from '../../assets/New folder/clippergoat reviews/Prohibited Industries.png';
-import imgs58 from '../../assets/New folder/clippergoat reviews/Real estate shorts.png';
-import imgs59 from '../../assets/New folder/clippergoat reviews/Streaming Shorts.png';
-import imgs60 from '../../assets/New folder/clippergoat reviews/Tech Review Shorts.png';
-import imgs61 from '../../assets/New folder/clippergoat reviews/TikTok Affiliate.png';
-import imgs62 from '../../assets/New folder/clippergoat reviews/TikTok Shop.png';
-import imgs63 from '../../assets/New folder/clippergoat reviews/Traval Tiktok.png';
-import imgs64 from '../../assets/New folder/clippergoat reviews/Youtube Influncer.png';
+
 
 const Slider = () => {
   const [position, setPosition] = useState(0);
   const trackRef = useRef(null);
   const images = [
-    { src: imgs44, title: 'Felix', description: 'Comedy Reels' },
-    { src: imgs45, title: 'Jane', description: 'Cooking Youtuber' },
-    { src: imgs46, title: 'Max', description: 'Crypto Shorts' },
-    { src: imgs47, title: 'Emma', description: 'DIY Youtuber' },
-    { src: imgs48, title: 'Liam', description: 'Ecom Affiliate' },
-    { src: imgs49, title: 'Sophia', description: 'facebook short' },
-    { src: imgs50, title: 'Lucas', description: 'Finance & Investment Reels' },
-    { src: imgs52, title: 'Noah', description: 'Gambling Affilate' },
-    { src: imgs51, title: 'Mia', description: 'Fitness Affiliate' },
-    { src: imgs53, title: 'Olivia', description: 'Gambling Affiliate ' },
-    { src: imgs54, title: 'Ethan', description: 'Gaming Reels' },
-    { src: imgs55, title: 'Ava', description: 'Influncer' },
-    { src: imgs56, title: 'Alexander', description: 'Prank Youtuber' },
-    { src: imgs57, title: 'Isabella', description: 'Prohibited Industries' },
-    { src: imgs58, title: 'James', description: 'Real estate shorts' },
-    { src: imgs59, title: 'Amelia', description: 'Streaming Shorts' },
-    { src: imgs60, title: 'William', description: 'Tech Review Shorts' },
-    { src: imgs61, title: 'Charlotte', description: 'TikTok Affiliate' },
-    { src: imgs62, title: 'Benjamin', description: 'TikTok Shop' },
-    { src: imgs63, title: 'Elijah', description: 'Travel Tiktok' },
-    { src: imgs64, title: 'Harper', description: 'Youtube Influncer' },
-
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Comedy Reels-DEbXlLpl.png", title: 'Felix', description: 'Comedy Reels' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Cooking Youtube-BBUomc_9.png", title: 'Jane', description: 'Cooking Youtuber' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Crypto Shorts-D_nE0xtX.png", title: 'Max', description: 'Crypto Shorts' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/DIY Youtube-K_qqiXen.png", title: 'Emma', description: 'DIY Youtuber' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Ecom Affiliate-DarCuoO9.png", title: 'Liam', description: 'Ecom Affiliate' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/facebook short-BfKl-8lo.png", title: 'Sophia', description: 'Facebook Short' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Finance _ Investment Reels-ZJPLBh0f.png", title: 'Lucas', description: 'Finance & Investment Reels' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Gambaling Affilate-X8QwuSo1.png", title: 'Noah', description: 'Gambling Affiliate' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Fitness Affiliate-Dfkp4T5U.png", title: 'Mia', description: 'Fitness Affiliate' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Gambaling Affilate-X8QwuSo1.png", title: 'Olivia', description: 'Gambling Affiliate' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Gambaling Affilate-X8QwuSo1.png", title: 'Ethan', description: 'Gaming Reels' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Influncer -CuRdbXMl.png", title: 'Ava', description: 'Influencer' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Ecom Affiliate-DarCuoO9.png", title: 'Alexander', description: 'Prank Youtuber' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Prohibited Industries-Dw9iO4Ar.png", title: 'Isabella', description: 'Prohibited Industries' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Real estate shorts-DMnWXl6c.png", title: 'James', description: 'Real Estate Shorts' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Streaming Shorts-CgRvd7id.png", title: 'Amelia', description: 'Streaming Shorts' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Tech Review Shorts-BjRzJc8Z.png", title: 'William', description: 'Tech Review Shorts' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/TikTok Affiliate-Dka6IhO3.png", title: 'Charlotte', description: 'TikTok Affiliate' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/TikTok Shop-DzxUHX-e.png", title: 'Benjamin', description: 'TikTok Shop' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Traval Tiktok-fIqPFtPJ.png", title: 'Elijah', description: 'Travel Tiktok' },
+    { src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Youtube Influncer-BCikUbZm.png", title: 'Harper', description: 'Youtube Influencer' }
   ];
+  
   
   const tripleImages = [...images, ...images, ...images];
 

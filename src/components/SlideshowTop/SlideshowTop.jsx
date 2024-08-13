@@ -1,43 +1,63 @@
 import React, { useState, useRef, useEffect, memo } from 'react';
 import './SlideshowTop.css';
+import AutoPlayVideo  from "../AutoPlayVideo/AutoPlayVideo "
 
-const DURATION = 40000;
+const DURATION = 34000;
 
 const InfiniteLoopSlider = memo(({ children, duration, direction }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef(null);
+  const [sliderWidth, setSliderWidth] = useState(0);
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    const updateWidth = () => {
+      if (slider) {
+        setSliderWidth(slider.scrollWidth / 2);
+      }
+    };
+
+    updateWidth();
+    window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
+  }, [children]);
 
   useEffect(() => {
     const slider = sliderRef.current;
     let animationFrameId;
+    let startTime;
 
-    const animate = () => {
-      const progress = (performance.now() % duration) / duration;
-      const translateX = direction === 'right' 
-        ? -25 + progress * 25 
-        : -progress * 25;
-      
-      slider.style.transform = `translateX(${translateX}%)`;
+    const animate = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progress = (elapsed % duration) / duration;
+
+      const translateX = direction === 'right'
+        ? -progress * sliderWidth
+        : -(1 - progress) * sliderWidth;
+
+      slider.style.transform = `translateX(${translateX}px)`;
+
+      if (elapsed >= duration) {
+        startTime = timestamp;
+      }
+
       animationFrameId = requestAnimationFrame(animate);
     };
 
     animationFrameId = requestAnimationFrame(animate);
 
     return () => cancelAnimationFrame(animationFrameId);
-  }, [duration, direction]);
+  }, [duration, direction, sliderWidth]);
 
   return (
-    <div className='loop-slider'>
-      <div className='inner' ref={sliderRef}>
-        {children}
-        {children}
+    <div className='loop-slider' style={{ overflow: 'hidden' }}>
+      <div className='inner' ref={sliderRef} style={{ display: 'flex' }}>
         {children}
         {children}
       </div>
     </div>
   );
 });
-
 const ImageSlide = memo(({ src, title, description }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -45,17 +65,14 @@ const ImageSlide = memo(({ src, title, description }) => {
 
   return (
     <div className='slide'>
-      {src.endsWith('.mp4') ? (
-        <video
-          src={src}
-          autoPlay
-          preload
-          loop
-          muted
-          playsInline
+         {src.endsWith('.mp4') ? (
+        <AutoPlayVideo
+          sources={[{ src: src }]}
           className="slide-media"
-          onLoadedData={handleLoad}
-          style={{ opacity: isLoaded ? 0.5 : 0 }}
+          style={{
+            opacity: 0.5,
+            backgroundColor: isLoaded ? 'transparent' : "#0b3e87",
+          }}
         />
       ) : (
         <img
@@ -64,8 +81,12 @@ const ImageSlide = memo(({ src, title, description }) => {
           alt={`slidetop ${title}`}
           className="slide-media"
           onLoad={handleLoad}
-          style={{ opacity: isLoaded ? 0.5 : 0 }}
-        />
+          style=
+          {{ 
+            opacity:  0.5 ,
+            backgroundColor: isLoaded ? 'transparent' : "#0b3e87", 
+          }}
+      />
       )}
       {isLoaded && (
         <div className="slidetopoverlay">

@@ -170,9 +170,8 @@
   background-color: var(--main-color-lighter);
   box-shadow: 0 0 15px rgba(20, 110, 255, 0.5);
 }
-.pricing-card--custom-normal{
-  margin-bottom: -90px;;
-
+.pricing-card-container--with-normal {
+  margin-bottom: -90px;
 }
 .pricing-card--custom-normal .StartClipping {
   background-color: transparent;
@@ -192,6 +191,9 @@
 }
 
 @media screen and (max-width: 992px) {
+  .pricing-card-container--with-normal {
+    margin-bottom: 0px;
+  }
   .pricing-card--custom-normal{
     margin-bottom: 0px;;
   

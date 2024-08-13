@@ -114,7 +114,10 @@ function PricingSection() {
       <p className="custom-header-subtitle">Flexible pricing to suit your needs, whether you're a solo creator or a large agency.</p>
       <div className="pricing-container">
         {plans.map((plan, index) => (
-          <div className="pricing-card-container" key={index}>
+          <div 
+            className={`pricing-card-container ${plan.title !== 'Agency' ? 'pricing-card-container--with-normal' : ''}`} 
+            key={index}
+          >
             <PricingCard {...plan} />
           </div>
         ))}

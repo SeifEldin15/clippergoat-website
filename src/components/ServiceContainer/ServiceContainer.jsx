@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import ServiceProgress from "../ServiceProgress/ServiceProgress";
 import "./ServiceContainer.css";
 
-// Import video assets
+// Import video assets (same as before)
 import cleanvid from "../../assets/videos/clean.mov";
 import ripvid from "../../assets/videos/rip finished edit.mov";
 import repost from "../../assets/videos/post CG lp.mov";
@@ -32,6 +32,8 @@ const ServiceContainer = () => {
     repost: repostphone,
     repeat: repeatvidphone,
   });
+
+  const videoRefs = useRef([]);
 
   useEffect(() => {
     if (targetRef.current) {
@@ -71,7 +73,7 @@ const ServiceContainer = () => {
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Call once to set the initial state
+    handleResize();
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -110,11 +112,41 @@ const ServiceContainer = () => {
       className: "text-repeat-color",
     },
   ];
+
   const [isLoaded, setIsLoaded] = useState(false);
 
   const handleVideoLoad = () => {
     setIsLoaded(true);
   };
+
+  useEffect(() => {
+    const observers = videoRefs.current.map(
+      (videoRef) =>
+        new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.play();
+              } else {
+                entry.target.pause();
+              }
+            });
+          },
+          { threshold: 0.5 }
+        )
+    );
+
+    videoRefs.current.forEach((videoRef, index) => {
+      if (videoRef) {
+        observers[index].observe(videoRef);
+      }
+    });
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, []);
+
   return (
     <div
       className="information-container Container-Spacing"
@@ -154,12 +186,8 @@ const ServiceContainer = () => {
               <div className="getofferlarge">
                 <button
                   className="StartClipping"
-                  text="Get Started!"
-                  onClick={(e) => {
-                    scrollToPricing();
-                  }}
+                  onClick={scrollToPricing}
                 >
-                  {" "}
                   Get Started!
                 </button>
               </div>
@@ -167,13 +195,14 @@ const ServiceContainer = () => {
             <div className="video-box-container ">
               <div className="video-box">
                 <video
-                  className={` ${isLoaded ? "" : "blurred"}`}
+                  ref={(el) => (videoRefs.current[index] = el)}
+                  className={isLoaded ? "" : "blurred"}
                   loading="lazy"
                   src={item.videoSrc}
-                  autoPlay
                   loop
                   muted
                   playsInline
+                  onLoadedData={handleVideoLoad}
                 >
                   <track
                     kind="captions"
@@ -187,12 +216,8 @@ const ServiceContainer = () => {
             <div className="getoffersmall">
               <button
                 className="StartClipping"
-                text="Get Started!"
-                onClick={(e) => {
-                  scrollToPricing();
-                }}
+                onClick={scrollToPricing}
               >
-                {" "}
                 Get Started!
               </button>
             </div>

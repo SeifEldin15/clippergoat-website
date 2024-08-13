@@ -1,160 +1,139 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Slideshow.css';
-import img1 from '../../assets/New folder/Industries/Affiliate Marketing.webp';
-import img2 from '../../assets/New folder/Industries/spencer__3_.webp';
-import img3 from '../../assets/New folder/Industries/Automotive .webp';
-import img4 from '../../assets/New folder/Industries/Comedy.webp';
-import img5 from '../../assets/New folder/Industries/Cooking & Food Review.webp';
-import img6 from '../../assets/New folder/Industries/Crypto.webp';
-import img7 from '../../assets/New folder/Industries/DIY, Remodeling, Landscaping.webp';
-import img8 from '../../assets/New folder/Industries/E-commerce.webp';
-import img9 from '../../assets/New folder/Industries/Finance & Investment.webp';
-import img10 from '../../assets/New folder/Industries/Fitness & Wellness,.webp';
-import img11 from '../../assets/New folder/Industries/gaming.webp';
-import img12 from '../../assets/New folder/Industries/unnamed.webp';
-import img13 from '../../assets/New folder/Industries/No Face Channels.webp';
-import img14 from '../../assets/New folder/Industries/spencer__1_.webp';
-import img15 from '../../assets/New folder/Industries/Podcast.webp';
-import img16 from '../../assets/New folder/Industries/Real Estate.webp';
-import img17 from '../../assets/New folder/Industries/Tech Review .webp';
-// import img18 from '../../assets/New folder/Industries/Traval Vlogs.webp';
-import img19 from '../../assets/New folder/Industries/248281584_669313307384591_6746345535741826702_n.webp';
-import img20 from '../../assets/New folder/Industries/spencer__2_.webp';
-import img124132 from '../../assets/New folder/Industries/STREAMING .png';
 
-import img2121 from '../../assets/New folder/Industries/TIKTOK SHOP.png';
+
 const slides = [
   {
     
     title: 'Affiliate Marketing',
     content: 'Enhance your campaigns with high-quality, repurposed videos. ClipperGoat helps you attract and convert more leads effectively.',
-    image: img1
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Affiliate Marketing-BXRAL6s_.webp"
   },
   {
     
     title: 'TikTok Shop',
     content: 'Sharing product clips increases visibility and drives more sales.',
-    image: img2121
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/TIKTOK SHOP-qBrs8Hvn.png"
   },
   {
     
     title: 'Streaming',
     content: 'Reposting highlights and clips boosts engagement and attracts more viewers.',
-    image: img124132
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/STREAMING -DZjOH9tO.png"
   },
   {
     
     title: 'Agency & Course Owners',
     content: 'Elevate your educational content and promotional materials with ClipperGoats AI tools. Keep your training programs fresh and engaging by continuously updating your video content.',
-    image: img2
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/spencer__3_-THllFHyw.webp"
   },
   {
     
     title: 'Automotive',
     content: 'Showcase car reviews, maintenance tips, and automotive news. Keep your audience engaged with high-quality, informative videos using ClipperGoat.',
-    image: img3
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Automotive -CJcH9mtA.webp"
   },
   {
     author: 'Marcus Perez',
     title: 'Comedy',
     content: 'Grows audience by sharing funniest stand-up bits, skits, and humorous moments, keeping followers entertained and engaged.',
     color: '#1f2937',
-    image: img4
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Comedy-DjlxDi2I.webp"
   },
   {
     
     title: 'Food Industries & Channels',
     content: 'Create mouth-watering recipe videos and cooking tutorials. Engage your audience and attract more followers with delicious content using ClipperGoat.',
-    image: img5
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Cooking _ Food Review-BMHFI8pg.webp"
   },
   {
     
     title: 'Crypto',
     content: 'Attracts followers by highlighting market insights, investment tips, and significant trades, keeping the audience informed and engaged with timely and actionable financial content.',
-    image: img6
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Crypto-D7hx3ZQr.webp"
   },
 
   {
     
     title: 'DIY, Remodeling, Landscaping',
     content: 'Attracts new clients by showcasing how-to guides, before-and-after transformations, and client testimonials, demonstrating value and expertise in the service offered.',
-    image: img7
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/DIY_ Remodeling_ Landscaping-CyAT0LNi.webp"
   },
   {
     author: 'Marcus Perez',
     title: 'E-commerce',
     content: 'Drive traffic and boost sales with engaging product videos. Use ClipperGoat to create consistent, high-quality content for your online store.',
     color: '#1f2937',
-    image: img8
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/E-commerce-OQL_SLwR.webp"
   },
   {
     
     title: 'Finance & Investment',
     content: 'Provide valuable insights and investment tips through well-crafted videos. Keep your audience informed and engaged with ClipperGoat.',
-    image: img9
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Finance _ Investment-BsTs7vMM.webp"
   },
   {
     
     title: 'Fitness & Wellness',
     content: 'Keep your audience motivated by repurposing workout routines and wellness tips. ClipperGoat helps you maintain fresh and inspiring content.',
-    image: img10
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Fitness _ Wellness_-D0YrcPUX.webp"
   },
   {
     
     title: 'Gaming',
     content: 'Repurpose gameplay highlights and tutorials to keep your content fresh. Engage your gaming community with ClipperGoats AI tools.',
-    image: img11
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Gaming Reels-Cxt6oR_t.png"
   },
   {
     
     title: 'Gambling',
     content: 'Engages audience by sharing big wins, betting strategies, and entertaining gameplay, creating excitement and drawing in viewers who are interested in the thrill of gambling.',
-    image: img19
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/248281584_669313307384591_6746345535741826702_n-BWFy9H_2.webp"
   },
   {
     
     title: 'Influencers',
     content: 'Maximize your online presence by repurposing your viral content. Stay relevant and engage your audience across all platforms with ClipperGoat.',
     color: '#1f2937',
-    image: img12
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/unnamed-CgatswIj.webp"
   },
   {
     
     title: 'No Face Channels',
     content: 'Create and edit videos without revealing your identity. Perfect for channels focusing on gaming, tutorials, and more, using ClipperGoats AI capabilities.',
-    image: img13
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/No Face Channels-BF6rTK4v.webp"
   },
   {
     title: 'Prohibited Industries',
     content: 'safely repurpose content to avoid restrictions and keep your audience engaged. ClipperGoat provides effective solutions for shadow-banned industries.',
-    image: img14
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/spencer__1_-Dm_cEp9R.webp<"
   },
   {
     
     title: 'Podcast',
     content: 'Transform your audio content into engaging video snippets. Expand your reach and keep your audience entertained with ClipperGoat.',
-    image: img15
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Podcast-D3tXv5Vg.webp"
   },
   {
     author: 'Marcus Perez',
     title: 'Real Estate',
     content: 'Create stunning property tours and market updates. Attract more buyers and sellers with high-quality video content using ClipperGoat.',
     color: '#1f2937',
-    image: img16
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Real Estate-CjBEfvM7.webp"
   },
   {
     author: 'Marcus Perez',
     title: 'Tech Review',
     content: 'Repurpose tech review videos and tutorials. Keep your content relevant and engaging for your tech-savvy audience with ClipperGoat',
     color: '#1f2937',
-    image: img17
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Tech Review -DJUzvOu2.webp"
   },
 
   {
     
     title: 'Travel',
     content: 'Repurpose travel footage and vlogs to keep your audience coming back for more adventures. Share your experiences through captivating videos.',
-    image: img20
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/spencer__2_-Cm4gMwCo.webp"
   },
 
 ];
