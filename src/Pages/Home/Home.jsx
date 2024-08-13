@@ -35,8 +35,8 @@ import imgs11 from "https://assets.clippergoat.com/assets/XQC.mp4";
 import imgs12 from "https://assets.clippergoat.com/assets/Yodit Yemane .webp";
 import SlideshowTop from "../../components/SlideshowTop/SlideshowTop";
 import Footer from "../../components/Footer/Footer";
-import herovideo from "../../assets/videos/Updated final.mp4";
-import herovideophone from "../../assets/videos/9;16 hero.mp4";
+import herovideo from "https://clipper-goat-ten.vercel.app/Updated final.mp4";
+import herovideophone from "https://clipper-goat-ten.vercel.app/9;16 hero.mp4";
 
 import "./Home.css";
 
