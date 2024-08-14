@@ -135,12 +135,14 @@ video::-webkit-media-controls {
 }
 
 .box-custom-shadow {
-  box-shadow: 0 0 15px rgba(20, 110, 255, 0.5);
+  box-shadow: 0 0 15px rgba(20, 110, 255, 0.5)
+  
 }
 
 .box-custom-shadow-smaller {
-  box-shadow: 0 0 12px rgba(20, 110, 255, 0.5);
+  box-shadow: 0 0 24px rgba(20, 110, 255, 0.296);
 }
+
 .break-div {
   display: none;
 }

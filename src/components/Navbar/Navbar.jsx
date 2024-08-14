@@ -100,6 +100,13 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar Container ${screenSize === 'small' ? 'small-screen scrolled' : ''} ${isScrolled ? 'scrolled' : ''}`}>
+      <div style={{
+        maxWidth:"1300px",
+        display:"flex",
+        width:"100%",
+        alignItems:"center",
+        margin:"0 auto"
+      }}>
       <div className='navbar-header'>
         <Logo />
         {screenSize === 'small' && (
@@ -139,7 +146,7 @@ const Navbar = () => {
 </a>
 
         </div>
-      )}
+      )}</div>
     </nav>
   );
 };

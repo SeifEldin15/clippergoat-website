@@ -9,7 +9,6 @@ import FAQ from "../../components/FAQ/FAQ";
 import Slider from "../../components/Slider/Slider";
 import ChallengeCard from "../../components/ChallengeCard/ChallengeCard";
 import Slideshow from "../../components/Slideshow/Slideshow";
-import AutoPlayVideo  from "../../components/AutoPlayVideo/AutoPlayVideo "
 import SlideshowTop from "../../components/SlideshowTop/SlideshowTop";
 import Footer from "../../components/Footer/Footer";
 
@@ -188,7 +187,13 @@ const Home = () => {
   };
 
   return (
-    <>
+    <div 
+    // style=
+    // {{
+    //   maxWidth:"1400px",
+    //   margin:"0 auto"
+    // }}
+    >
     
     <BackToTopPhone />
       <div className="home-hero-video">
@@ -200,9 +205,9 @@ const Home = () => {
       <div>
         
         
-     <div className="challenge-card-phone">
+     {/* <div className="challenge-card-phone">
      <ChallengeCard />
-     </div>
+     </div> */}
 
         <div className="Container-Spacing">
           <div className="spacing-counter">
@@ -262,7 +267,7 @@ const Home = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

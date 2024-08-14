@@ -1,14 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./HeroSectionLanding.css";
-// import ChallengeCard from "../ChallengeCard/ChallengeCard";
 import NewCounter from "../NewCounter/NewCounter";
-import StartClippingBtn from "../StartClippingBtn/StartClippingBtn";
 
 function HeroSectionLandingHero() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [videoScaleX, setVideoScaleX] = useState(1);
-  const [videoScaleY, setVideoScaleY] = useState(1);
+  const [videoWidth, setVideoWidth] = useState(50);
   const videoRef = useRef(null);
 
   const handleVideoLoad = () => {
@@ -27,12 +24,11 @@ function HeroSectionLandingHero() {
       const position = window.pageYOffset;
       setScrollPosition(position);
       
-      const newScaleX = Math.min(1 + position / 1000, 1.35);
-      const newScaleY = Math.min(1 + position / 1500, 1.2);
-      setVideoScaleX(newScaleX);
-      setVideoScaleY(newScaleY);
+      // Calculate new width based on scroll position
+      const newWidth = Math.min(50 + (position / 10), 90);
+      setVideoWidth(newWidth);
 
-      if (videoRef.current && position > 100) {
+      if (videoRef.current && position > 350) {
         videoRef.current.play();
       }
     };
@@ -56,47 +52,53 @@ function HeroSectionLandingHero() {
 
   return (
     <>
-      <section className="clippergoat-hero ">
-        <div className="aurora aurora1"></div>
- 
-        <div className="aurora aurora2"></div>
-    
-        <div className="aurora aurora3"></div>
-        <div className="clipper-hero-left">
-          <h1 className="clippergoat-hero-title">
-            <span className="clippergoat-highlight glow-text">
-              Unlock Endless Virality with ClipperGoat!
-            </span>
-          </h1>
-          <p className="clippergoat-hero-price">
-            For just $120
-          </p>
-          <p className="clippergoat-hero-subtitle">
-            Repurpose your most viral clips 1000 times a month using our
-            AI-powered Short Form Editor. Perfect for any industry, ClipperGoat
-            AI transforms your content into fresh, engaging videos in minutes.
-          </p>
-          <button
-            className="StartClipping"
-            onClick={scrollToPricing}
-          >
-            Get Started!
-          </button>
-        </div>
-      </section>
-      <div className="Hero-Second-Section" >
-          <div className="Second-Section-Left">
-       
-          </div>
-          <div className="hero-section-right">
-          <NewCounter targetDate="2024-08-25T00:00:00" />
-          <StartClippingBtn
-            text="Challenge Accepted"
-            to="/leaderboard"
-          />      
-          </div>     
-        </div> 
-      <div className="hero-video-container2 Container-Spacing">
+<section className="hero-wrapper">
+
+  <div className="aurora aurora1"></div>
+  <div className="aurora aurora2"></div>
+  <div className="aurora aurora3"></div>
+
+  <div className="hero-left">
+    <section className="clippergoat-hero">
+      <div className="clipper-hero-left">
+        <h1 className="clippergoat-hero-title">
+          <span className="clippergoat-highlight glow-text">
+            Unlock Endless Virality <div className="break-div-2"></div> with ClipperGoat!
+          </span>
+        </h1>
+        <p className="clippergoat-hero-price">
+          For just $120
+        </p>
+        <p className="clippergoat-hero-subtitle">
+          Repurpose your most viral clips 1000 times a month using our
+          AI-powered Short Form Editor. Perfect for any industry, ClipperGoat
+          AI transforms your content into fresh, engaging videos in minutes.
+        </p>
+        <button
+          className="StartClipping"
+          onClick={scrollToPricing}
+        >
+          Get Started!
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <div className="hero-right ">
+    <section className="counter-container ">
+      <div className="counter ">
+        <NewCounter targetDate="2024-09-25T00:00:00" />
+        <button className="chlng-btn " >
+          Challenge Accepted
+          <i class="fa-regular fa-arrow-right"></i>
+        </button> 
+      </div>
+    </section>
+  </div>
+  
+</section>
+        
+<div className="hero-video-container2 ">
         <video
           ref={videoRef}
           poster=""
@@ -107,8 +109,8 @@ function HeroSectionLandingHero() {
           muted
           playsInline
           style={{
-            transform: `scaleX(${videoScaleX}) scaleY(${videoScaleY})`,
-            transition: 'transform 0.3s ease-out'
+            width: `${videoWidth}%`,
+            transition: 'width 0.3s ease-out'
           }}
         >
           {heroVideoSources.map((source, index) => (
@@ -122,5 +124,6 @@ function HeroSectionLandingHero() {
     </>
   );
 }
+
 
 export default HeroSectionLandingHero;

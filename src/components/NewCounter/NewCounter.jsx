@@ -6,7 +6,12 @@ const NewCounter = ({ targetDate }) => {
 
   function calculateTimeLeft() {
     const difference = +new Date(targetDate) - +new Date();
-    let timeLeft = {};
+    let timeLeft = {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0
+    };
 
     if (difference > 0) {
       timeLeft = {
@@ -28,25 +33,19 @@ const NewCounter = ({ targetDate }) => {
     return () => clearTimeout(timer);
   });
 
-  const timerComponents = Object.keys(timeLeft).map((interval) => {
-    if (!timeLeft[interval]) {
-      return null;
-    }
-
-    return (
-      <div className="countdown-item" key={interval}>
-        <span className="countdown-value">{timeLeft[interval]}</span>
-        <span className="countdown-label">{interval}</span>
-      </div>
-    );
-  });
+  const timerComponents = ['days', 'hours', 'minutes', 'seconds'].map((interval) => (
+    <div className="countdown-item box-custom-shadow-smaller" key={interval}>
+      <span className="countdown-value">{timeLeft[interval]}</span>
+      <span className="countdown-label">{interval}</span>
+    </div>
+  ));
 
   return (
-    <div className="countdown-container">
-      <h2>We're almost ready!</h2>
-      <h1>Launching in...</h1>
+    <div className="countdown-container glow-text ">
+      <h1>Join The ClipperGoat</h1>
+      <h2>$10 Million Challenge</h2>
       <div className="countdown-timer">
-        {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+        {timerComponents}
       </div>
     </div>
   );

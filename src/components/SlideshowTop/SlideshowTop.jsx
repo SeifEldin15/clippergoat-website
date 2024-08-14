@@ -59,7 +59,7 @@ const ImageSlide = memo(({ src, title, description }) => {
         />
       ) : (
         <img
-          preload
+          loading="lazy"
           src={src}
           alt={`slidetop ${title}`}
           className="slide-media"
