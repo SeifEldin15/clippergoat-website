@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, memo } from 'react';
 import './SlideshowTop.css';
 
-const DURATION = 40000;
+const DURATION = 24000;
 
 const InfiniteLoopSlider = memo(({ children, duration, direction }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,8 +31,7 @@ const InfiniteLoopSlider = memo(({ children, duration, direction }) => {
       <div className='inner' ref={sliderRef}>
         {children}
         {children}
-        {children}
-        {children}
+
       </div>
     </div>
   );
@@ -49,7 +48,7 @@ const ImageSlide = memo(({ src, title, description }) => {
         <video
           src={src}
           autoPlay
-          preload
+          preload="true"
           loop
           muted
           playsInline
@@ -59,7 +58,7 @@ const ImageSlide = memo(({ src, title, description }) => {
         />
       ) : (
         <img
-          loading="lazy"
+          preload="true"
           src={src}
           alt={`slidetop ${title}`}
           className="slide-media"

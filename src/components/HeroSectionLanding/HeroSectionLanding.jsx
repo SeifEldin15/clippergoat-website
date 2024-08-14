@@ -102,6 +102,7 @@ function HeroSectionLandingHero() {
         <video
           ref={videoRef}
           poster=""
+          preload="true"
           className={`video-hero ${isLoaded ? "loaded" : "blurred"}`}
           autoPlay
           onLoadedData={handleVideoLoad}
