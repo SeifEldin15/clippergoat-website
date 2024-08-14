@@ -1,17 +1,8 @@
 import React, { useRef, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import HeroSectionLanding from "../../components/HeroSectionLanding/HeroSectionLanding";
-import PricingSection from "../../components/PricingSection/PricingSection";
-import LogoSlideshow from "../../components/LogoSlideshow/LogoSlideshow";
 import BackToTopPhone from "../../components/BackToTopPhone/BackToTopPhone";
-import ServiceContainer from "../../components/ServiceContainer/ServiceContainer";
-import FAQ from "../../components/FAQ/FAQ";
-import Slider from "../../components/Slider/Slider";
 import ChallengeCard from "../../components/ChallengeCard/ChallengeCard";
-import Slideshow from "../../components/Slideshow/Slideshow";
-import AutoPlayVideo  from "../../components/AutoPlayVideo/AutoPlayVideo "
-import SlideshowTop from "../../components/SlideshowTop/SlideshowTop";
-import Footer from "../../components/Footer/Footer";
 
 import "./Home.css";
 
@@ -198,70 +189,10 @@ const Home = () => {
         <HeroSectionLanding />
       </div>
       <div>
-        
-        
      <div className="challenge-card-phone">
      <ChallengeCard />
      </div>
-
-        <div className="Container-Spacing">
-          <div className="spacing-counter">
-            <h1 className="information-container-header custom-header-title">
-              Top <span className="glow-text">Influencers</span>
-            </h1>
-            <p className="custom-header-subtitle ">
-              Top Influencers Using ClipperGoat Join the ranks of elite
-              influencers who trust ClipperGoat to maximize their content:
-            </p>
-          </div>
-          <div className="Container-Spacing">
-            <SlideshowTop images={IMAGES} direction="left" />
-            <SlideshowTop images={INFLUENCERS} direction="right" />
-          </div>
-        </div>
-
-    <ServiceContainer />
-
-        <LogoSlideshow />{" "}
-        <div>
-          <h1 className="information-container-header custom-header-title ">
-            Industries that <div className="break-div"><br/></div><span className="glow-text">NEED THIS!</span>
-          </h1>
-          <p className="custom-header-subtitle ">
-            ClipperGoat is ideal for short form marketing, addressing the high
-            demand for online attention and traffic in today's era of short
-            attention spans and constant phone usage across social media, sales
-            funnels, video games, influencers, online education, explicit sites,
-            and subscription services.
-          </p>
-        </div>
-        <div className="Container-Spacing"></div>
-        <Slideshow items={items} />
-        <div className="Container-Spacing">
-          <PricingSection />
-        </div>
-        <div className="Container-Spacing">
-          <h1 className="information-container-header custom-header-title">
-            Unlock Your <div className="break-div"><br/></div><span className="glow-text">Full Potential</span>
-          </h1>
-          <p className="custom-header-subtitle ">
-          ClipperGoat revolutionizes social media management, driving traffic and engagement across all social media platforms. Users praise its powerful tools for optimizing content and maximizes reach.
-          </p>
-        </div>
-        <Slider />
       </div>
-      <div>
-        <div className="Container-Spacing-Lg" id="faq-section">
-          <h1 className="information-container-header custom-header-title ">
-            Frequently  Asked <div className="break-div"><br/></div> <span className="glow-text">Questions</span>
-          </h1>
-          <p className="custom-header-subtitle ">
-            You have questions, we have answers
-          </p>
-          <FAQ />
-        </div>
-      </div>
-      <Footer />
     </>
   );
 };

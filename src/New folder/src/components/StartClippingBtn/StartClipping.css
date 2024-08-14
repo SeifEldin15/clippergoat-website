@@ -1,0 +1,36 @@
+.StartClipping {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color-lighter);
+  padding-left:25px !important;
+  color: white;
+   border-radius: 12px; width: 100%;
+  margin-bottom: 40px;  border: 1px solid rgb(46, 126, 255);
+  opacity:0.9;
+  padding: 15px 20px;
+  max-width: 300px;
+  font-size: 18px;
+  font-weight: 700;
+  transition: 0.6s;  
+  box-shadow: 0 0 15px rgba(20, 110, 255, 0.5);
+
+
+}
+  .StartClipping i{
+    margin-left:15px;
+    font-size:19px;
+    margin-bottom: -2px;  color: rgb(163, 198, 255);
+
+  }
+.StartClipping:hover {  color: white;
+
+  box-shadow: 
+ 
+  0 0 35px rgb(35, 119, 255);
+ }
+ @media screen and (max-width: 400px) {
+  .StartClipping {
+    font-size: 14px;
+  }
+}

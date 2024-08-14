@@ -1,0 +1,41 @@
+.countdown-container {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .countdown-item {
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 80px;
+  }
+  
+  .countdown-value {
+    font-size: 2em;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .countdown-label {
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
