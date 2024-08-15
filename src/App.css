@@ -86,7 +86,7 @@ h1, h2 {
   height: 100%;
   overflow: hidden;
   z-index: -1;
-  opacity: 0.2;
+  opacity: 0.05;
 }
 video::-webkit-media-controls {
   display: none !important;
