@@ -187,13 +187,14 @@ const Home = () => {
   };
 
   return (
-    <div 
+    < 
     // style=
     // {{
     //   maxWidth:"1400px",
     //   margin:"0 auto"
     // }}
     >
+<div className="newoverlay"></div>
     
     <BackToTopPhone />
       <div className="home-hero-video">
@@ -267,7 +268,7 @@ const Home = () => {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
