@@ -2,7 +2,7 @@
 
 .pricing-section {
   text-align: center;
-  padding: 20px;
+
 }
 
 .pricing-section__title {
@@ -10,28 +10,33 @@
 }
 
 .pricing-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   flex-wrap: wrap;
+  max-width: 90%;
   margin-top: 80px;
+ margin-left: auto !important;
+ margin-right: auto !important;
 }
 
-.pricing-card-container {  display: flex;
+.pricing-card-container {  
+  display: flex;
   align-items: center;
   border: 1px solid rgba(52, 130, 255, 0.1);
   padding: 10px;
   border-radius: 10px;
-  width: 100%;
-  max-width: 410px;
 }
+
+/* make the service section responsive
+
+*/
 
 .pricing-card {
   border-radius: 10px;
   padding: 20px;
   width: 100%;
-  max-width: 390px;
+  max-width: auto;
   height: auto;
   position: relative;
   background-image: linear-gradient(to top, rgba(20, 110, 255, 0.1), rgba(0, 98, 255, 0.01));

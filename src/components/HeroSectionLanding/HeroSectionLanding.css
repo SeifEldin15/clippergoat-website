@@ -1,8 +1,8 @@
 .aurora {
   border-radius: 50%;
   position: absolute;
-  left: 0;
-  width: 50%;
+  left: 100px;
+  width: 40%;
   height: 30%;
   background: linear-gradient(120deg, rgba(0, 162, 255, 0.6) 20%, rgba(0, 255, 200, 0) 70%),
               linear-gradient(300deg, rgba(0, 86, 161, 0.633) 20%, rgba(255, 0, 200, 0) 70%);
@@ -16,21 +16,21 @@
 }
 
 .aurora2 {
-  top: 35%;
+  top: 25%;
 }
 
 .aurora3 {
-  top: 90%;
+  top: 70%;
 }
 @keyframes aurora-animation {
   0% {
-    transform: translateY(-20%) rotate(25deg) scaleX(2.5);
+    transform: translateY(-20%) rotate(10deg) scaleX(1.7);
   }
   50% {
-    transform: translateY(10%) rotate(25deg) scaleX(2.5);
+    transform: translateY(10%) rotate(10deg) scaleX(1.7);
   }
   100% {
-    transform: translateY(-20%) rotate(25deg) scaleX(2.5);
+    transform: translateY(-20%) rotate(10deg) scaleX(1.7);
   }
 }
 .hero-wrapper {
