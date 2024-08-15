@@ -26,7 +26,7 @@ function HeroSectionLandingHero() {
       setScrollPosition(position);
       
       // Calculate new width based on scroll position
-      const newWidth = Math.min(50 + (position / 10), 90);
+      const newWidth = Math.min(50 + (position / 10), 72);
       setVideoWidth(newWidth);
 
       if (videoRef.current && position > 350) {
