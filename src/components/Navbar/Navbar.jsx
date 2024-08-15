@@ -101,7 +101,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar Container ${screenSize === 'small' ? 'small-screen scrolled' : ''} ${isScrolled ? 'scrolled' : ''}`}>
       <div style={{
-        maxWidth:"1300px",
+        maxWidth:"90%",
         display:"flex",
         width:"100%",
         alignItems:"center",
