@@ -116,8 +116,8 @@
   justify-content: center;
   overflow: hidden;
   position: relative;
-  margin-top: 150px; 
-  padding:50px;
+  margin-top: 170px; 
+  padding:90px;
 
 }
 
@@ -127,7 +127,7 @@
   object-fit: cover;
   transition: transform 0.3s ease-out;
   will-change: width;
-  box-shadow: 0 0 50px 10px rgba(20, 110, 255, 0.5);
+  box-shadow: 0 0 70px 20px rgba(20, 110, 255, 0.5);
 
 }
 
