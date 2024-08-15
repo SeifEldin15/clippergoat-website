@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./HeroSectionLanding.css";
-import NewCounter from "../NewCounter/NewCounter";
+// import NewCounter from "../NewCounter/NewCounter";
+import ChallengeCard from "../ChallengeCard/ChallengeCard";
 
 function HeroSectionLandingHero() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -52,9 +53,10 @@ function HeroSectionLandingHero() {
 
   return (
     <>
-<section className="hero-wrapper">
 
-  <div className="aurora aurora1"></div>
+
+<div className="hero-wrapper">
+<div className="aurora aurora1"></div>
   <div className="aurora aurora2"></div>
   <div className="aurora aurora3"></div>
 
@@ -86,17 +88,17 @@ function HeroSectionLandingHero() {
 
   <div className="hero-right ">
     <section className="counter-container ">
-      <div className="counter ">
+      <ChallengeCard />
+      {/* <div className="counter ">
         <NewCounter targetDate="2024-09-25T00:00:00" />
         <button className="chlng-btn " >
           Challenge Accepted
           <i class="fa-regular fa-arrow-right"></i>
         </button> 
-      </div>
+      </div> */}
     </section>
   </div>
-  
-</section>
+  </div>
         
 <div className="hero-video-container2 ">
         <video

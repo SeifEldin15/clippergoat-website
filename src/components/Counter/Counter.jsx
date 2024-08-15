@@ -18,21 +18,13 @@ const neonPulse = keyframes`
   }
 `;
 
-const DigitBoxContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
 const CounterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 35px rgba(20, 110, 255, 0.6), inset 0 0 85px rgba(20, 110, 255, 0.6);
-  background-color: rgba(17, 24, 39, 0.8);
   padding: 20px;
   border-radius: 15px;
   z-index: 1000;
-  border: 2px solid rgba(52, 130, 255, 1);
   ${props => props.shake && css`
     animation: ${shake} 0.5s ease-in-out;
   `}
@@ -43,12 +35,27 @@ const CounterWrapper = styled.div`
   }
 `;
 
+const DigitBoxContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const TimeUnit = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 8px;
+
+  @media screen and (max-width: 410px) {
+    margin: 0 6px;
+  }
+`;
+
 const DigitBox = styled.div`
   box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
   font-size: 24px;
   font-weight: bold;
   padding: 8px;
-  margin: 0 8px;
   border-radius: 10px;
   min-width: 60px;
   text-align: center;
@@ -61,18 +68,16 @@ const DigitBox = styled.div`
     font-size: 22px;
     padding: 5px;
     min-width: 45px;
-    margin: 0 6px;
   }
 `;
 
 const TimeLabel = styled.p`
   font-size: 14px;
   margin-top: 5px;
-  margin: 8px 8px;
+  text-align: center;
 
   @media screen and (max-width: 410px) {
     font-size: 13px;
-    margin: 6px 6px;
   }
 `;
 
@@ -122,16 +127,22 @@ const AnimatedCounter = ({ targetDate }) => {
         <div className="counter-content-header">
           <CounterWrapper shake={shakeCounter}>
             <DigitBoxContainer>
-              <DigitBox>{formatNumber(timeLeft.days || 0)}</DigitBox>
-              <DigitBox>{formatNumber(timeLeft.hours || 0)}</DigitBox>
-              <DigitBox>{formatNumber(timeLeft.minutes || 0)}</DigitBox>
-              <DigitBox>{formatNumber(timeLeft.seconds || 0)}</DigitBox>
-            </DigitBoxContainer>
-            <DigitBoxContainer>
-              <TimeLabel>days</TimeLabel>
-              <TimeLabel>hours</TimeLabel>
-              <TimeLabel>minutes</TimeLabel>
-              <TimeLabel>seconds</TimeLabel>
+              <TimeUnit>
+                <DigitBox>{formatNumber(timeLeft.days || 0)}</DigitBox>
+                <TimeLabel>days</TimeLabel>
+              </TimeUnit>
+              <TimeUnit>
+                <DigitBox>{formatNumber(timeLeft.hours || 0)}</DigitBox>
+                <TimeLabel>hours</TimeLabel>
+              </TimeUnit>
+              <TimeUnit>
+                <DigitBox>{formatNumber(timeLeft.minutes || 0)}</DigitBox>
+                <TimeLabel>minutes</TimeLabel>
+              </TimeUnit>
+              <TimeUnit>
+                <DigitBox>{formatNumber(timeLeft.seconds || 0)}</DigitBox>
+                <TimeLabel>seconds</TimeLabel>
+              </TimeUnit>
             </DigitBoxContainer>
           </CounterWrapper>
         </div>

@@ -1,4 +1,4 @@
-/* 
+
 .counter-container p {
   margin-bottom: 10px;
 }
@@ -14,6 +14,7 @@
   text-align: center;
 
 }
+
 .landing-counter-container-header p{
   font-size:30px;
   font-weight: 800;
@@ -29,6 +30,7 @@
 }
 .counter-content-header{
   display: flex;
+  justify-content: center;
 }
 .time-container {
   display: flex;
@@ -88,4 +90,4 @@
     font-size:18px ;
   }
 
-} */
+}
