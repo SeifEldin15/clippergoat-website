@@ -86,14 +86,7 @@ h1, h2 {
   height: 100%;
   overflow: hidden;
   z-index: -1;
-  opacity:0.05
-}
-.newoverlay{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.134);
-  z-index: 12432654756765754754;
+  opacity: 0.1;
 }
 video::-webkit-media-controls {
   display: none !important;
