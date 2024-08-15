@@ -26,7 +26,7 @@ function HeroSectionLandingHero() {
       setScrollPosition(position);
       
       // Calculate new width based on scroll position
-      const newWidth = Math.min(50 + (position / 10), 72);
+      const newWidth = Math.min(50 + (position / 15), 72);
       setVideoWidth(newWidth);
 
       if (videoRef.current && position > 350) {
@@ -65,7 +65,7 @@ function HeroSectionLandingHero() {
       <div className="clipper-hero-left">
         <h1 className="clippergoat-hero-title">
           <span className="clippergoat-highlight glow-text">
-            Unlock Endless Virality <div className="break-div-2"></div> with ClipperGoat!
+            Unlock Endless Virality <div className="break-div-2"></div> <br /> with ClipperGoat!
           </span>
         </h1>
         <p className="clippergoat-hero-price">
@@ -80,7 +80,7 @@ function HeroSectionLandingHero() {
           className="StartClipping"
           onClick={scrollToPricing}
         >
-          Get Started!
+          Start Your Free Trial!
         </button>
       </div>
     </section>

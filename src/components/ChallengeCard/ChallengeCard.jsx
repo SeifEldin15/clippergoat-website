@@ -11,7 +11,7 @@ const ChallengeCard = () => {
       <div className="clippergoat-cta-hero-div">
         <div className="challenge-btn-phone">
           <StartClippingBtn
-            text="Challenge Accepted"
+            text="Join The Challenge"
             to="/leaderboard"
           />
         </div>

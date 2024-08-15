@@ -53,11 +53,11 @@ const TimeUnit = styled.div`
 
 const DigitBox = styled.div`
   box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   padding: 8px;
   border-radius: 10px;
-  min-width: 60px;
+  min-width: 80px;
   text-align: center;
   transition: all 0.3s ease;
   border: 2px solid rgba(52, 130, 255, 1);
