@@ -1,109 +1,106 @@
-.logo-slideshow-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  color: #fff;
+
+.counter-container p {
+  margin-bottom: 10px;
 }
-
-.logo-slideshow-container img {
-  object-fit: contain;
-  margin-left: 45px !important;
-}
-
-.logo-netflix {
-  width: 100px;
-}
-
-.logo-google {
-  width: 100px;
-}
-
-.logo-meta {
-  max-width: 200px;
-  height: 30px !important;
-  filter: brightness(40%) sepia(1) hue-rotate(180deg) saturate(3) drop-shadow(0 0 10px rgba(20, 110, 255, 0.5))  !important;
-
-}
-
-.logo-onlyfans {
-  width: 100px;
-}
-
-.logo-slideshow-container11 {
-  height: 150px !important;
-  display: flex;
-  align-items: center;
-  margin-bottom: 80px;
-}
-
-.logo-slideshow-container::before,
-.logo-slideshow-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 25%;
-  z-index: 2;
-}
-
-.logo-slideshow {
-  display: flex;
-  transition: none;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
-
-.element {
-  width: 100%;
-  height: 300px;
-}
-
-.logo-slideshow-container h2 {
+.landing-leaader-header{
+  margin-top:180px;
+  white-space: nowrap !important;
+  font-size:30px;
+  margin-bottom:30px ;
+ }
+ .landing-counter-container-header {
+  width:100%;
+  margin-top:30px;
   text-align: center;
-  margin-bottom: 40px;
-  color: white !important;
+
 }
 
-.logo-slideshow-container .logo {
-  height: 40px;
-  margin: 0 45px;
-  filter: brightness(80%) sepia(1) hue-rotate(180deg) saturate(3) drop-shadow(0 0 10px rgba(10, 110, 255, 0.5));
-  flex: 0 0 auto;
+.landing-counter-container-header p{
+  font-size:30px;
+  font-weight: 800;
+
+}
+.counter-content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.leader-getoffer-btn{
+  margin-top:10px;
+}
+.counter-content-header{
+  display: flex;
+  justify-content: center;
+}
+.time-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 5px;
+  font-size: 17px;
+}
+
+@media screen and (min-width: 1900px) {
+  
+.landing-counter-container-header p{
+  font-size:40px;
+}
+  .StartClipping {
+    font-size: 14px;
+    max-width: 350px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1308px) {
+
+  .counter-content-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }  
+  .landing-counter-container-header{
+    text-align: center;
+    font-size:15px;
+    margin-bottom: 20px;
+    margin-right:0px;  
+    color:#ffffff !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .logo-slideshow-container::before,
-  .logo-slideshow-container::after {
-    width: 15%;
+
+.counter-content-header img {
+  width:150px;
+  height:150px;
+}
+.landing-leaader-header{
+  margin-top:120px;
+  font-size:18px !important;
+ }
+  .counter-container {
+    padding: 10px;
+  }
+  
+  .landing-counter-container-header p {
+    font-size: 24px;
+  }
+  .landing-leader-counter-container-header p:first-of-type {
+    margin-top:50px;
+  }
+  
+  .landing-leader-counter-container-header p{
+    font-size: 30px !important;
+  }
+  
+  .time-container {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 400px) {
+
+  .landing-counter-container-header p{
+    font-size:22px ;
   }
 
-  .logo-slideshow-container {
-    padding-bottom: 10px;
-  }
-
-  .logo-slideshow-container img {
-    margin-left: 45px !important;
-  }
-
-  .logo-netflix {
-    width: 80px;
-  }
-
-  .logo-google {
-    width: 80px;
-  }
-
-  .logo-meta {
-    max-width: 170px;
-    height: 30px !important;
-  }
-
-  .logo-onlyfans {
-    width: 80px;
-  }
-
-  .logo-slideshow-container h2 {
-    font-size: 18px !important;
-  }
 }
