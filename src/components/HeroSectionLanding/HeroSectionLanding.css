@@ -189,7 +189,7 @@
   .hero-card-phone{
     display: flex;
     justify-content: center;
-    max-width:80%;
+    max-width:90%;
     margin: 0 auto;
   }
   .hero-card-phone .counter-container{
