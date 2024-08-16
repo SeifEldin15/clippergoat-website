@@ -53,6 +53,7 @@ const DigitBoxContainer = styled.div`
 
 const TimeUnit = styled.div`
   display: flex;
+  box-shadow: 0 0 11px 5px rgba(20, 110, 255, 0.2);
   flex-direction: column;
   align-items: center;
 `;
@@ -61,13 +62,12 @@ const DigitBox = styled.div`
   font-size: 1.8em;
   color: white;
   font-weight: bold;
-  padding: 4px 0px;
+  padding: 0px 0px;
   background-color: #2a2a2a00;
   border-radius: 5px;
   min-width: 70px;
   text-align: center;
   transition: all 0.3s ease;
-  box-shadow: 0 0 11px 5px rgba(20, 110, 255, 0.2);
   
   @media screen and (max-width: 700px) {
     font-size: 1.4em;

@@ -15,6 +15,9 @@
     background: linear-gradient(to right, #182F40, rgb(4, 37, 61));
     border: 1px solid rgba(52, 130, 255, 0.1);
   }
+/* fix revitalize wrapping to other lines
+
+*/
 @media (max-width: 700px) {
     .challenge-card21edwv13 {
         padding: 20px;    

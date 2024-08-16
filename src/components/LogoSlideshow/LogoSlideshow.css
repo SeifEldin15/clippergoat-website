@@ -11,7 +11,7 @@
 }
 
 .logo-netflix {
-  width: 100px;  filter: brightness(80%) sepia(1) hue-rotate(180deg) saturate(3) drop-shadow(0 0 0px rgba(101, 160, 255, 0.5))  !important;
+  width: 100px;  filter: brightness(80%) sepia(1) hue-rotate(180deg) saturate(3)  !important;
 
 }
 
@@ -22,7 +22,7 @@
 .logo-meta {
   max-width: 200px;
   height: 30px !important;
-  filter: brightness(30%) sepia(1) hue-rotate(180deg) saturate(3) drop-shadow(0 0 3px 3px3px rgba(101, 160, 255, 0.5))  !important;
+  filter: brightness(30%) sepia(1) hue-rotate(180deg) saturate(3) !important;
 
 }
 
@@ -69,7 +69,7 @@
 .logo-slideshow-container .logo {
   height: 40px;
   margin: 0 45px;
-  filter: brightness(70%) sepia(1) hue-rotate(180deg) saturate(3) drop-shadow(0 0 5px rgba(101, 160, 255, 0.5))  ;
+  filter: brightness(70%) sepia(1) hue-rotate(180deg) saturate(3)  ;
   flex: 0 0 auto;
 }
 
