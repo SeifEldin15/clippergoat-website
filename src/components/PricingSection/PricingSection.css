@@ -16,8 +16,9 @@
   flex-wrap: wrap;
   max-width: 90%;
   margin-top: 80px;
- margin-left: auto !important;
- margin-right: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  align-items: center;
 }
 
 .pricing-card-container {  
@@ -176,26 +177,21 @@
   box-shadow: 0 0 15px rgba(20, 110, 255, 0.5);
 }
 .pricing-card-container--with-normal {
+  max-height:1000px !important;
   margin-bottom: -90px;
+  display: flex;
+  align-items: center;
 }
 .pricing-card--custom-normal .StartClipping {
   background-color: transparent;
 }
+
 @media screen and (max-width: 1200px) {
   .pricing-container {
     gap: 20px;
   }
 
-  .pricing-card-container {
-    max-width: 350px;
-  }
 
-  .pricing-card {
-    max-width: 330px;
-  }
-}
-
-@media screen and (max-width: 992px) {
   .pricing-card-container--with-normal {
     margin-bottom: 0px;
   }
@@ -211,35 +207,44 @@
     font-size: 3rem !important;
   }
 
-  .pricing-card {
+    .pricing-container {
+      grid-template-columns: repeat(1, 1fr); /* Change to two columns on medium screens */
+      gap: 20px;
+    }
+  
+ 
+  
+    .pricing-card {
     padding: 0px 20px;
-  }
-
+    }
+  
+}
+@media screen and (max-width: 768px) {
   .pricing-container {
-    flex-direction: column;
-    align-items: center;
+    gap: 20px;
   }
-
+  
   .pricing-card-container {
-    max-width: 400px;
+    max-width: 100%; /* Ensure full width on smaller screens */
   }
 
   .pricing-card {
-    max-width: 380px;
+    max-width: 100%;
   }
-}
-
-@media screen and (max-width: 576px) {
   .pricing-section__title {
     font-size: 2.5em !important;
   }
 
+  .pricing-container {
+    grid-template-columns: 1fr; /* Stack in a single column on smaller screens */
+  }
+
   .pricing-card-container {
     max-width: 100%;
   }
 
   .pricing-card {
-    max-width: 100%;
+    max-width: 100%
   }
 
   .pricing-card__header {

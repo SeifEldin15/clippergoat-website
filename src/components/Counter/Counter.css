@@ -16,7 +16,7 @@
 }
 
 .landing-counter-container-header p{
-  font-size:40px;
+  font-size:30px;
   font-weight: 800;
 
 }
@@ -39,6 +39,19 @@
   margin-top: 5px;
   font-size: 17px;
 }
+
+@media screen and (min-width: 1900px) {
+  
+.landing-counter-container-header p{
+  font-size:40px;
+}
+  .StartClipping {
+    font-size: 14px;
+    max-width: 350px;
+    font-size: 22px;
+  }
+}
+
 @media screen and (max-width: 1308px) {
 
   .counter-content-header{

@@ -116,28 +116,3 @@
     height: 340px;
   } */
 }
-@media (min-width: 1300px) {
-
-  .home-header .title {
-    font-size: 3.5rem;
-  }
-
-  .video-box-container {
-    width: 55%;
-    margin-top: 0;
-  }
-
-  .Home-Services-Container-Header {
-    max-width: 400px;
-    margin-left: 8%;
-    text-align: left;
-  }
-
-  .Home-Services-Container-Header-First {
-    font-size: 36px;
-  }
-
-  .Home-Services-Container-Header-Second {
-    font-size: 21px;
-  }
-}

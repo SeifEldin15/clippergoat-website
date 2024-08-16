@@ -65,7 +65,7 @@ function HeroSectionLandingHero() {
       <div className="clipper-hero-left">
         <h1 className="clippergoat-hero-title">
           <span className="clippergoat-highlight glow-text">
-            Unlock Endless Virality <div className="break-div-2"></div> <br /> with ClipperGoat!
+            Unlock Endless Virality <div className="break-div-2"></div> <br className="large-screen-br" /> with ClipperGoat!
           </span>
         </h1>
         <p className="clippergoat-hero-price">

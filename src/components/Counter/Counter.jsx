@@ -53,17 +53,22 @@ const TimeUnit = styled.div`
 
 const DigitBox = styled.div`
   box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
-  padding: 8px;
+  padding: 6px;
   border-radius: 10px;
-  min-width: 80px;
+  min-width: 60px;
   text-align: center;
   transition: all 0.3s ease;
   border: 2px solid rgba(52, 130, 255, 1);
   -webkit-text-stroke: 1.5px #3a78ff;
   animation: ${neonPulse} 1.5s infinite;
-
+  
+  @media screen and (min-width: 1900px) {
+    min-width: 80px;
+    font-size: 30px;
+    padding: 8px;
+  }
   @media screen and (max-width: 410px) {
     font-size: 22px;
     padding: 5px;
