@@ -97,8 +97,7 @@
   align-items: center; /* Add this line */
   overflow: hidden;
   position: relative;
-  margin-top: 170px; 
-  padding: 7% 0; /* Change this line */
+  padding: 100px 0; /* Change this line */
   perspective: 1000px;
 }
 

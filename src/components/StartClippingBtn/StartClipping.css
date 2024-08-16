@@ -22,10 +22,10 @@
 
   }
 .StartClipping:hover {  color: white;
-
+transform: scale(1.03);
   box-shadow: 
  
-  0 0 35px rgb(35, 119, 255);
+  0 0 25px rgb(35, 119, 255);
  }
  @media screen and (max-width:500px) {
   .StartClipping {
