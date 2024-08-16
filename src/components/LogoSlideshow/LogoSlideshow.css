@@ -66,9 +66,11 @@
 .logo-slideshow-container .logo {
   height: 40px;
   margin: 0 45px;
-  filter: grayscale(100%) brightness(70%);
+  filter: brightness(40%) sepia(1) hue-rotate(180deg) saturate(5);
   flex: 0 0 auto;
+
 }
+
 
 @media screen and (max-width: 768px) {
   .logo-slideshow-container::before,

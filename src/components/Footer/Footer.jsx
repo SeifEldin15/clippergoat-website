@@ -77,6 +77,9 @@ const Footer = () => {
               <a href="https://x.com/TheClipperGoat" target="_blank" rel="noopener noreferrer">
                 <i className="fa-brands fa-twitter"></i>
               </a>
+              <a href="https://x.com/TheClipperGoat" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-youtube"></i>
+              </a>
             </div>
           </div>
         </div>

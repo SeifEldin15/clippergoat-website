@@ -19,15 +19,14 @@
     .challenge-card21edwv13 {
         padding: 20px;    
 
-        height: 390px;
+        max-width: auto;
       }
 }
 
 @media (max-width: 400px) {
     .challenge-card21edwv13 {
-      padding: 20px;
-      height: 310px;
-      max-width: auto;
+      padding: 0px;
+      min-height: 310px;
 }
 }
 
