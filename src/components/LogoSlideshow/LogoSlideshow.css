@@ -22,7 +22,7 @@
 .logo-meta {
   max-width: 200px;
   height: 30px !important;
-  filter: brightness(30%) sepia(1) hue-rotate(180deg) saturate(3) drop-shadow(0 0 3px rgba(101, 160, 255, 0.5))  !important;
+  filter: brightness(30%) sepia(1) hue-rotate(180deg) saturate(3) drop-shadow(0 0 3px 3px3px rgba(101, 160, 255, 0.5))  !important;
 
 }
 
