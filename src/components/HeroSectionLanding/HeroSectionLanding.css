@@ -114,11 +114,12 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  align-items: center; /* Add this line */
   overflow: hidden;
   position: relative;
   margin-top: 170px; 
-  padding:90px;
-
+  padding: 90px 0; /* Change this line */
+  perspective: 1000px;
 }
 
 .video-hero {
@@ -128,9 +129,8 @@
   transition: transform 0.3s ease-out;
   will-change: width;
   box-shadow: 0 0 70px 20px rgba(20, 110, 255, 0.5);
-
+  transform: translateZ(50px); /* Add this line */
 }
-
 .video-hero.loaded {
   filter: none;
 }

@@ -1,7 +1,61 @@
 import React, { useRef, useState, useEffect } from "react";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import "./HeroSectionLanding.css";
-// import NewCounter from "../NewCounter/NewCounter";
 import ChallengeCard from "../ChallengeCard/ChallengeCard";
+
+function Card3D({ children }) {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const mouseXSpring = useSpring(x);
+  const mouseYSpring = useSpring(y);
+
+  const rotateX = useTransform(
+    mouseYSpring,
+    [-0.5, 0.5],
+    ["17.5deg", "-17.5deg"]
+  );
+  const rotateY = useTransform(
+    mouseXSpring,
+    [-0.5, 0.5],
+    ["-17.5deg", "17.5deg"]
+  );
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const width = rect.width;
+    const height = rect.height;
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+    const xPct = mouseX / width - 0.5;
+    const yPct = mouseY / height - 0.5;
+    x.set(xPct);
+    y.set(yPct);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
+  return (
+    <motion.div
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        rotateY,
+        rotateX,
+        transformStyle: "preserve-3d",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+      }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 function HeroSectionLandingHero() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -100,32 +154,36 @@ function HeroSectionLandingHero() {
   </div>
   </div>
         
-<div className="hero-video-container2 ">
+  <div className="hero-video-container2">
+        <Card3D>
         <video
-          ref={videoRef}
-          poster=""
-          preload="true"
-          className={`video-hero ${isLoaded ? "loaded" : "blurred"}`}
-          autoPlay
-          onLoadedData={handleVideoLoad}
-          loop
-          muted
-          playsInline
-          style={{
-            width: `${videoWidth}%`,
-            transition: 'width 0.3s ease-out'
-          }}
-        >
-          {heroVideoSources.map((source, index) => (
-            <source key={index} src={source.src} media={source.media} type="video/mp4" />
-          ))}
-          <track kind="captions" srclang="en" label="English captions" />
-          Your browser does not support the video tag.
-        </video>
+  ref={videoRef}
+  poster=""
+  preload="true"
+  className={`video-hero ${isLoaded ? "loaded" : "blurred"}`}
+  autoPlay
+  onLoadedData={handleVideoLoad}
+  loop
+  muted
+  playsInline
+  style={{
+    width: `${videoWidth}%`,
+    transition: 'width 0.3s ease-out',
+    maxWidth: '100%', // Add this line
+    height: 'auto', // Add this line
+    display: 'block', // Add this line
+    margin: '0 auto', // Add this line
+  }}
+>
+            {heroVideoSources.map((source, index) => (
+              <source key={index} src={source.src} media={source.media} type="video/mp4" />
+            ))}
+            <track kind="captions" srclang="en" label="English captions" />
+            Your browser does not support the video tag.
+          </video>
+        </Card3D>
       </div>
-      
-    </>
-  );
+    </>  );
 }
 
 
