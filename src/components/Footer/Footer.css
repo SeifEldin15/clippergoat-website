@@ -45,7 +45,7 @@
 .footer-links a {
   color: #9b9b9b;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: 0.2s ease;
 }
 
  
@@ -95,7 +95,7 @@
 
 .social-icons i {
   font-size: 24px;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
   cursor: pointer;
   padding:15px;
 }
@@ -104,7 +104,7 @@
 }
 .social-icons a {
 
-  color: #1467db;
+  color:rgb(101, 160, 255);
 }
 .social-icons a:hover {
   transform: scale(1.4);
