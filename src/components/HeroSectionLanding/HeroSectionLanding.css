@@ -138,6 +138,9 @@
   display: none;
 }
 @media screen and (min-width: 1900px) {
+  .video-hero {
+    margin-top: 100px !important;
+  }
   .large-screen-br{
     display: block;
   }
