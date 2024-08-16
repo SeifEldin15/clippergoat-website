@@ -27,9 +27,10 @@
  
   0 0 35px rgb(35, 119, 255);
  }
- @media screen and (max-width: 400px) {
+ @media screen and (max-width:500px) {
   .StartClipping {
-    font-size: 14px;
+    max-width: 250px;
+    font-size: 12px;
   }
   
 }

@@ -6,3 +6,10 @@
   margin: 0px !important;
   padding:0px !important;
 }
+
+@media screen and (max-width: 768px) {
+  .websitelogo {
+    width:120px;
+
+}
+}

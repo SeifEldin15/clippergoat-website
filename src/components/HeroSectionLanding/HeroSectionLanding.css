@@ -118,7 +118,7 @@
   overflow: hidden;
   position: relative;
   margin-top: 170px; 
-  padding: 90px 0; /* Change this line */
+  padding: 10% 0; /* Change this line */
   perspective: 1000px;
 }
 
@@ -155,6 +155,9 @@
 .large-screen-br{
   display: none;
 }
+.hero-card-phone{
+  display: none;
+}
 @media screen and (min-width: 1900px) {
   .large-screen-br{
     display: block;
@@ -174,7 +177,17 @@
 }
 
 @media screen and (max-width: 1200px) {
-
+  .hero-card-phone{
+    display: flex;
+    justify-content: center;
+    max-width:90%;
+    margin: 0 auto;
+  }
+  .hero-card-phone .counter-container{
+  }
+  .hero-right{
+    display: none;
+  }
   .break-div-2{
     display: block;
   }
@@ -249,17 +262,18 @@
 @media screen and (max-width: 480px) {
   .hero-video-container2 {
     height:500px;
-    margin-top: 10px; 
+    padding:0px !important;
+    margin-top: 0px; 
   }
   
   .clipper-hero-left {
     opacity: 0.9;
   }
   .clippergoat-hero-price {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .clippergoat-hero-title {
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
     line-height: 1.2;
     margin-bottom: 20px;
     height: auto !important;

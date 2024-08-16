@@ -92,27 +92,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem;
+    width:100%
   }
 
-  .hamburger {
-    display: block;
-  }
-
+ 
+.hamburger {
+  display: block;
+  font-size: 20px;
+}
   .nav-content {
     position: absolute;
     top: 80px; 
     left: 0;
     width: 100%;
-    background-color: #111827f8;
     padding-bottom: 30px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: 0.3s ;
   }
 
   .nav-content.open {
-    max-height: calc(100vh - 100px); /* Adjust 100px to match your navbar height */
+    background-color: #111827f8;
+    max-height: calc(100vh - 100px); 
+    transition: max-height 0.3s ease-out;
     overflow-y: hidden;
   }
 

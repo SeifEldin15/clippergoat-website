@@ -183,6 +183,19 @@ function HeroSectionLandingHero() {
           </video>
         </Card3D>
       </div>
+
+      <div className="hero-card-phone ">
+    <section className="counter-container ">
+      <ChallengeCard />
+      {/* <div className="counter ">
+        <NewCounter targetDate="2024-09-25T00:00:00" />
+        <button className="chlng-btn " >
+          Challenge Accepted
+          <i class="fa-regular fa-arrow-right"></i>
+        </button> 
+      </div> */}
+    </section>
+  </div>
     </>  );
 }
 
