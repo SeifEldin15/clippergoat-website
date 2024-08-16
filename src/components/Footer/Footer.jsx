@@ -77,7 +77,7 @@ const Footer = () => {
               <a href="https://x.com/TheClipperGoat" target="_blank" rel="noopener noreferrer">
                 <i className="fa-brands fa-twitter"></i>
               </a>
-              <a href="https://x.com/TheClipperGoat" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@OFFICIALCLIPPERGOAT" target="_blank" rel="noopener noreferrer">
               <i class="fa-brands fa-youtube"></i>
               </a>
             </div>
@@ -137,6 +137,9 @@ const Footer = () => {
           <a href="https://x.com/TheClipperGoat" target="_blank" rel="noopener noreferrer">
             <i className="fa-brands fa-twitter"></i>
           </a>
+          <a href="https://www.youtube.com/@OFFICIALCLIPPERGOAT" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-youtube"></i>
+              </a>
         </div>
 
         <p className="footer-copyright">
