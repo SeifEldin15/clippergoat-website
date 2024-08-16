@@ -131,9 +131,16 @@ video::-webkit-media-controls {
 }
 
 .Container-Spacing-Lg {
-  margin-top: 100px;
+  margin-top: 70px !important;
 }
+.Container-Spacing-Lg-desktop{
+  margin-top: 70px !important;
 
+}
+.Container-Spacing-desktop{
+  margin-top: 50px !important;
+
+}
 .box-custom-shadow {
   box-shadow: 0 0 15px rgba(20, 110, 255, 0.5)
   
@@ -147,7 +154,14 @@ video::-webkit-media-controls {
   display: none;
 }
 @media (max-width: 750px) {
- 
+  .Container-Spacing-Lg-desktop{
+    margin-top: auto !important;
+  
+  }
+  .Container-Spacing-desktop{
+    margin-top: auto !important;
+  
+  }
     .break-div {
       display: block;
       line-height: 10px;

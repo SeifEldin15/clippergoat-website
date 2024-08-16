@@ -106,7 +106,7 @@ function PricingSection() {
   ];
 
   return (
-    <div className="pricing-section" id="pricing-section">
+    <div className="pricing-section Container-Spacing-Lg" id="pricing-section ">
       <h1 className="pricing-section__title custom-header-title">
         Choose Your <div className="break-div"><br /></div>
         <span className="information-container-header-span glow-text">Perfect Plan</span>
