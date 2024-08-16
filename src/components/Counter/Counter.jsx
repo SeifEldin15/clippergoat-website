@@ -30,7 +30,6 @@ const CounterWrapper = styled.div`
   `}
 
   @media screen and (max-width: 410px) {
-    padding: 10px;
     margin-top: 15px;
   }
 `;
@@ -38,52 +37,62 @@ const CounterWrapper = styled.div`
 const DigitBoxContainer = styled.div`
   display: flex;
   justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+
+  @media screen and (max-width: 700px) {
+    gap: 5px;
+    margin: 20px 0;
+  }
+
+  @media screen and (max-width: 400px) {
+    gap: 3px;
+    margin: 15px 0;
+  }
 `;
 
 const TimeUnit = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 8px;
-
-  @media screen and (max-width: 410px) {
-    margin: 0 6px;
-  }
 `;
 
 const DigitBox = styled.div`
- box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
-  font-size: 1.7em;
-  color:white
-  text-transform: uppercase;  font-weight: bold;
-  padding: 6px;
+  font-size: 1.8em;
+  color: white;
+  font-weight: bold;
+  padding: 4px 0px;
   background-color: #2a2a2a00;
   border-radius: 5px;
-  min-width: 70px;  min-width: 60px;
+  min-width: 70px;
   text-align: center;
   transition: all 0.3s ease;
-  -webkit-text-stroke: 1.5px #3a78ff;
-  animation: ${neonPulse} 1.5s infinite;
+  box-shadow: 0 0 11px 5px rgba(20, 110, 255, 0.2);
   
-  @media screen and (min-width: 1900px) {
-    min-width: 80px;
-    font-size: 30px;
-    padding: 8px;
+  @media screen and (max-width: 700px) {
+    font-size: 1.4em;
+    min-width: 60px;
+    padding: 2px 0px;
   }
-  @media screen and (max-width: 410px) {
-    font-size: 22px;
-    padding: 5px;
-    min-width: 45px;
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.1em;
+    min-width: 50px;
+    padding: 1px 0px;
   }
 `;
 
 const TimeLabel = styled.p`
-  font-size: 14px;
-  font-weight: bold;
-  display: block;
+  font-size: 0.7em;
+  color: rgb(35, 119, 255);
+  text-transform: uppercase;
 
-  @media screen and (max-width: 410px) {
-    font-size: 13px;
+  @media screen and (max-width: 700px) {
+    font-size: 0.6em;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 0.5em;
   }
 `;
 
@@ -124,6 +133,7 @@ const AnimatedCounter = ({ targetDate }) => {
   const formatNumber = (num) => num.toString().padStart(2, '0');
 
   return (
+  
     <div className='counter-container'>
       <div className='counter-content'>
         <div className="landing-counter-container-header">
@@ -131,30 +141,31 @@ const AnimatedCounter = ({ targetDate }) => {
           <p className='glow-text-test'>ClipperGoat Challenge!</p>
         </div>
         <div className="counter-content-header">
-          <CounterWrapper shake={shakeCounter}>
-            <DigitBoxContainer>
-              <TimeUnit>
-                <DigitBox>{formatNumber(timeLeft.days || 0)}</DigitBox>
-                <TimeLabel>days</TimeLabel>
-              </TimeUnit>
-              <TimeUnit>
-                <DigitBox>{formatNumber(timeLeft.hours || 0)}</DigitBox>
-                <TimeLabel>hours</TimeLabel>
-              </TimeUnit>
-              <TimeUnit>
-                <DigitBox>{formatNumber(timeLeft.minutes || 0)}</DigitBox>
-                <TimeLabel>minutes</TimeLabel>
-              </TimeUnit>
-              <TimeUnit>
-                <DigitBox>{formatNumber(timeLeft.seconds || 0)}</DigitBox>
-                <TimeLabel>seconds</TimeLabel>
-              </TimeUnit>
-            </DigitBoxContainer>
-          </CounterWrapper>
-        </div>
+      <CounterWrapper shake={shakeCounter}>
+          <DigitBoxContainer>
+        <TimeUnit>
+          <DigitBox>{formatNumber(timeLeft.days || 0)}</DigitBox>
+          <TimeLabel>days</TimeLabel>
+        </TimeUnit>
+        <TimeUnit>
+          <DigitBox>{formatNumber(timeLeft.hours || 0)}</DigitBox>
+          <TimeLabel>hours</TimeLabel>
+        </TimeUnit>
+        <TimeUnit>
+          <DigitBox>{formatNumber(timeLeft.minutes || 0)}</DigitBox>
+          <TimeLabel>minutes</TimeLabel>
+        </TimeUnit>
+        <TimeUnit>
+          <DigitBox>{formatNumber(timeLeft.seconds || 0)}</DigitBox>
+          <TimeLabel>seconds</TimeLabel>
+        </TimeUnit>
+      </DigitBoxContainer>
+    </CounterWrapper>
+    </div>
       </div>
     </div>
   );
 };
+
 
 export default AnimatedCounter;
