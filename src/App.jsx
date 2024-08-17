@@ -6,7 +6,7 @@ import Terms from "./Pages/InfoPages/Terms";
 import Refund from "./Pages/InfoPages/Refund";
 import Leaderboard from "./Pages/LeaderBoard/LeaderBoard";
 import ContactUs from "./Pages/ContactUs/ContactUs";
-import FontAwesome from "./components/FontAwesome/FontAwesome";
+// import FontAwesome from "./components/FontAwesome/FontAwesome";
 import StarBackground from "./assets/star.mp4";
 
 import "./App.css";
@@ -14,7 +14,7 @@ import "./App.css";
 function App() {
   return (
     <>
-    <FontAwesome />
+    {/* <FontAwesome /> */}
       <div className="video-container">
         <video playsInline autoPlay muted loop className="background-video">
           <source src={StarBackground} type="video/mp4" />

@@ -1,16 +1,23 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, Suspense, lazy } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import HeroSectionLanding from "../../components/HeroSectionLanding/HeroSectionLanding";
-import PricingSection from "../../components/PricingSection/PricingSection";
-import LogoSlideshow from "../../components/LogoSlideshow/LogoSlideshow";
-import BackToTopPhone from "../../components/BackToTopPhone/BackToTopPhone";
-import ServiceContainer from "../../components/ServiceContainer/ServiceContainer";
-import FAQ from "../../components/FAQ/FAQ";
-import Slider from "../../components/Slider/Slider";
-import ChallengeCard from "../../components/ChallengeCard/ChallengeCard";
-import Slideshow from "../../components/Slideshow/Slideshow";
+
+const PricingSection = lazy(() => import('../../components/PricingSection/PricingSection'));
+
+const LogoSlideshow = lazy(() => import('../../components/LogoSlideshow/LogoSlideshow'));
+
+const BackToTopPhone = lazy(() => import('../../components/BackToTopPhone/BackToTopPhone'));
+const ServiceContainer = lazy(() => import('../../components/ServiceContainer/ServiceContainer'));
+
+const FAQ = lazy(() => import('../../components/FAQ/FAQ'));
+
+const Slider = lazy(() => import('../../components/Slider/Slider'));
+
+// import ChallengeCard from "../../components/ChallengeCard/ChallengeCard";
+const Slideshow = lazy(() => import('../../components/Slideshow/Slideshow'));
+
 import SlideshowTop from "../../components/SlideshowTop/SlideshowTop";
-import Footer from "../../components/Footer/Footer";
+const Footer = lazy(() => import('../../components/Footer/Footer'));
 
 import "./Home.css";
 
@@ -187,6 +194,7 @@ const Home = () => {
   };
 
   return (
+
     < 
     // style=
     // {{
@@ -194,6 +202,7 @@ const Home = () => {
     //   margin:"0 auto"
     // }}
     >
+    <Suspense fallback={<div>Loading...</div>}>
 <div className="newoverlay"></div>
     
     <BackToTopPhone />
@@ -269,6 +278,7 @@ const Home = () => {
         </div>
       </div>
       <Footer />
+    </Suspense>
     </>
   );
 };
