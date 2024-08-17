@@ -19,18 +19,6 @@
 .home-header h1 {
   color: white !important;
 }
-
-/* 
-
-.AnimateCounterHomePhone {
-  display: none;
-  flex-direction: column;
-  width: 100%;
-  align-items: center; 
-  margin-top: 30px;
-  color: white !important;
-} */
-
 .getoffersmall {
   display: none;
   margin-top: 40px;
@@ -84,7 +72,6 @@
   width:100%;
   display: none;
 }
-
 .challenge-btn-phone{
   margin-top:20px;
   display: flex;
@@ -112,7 +99,4 @@
     height: 310px;
     max-width: 280px;
   }
-  /* .challenge-card-phone{
-    height: 340px;
-  } */
 }
