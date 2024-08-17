@@ -196,11 +196,6 @@ const Home = () => {
   return (
 
     < 
-    // style=
-    // {{
-    //   maxWidth:"1400px",
-    //   margin:"0 auto"
-    // }}
     >
     <Suspense fallback={<div>Loading...</div>}>
 <div className="newoverlay"></div>
@@ -208,7 +203,6 @@ const Home = () => {
     <BackToTopPhone />
       <div className="home-hero-video">
 
-        {/* <div className="overlay"></div> */}
         <Navbar />
         <HeroSectionLanding />
       </div>

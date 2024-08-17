@@ -178,7 +178,6 @@
 }
 .pricing-card-container--with-normal {
   max-height:1000px !important;
-  margin-bottom: -90px;
   display: flex;
   align-items: center;
 }
