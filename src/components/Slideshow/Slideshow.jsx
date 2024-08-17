@@ -182,10 +182,10 @@ const Slideshow = () => {
   return (
     <div className="Slideshow-wrapper">
       <div className="Slideshow-Controls">
-        <button onClick={handlePrev} className="Slideshow-Button" disabled={currentSlide === 0}>
+        <button onClick={handlePrev} className="Slideshow-Button" disabled={currentSlide === 0} aria-label="previous">
           <i className="fa-solid fa-chevron-left"></i>
         </button>
-        <button onClick={handleNext} className="Slideshow-Button" disabled={currentSlide === maxSlide}>
+        <button onClick={handleNext} className="Slideshow-Button" disabled={currentSlide === maxSlide} aria-label="next">
           <i className="fa-solid fa-chevron-right"></i>
         </button>
       </div>

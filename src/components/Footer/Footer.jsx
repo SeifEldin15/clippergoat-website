@@ -65,19 +65,19 @@ const Footer = () => {
             </p>
 
             <div className="social-icons social-icons-normal">
-              <a href="https://www.instagram.com/officialclippergoat" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/officialclippergoat" target="_blank" rel="noopener noreferrer" aria-label="Go to Instagram">
                 <i className="fa-brands fa-instagram"></i>
               </a>
               <a href="https://www.facebook.com/profile.php?id=61563942300945" target="_blank" rel="noopener noreferrer">
                 <i className="fa-brands fa-facebook-f"></i>
               </a>
-              <a href="https://www.tiktok.com/@clippergoat.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.tiktok.com/@clippergoat.com" target="_blank" rel="noopener noreferrer" aria-label="Go to TikTok">
                 <i className="fa-brands fa-tiktok"></i>
               </a>
-              <a href="https://x.com/TheClipperGoat" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/TheClipperGoat" target="_blank" rel="noopener noreferrer" aria-label="Go to X">
                 <i className="fa-brands fa-twitter"></i>
               </a>
-              <a href="https://www.youtube.com/@OFFICIALCLIPPERGOAT" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@OFFICIALCLIPPERGOAT" target="_blank" rel="noopener noreferrer" aria-label="Go to YouTube">
               <i class="fa-brands fa-youtube"></i>
               </a>
             </div>
@@ -125,19 +125,19 @@ const Footer = () => {
         </div>
 
         <div className="social-icons social-icons-phone">
-          <a href="https://www.instagram.com/officialclippergoat" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/officialclippergoat" target="_blank" rel="noopener noreferrer" aria-label="Go to Instagram">
             <i className="fa-brands fa-instagram"></i>
           </a>
-          <a href="https://www.facebook.com/profile.php?id=61563942300945" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/profile.php?id=61563942300945" target="_blank" rel="noopener noreferrer" aria-label="Go to FaceBook">
             <i className="fa-brands fa-facebook-f"></i>
           </a>
-          <a href="https://www.tiktok.com/@clippergoat.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.tiktok.com/@clippergoat.com" target="_blank" rel="noopener noreferrer" aria-label="Go to TikTok">
             <i className="fa-brands fa-tiktok"></i>
           </a>
-          <a href="https://x.com/TheClipperGoat" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/TheClipperGoat" target="_blank" rel="noopener noreferrer" aria-label="Go to X">
             <i className="fa-brands fa-twitter"></i>
           </a>
-          <a href="https://www.youtube.com/@OFFICIALCLIPPERGOAT" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.youtube.com/@OFFICIALCLIPPERGOAT" target="_blank" rel="noopener noreferrer" aria-label="Go to YouTube">
               <i class="fa-brands fa-youtube"></i>
               </a>
         </div>

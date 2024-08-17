@@ -21,25 +21,25 @@ const PricingCard = ({ title, price, description, features, soonToCome, popular 
       to="/reviving-clips" 
     />
    </div>
-    <ul className="pricing-card__features-list">
+    <div className="pricing-card__features-list">
       {features.map((feature, index) => (
         <div className="pricing-card__soon-to-come-container">
           <i className="fa-solid fa-check pricing-card__soon-to-come-check"></i>
-          <li key={index}>{feature}</li>
+          <p key={index}>{feature}</p>
         </div>
       ))}
-    </ul>
-    <ul className="pricing-card__soon-to-come-list">
+    </div>
+    <div className="pricing-card__soon-to-come-list">
       <div>
         <strong>Soon to Come:</strong>
       </div>
       {soonToCome.map((feature, index) => (
         <div className="pricing-card__soon-to-come-container">
           <i className="fa-solid fa-check pricing-card__soon-to-come-check"></i>
-          <li key={index}>{feature}</li>
+          <p key={index}>{feature}</p>
         </div>
       ))}
-    </ul>
+    </div>
   </div>
 );
 

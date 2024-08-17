@@ -61,12 +61,12 @@
 
 .Home-Services-Container-Header-First {
   font-size: 24px;
-  color: white;
+  color: white !important;
   font-weight: 700;
 }
 
 .Home-Services-Container-Header-Second {
-  color: rgb(115, 115, 115);
+  color: rgb(235, 235, 235);
   font-size: 18px;
   font-weight: 700;
 }

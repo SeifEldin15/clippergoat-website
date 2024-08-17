@@ -1,6 +1,6 @@
 .footer {
   background-color: rgba(0, 0, 0, 0);
-  color: #9b9b9b !important;
+  color: #ffffff !important;
   position: relative;
   padding: 4rem 1rem;
 }
@@ -43,7 +43,7 @@
 }
 
 .footer-links a {
-  color: #9b9b9b;
+  color: #ffffff;
   text-decoration: none;
   transition: 0.2s ease;
 }

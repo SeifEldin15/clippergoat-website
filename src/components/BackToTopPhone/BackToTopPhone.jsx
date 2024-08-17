@@ -37,7 +37,7 @@ const BackToTopPhone = () => {
   };
 
   return (
-    <button onClick={handleBackToTop} className={`BackToTopPhone ${isSmallScreen ? '' : ''} ${isScrolled ? 'scrolled-backtotop' : ''}`}>
+    <button onClick={handleBackToTop} className={`BackToTopPhone ${isSmallScreen ? '' : ''} ${isScrolled ? 'scrolled-backtotop' : ''}`} aria-label="back to top">
                <span className="sr-only">Back to top</span>
                <i className="fa-solid fa-chevron-up"></i>
     </button>
