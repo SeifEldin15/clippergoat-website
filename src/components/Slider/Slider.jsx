@@ -71,7 +71,7 @@ const Slider = () => {
               <div className="slide-content212">
                 <div className="slideoverlay"></div>
                 <img 
-                preload="true"
+                loading="lazy"                
                 src={image.src} alt={`Slide212 ${index + 1}`} />
               </div>
             </div>

@@ -198,7 +198,7 @@ const Slideshow = () => {
           >
             <div className='Slideshowimgcontainer'>
               <img 
-                preload="true"
+                loading="lazy"
                 src={slide.image} alt={slide.title} className='Slideshowimg'/>
             </div>
             <div className="SlideShow-Overlay">
