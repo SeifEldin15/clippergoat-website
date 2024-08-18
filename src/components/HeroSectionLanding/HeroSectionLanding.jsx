@@ -96,11 +96,11 @@ function HeroSectionLandingHero() {
 
   const heroVideoSources = [
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/9_16 hero-BSZAWict.mp4",
+      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/9;16 Hero.mp4",
       media: "(max-width: 600px)"
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Updated final-BDiza0Ii.mp4",
+      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Updated Final.mp4",
       media: "(min-width: 601px)"
     }
   ];

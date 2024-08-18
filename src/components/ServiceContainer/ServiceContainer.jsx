@@ -1,19 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import ServiceProgress from "../ServiceProgress/ServiceProgress";
 import "./ServiceContainer.css";
-
-// import cleanvid from "../../assets/videos/clean.mov";
-// import ripvid from "../../assets/videos/rip finished edit.mov";
-// import repost from "../../assets/videos/post CG lp.mov";
-// import repeatvid from "../../assets/videos/Repeat fin CG.mov";
-// import rinsephone from "../../assets/videos/rinse 640 x 480.mov";
-// import ripvidphone from "../../assets/videos/rip  640 x 480.mov";
-// import repostphone from "../../assets/videos/post CG lp.mov";``
-// import repeatvidphone from "../../assets/videos/repeat  640 x 480.mov";
-// import rinsesmall from "../../assets/videos/rinse 320 x 650.mov";
-// import ripvidsmall from "../../assets/videos/rip 320 x 650.mov";
-// import repostsmall from "../../assets/videos/post 320 x 650 size.mov";
-// import repeatvidsmall from "../../assets/videos/320 x 650 repeat.mov";
+ 
 
 const ServiceContainer = () => {
   const scrollToPricing = () => {
@@ -40,28 +28,28 @@ const ServiceContainer = () => {
       const newVideoSources = {
         rip:
           window.innerWidth < 500
-            ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/rip 320 x 650-DvQx3Yvz.mov"
+            ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/rip 320 x 650.mov"
             : window.innerWidth < 1000
-            ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/rip 640 x 480-Cx9-7NU6.mov"
-            : "https://clippergoat.nyc3.digitaloceanspaces.com/assets/rip finished edit-CHY1ESq7.mov",
+            ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/rip 640 x 480.mov"
+            : "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Rip Finished Edit.mp4",
         rinse:
           window.innerWidth < 500
-            ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/rinse 320 x 650-TzfPNNYe.mov"
+            ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/rinse 320 x 650.mov"
             : window.innerWidth < 1000
-            ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/rinse 640 x 480-CPu41I64.mov"
-            : "https://clippergoat.nyc3.digitaloceanspaces.com/assets/clean-D6zNrOsF.mov",
+            ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/rinse 640 x 480.mov"
+            : "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Clean.mp4",
         repost:
           window.innerWidth < 500
             ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/post 320 x 650 size-SbuDCEKO.mov"
             : window.innerWidth < 1000
-            ? ""
+            ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/post 640 x 480 (1).mov"
             : "https://clippergoat.nyc3.digitaloceanspaces.com/assets/post CG lp-Dyd8q8-O.mov",
         repeat:
           window.innerWidth < 500
-            ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/320 x 650 repeat-D8JE84W-.mov"
+            ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Repeat Fin Cg.mp4"
             : window.innerWidth < 1000
             ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/repeat 640 x 480-IiEjk4gY.mov"
-            : "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Repeat fin CG-BG2OotUr.mov",
+            : "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Repeat Fin Cg.mp4",
       };
       setVideoSources(newVideoSources);
     };
