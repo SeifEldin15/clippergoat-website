@@ -117,7 +117,7 @@ function HeroSectionLandingHero() {
   <div className="hero-left">
     <section className="clippergoat-hero">
       <div className="clipper-hero-left">
-        {/* <h1 className="clippergoat-hero-title">
+        <h1 className="clippergoat-hero-title">
           <span className="clippergoat-highlight glow-text">
             Unlock Endless Virality <div className="break-div-2"></div> <br className="large-screen-br" /> with ClipperGoat!
           </span>
@@ -129,7 +129,7 @@ function HeroSectionLandingHero() {
           Repurpose your most viral clips 1000 times a month using our
           AI-powered Short Form Editor. Perfect for any industry, ClipperGoat
           AI transforms your content into fresh, engaging videos in minutes.
-        </p> */}
+        </p>
         <button
           className="StartClipping"
           onClick={scrollToPricing}
