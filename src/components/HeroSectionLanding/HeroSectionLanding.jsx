@@ -87,7 +87,7 @@ function HeroSectionLandingHero() {
         videoRef.current.play();
       }
     };
-
+// agsdgds
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
