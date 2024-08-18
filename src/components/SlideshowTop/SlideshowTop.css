@@ -21,14 +21,15 @@
 }
 
 .loop-slider .inner {
-  display: flex;
-  width: fit-content;
-  will-change: transform;
   animation-name: loop;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: normal;
   animation-duration: var(--duration);
+  display: flex;
+  width: fit-content;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .slide {
@@ -37,9 +38,21 @@
   height: 360.65px;
   position: relative;
   text-align: center;
-  contain: layout style;
+  contain: content;
 }
 
+.slide img, .slide video {
+  object-fit: cover;
+  box-shadow: 0 0.1rem 0.2rem rgb(0 0 0 / 20%), 0 0.1rem 0.5rem rgb(0 0 0 / 30%), 0 0.2rem 1.5rem rgb(0 0 0 / 40%);
+  width: 260px;
+  height: 360.65px;
+  border-radius: 15px;
+  display: block;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+  will-change: transform, opacity;
+}
+ 
 .slidetopshow-container-title {
   margin: 0 auto;
   width: 80%;

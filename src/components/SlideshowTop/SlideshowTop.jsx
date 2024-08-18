@@ -1,28 +1,27 @@
-import React, { useState, useRef, useEffect, memo } from 'react';
+import React, { useState, useRef, useEffect, memo, useCallback } from 'react';
 import './SlideshowTop.css';
 
-const DURATION = 24000;
+const DURATION = 29000;
 
 const InfiniteLoopSlider = memo(({ children, duration, direction }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef(null);
 
   useEffect(() => {
     const slider = sliderRef.current;
+    let start = performance.now();
     let animationFrameId;
 
-    const animate = () => {
-      const progress = (performance.now() % duration) / duration;
-      const translateX = direction === 'right' 
-        ? -25 + progress * 25 
+    const animate = (time) => {
+      const progress = ((time - start) % duration) / duration;
+      const translateX = direction === 'right'
+        ? -25 + progress * 25
         : -progress * 25;
-      
+     
       slider.style.transform = `translateX(${translateX}%)`;
       animationFrameId = requestAnimationFrame(animate);
     };
 
     animationFrameId = requestAnimationFrame(animate);
-
     return () => cancelAnimationFrame(animationFrameId);
   }, [duration, direction]);
 
@@ -31,16 +30,18 @@ const InfiniteLoopSlider = memo(({ children, duration, direction }) => {
       <div className='inner' ref={sliderRef}>
         {children}
         {children}
-
       </div>
     </div>
   );
+}, (prevProps, nextProps) => {
+  return prevProps.children === nextProps.children &&
+         prevProps.duration === nextProps.duration &&
+         prevProps.direction === nextProps.direction;
 });
 
 const ImageSlide = memo(({ src, title, description }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-
-  const handleLoad = () => setIsLoaded(true);
+  const handleLoad = useCallback(() => setIsLoaded(true), []);
 
   return (
     <div className='slide'>
@@ -48,7 +49,6 @@ const ImageSlide = memo(({ src, title, description }) => {
         <video
           src={src}
           autoPlay
-          preload="true"
           loop
           muted
           playsInline
@@ -58,7 +58,6 @@ const ImageSlide = memo(({ src, title, description }) => {
         />
       ) : (
         <img
-          preload="true"
           src={src}
           alt={`slidetop ${title}`}
           className="slide-media"
@@ -74,6 +73,10 @@ const ImageSlide = memo(({ src, title, description }) => {
       )}
     </div>
   );
+}, (prevProps, nextProps) => {
+  return prevProps.src === nextProps.src &&
+         prevProps.title === nextProps.title &&
+         prevProps.description === nextProps.description;
 });
 
 const SliderTop = ({ images, direction }) => {
@@ -93,7 +96,6 @@ const SliderTop = ({ images, direction }) => {
       );
       setVisibleImages(loadedImages);
     };
-
     loadImages();
   }, [images]);
 
@@ -115,4 +117,4 @@ const SliderTop = ({ images, direction }) => {
   );
 };
 
-export default SliderTop;
+export default memo(SliderTop);
