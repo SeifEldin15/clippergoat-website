@@ -2,6 +2,8 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import "./HeroSectionLanding.css";
 import ChallengeCard from "../ChallengeCard/ChallengeCard";
+import vid1 from "../../assets/videos/9;16 Hero.mp4";
+import vid2 from "../../assets/videos/Updated Final.mp4";
 
 function Card3D({ children }) {
   const x = useMotionValue(0);
@@ -96,11 +98,11 @@ function HeroSectionLandingHero() {
 
   const heroVideoSources = [
     {
-      src: "../../assets/videos/9;16 Hero.mp4",
+      src: vid1,
       media: "(max-width: 600px)"
     },
     {
-      src: "../../assets/videos/Updated Final.mp4",
+      src: vid2,
       media: "(min-width: 601px)"
     }
   ];
