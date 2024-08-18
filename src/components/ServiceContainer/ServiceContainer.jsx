@@ -28,7 +28,7 @@ const ServiceContainer = () => {
       const newVideoSources = {
         rip:
           window.innerWidth < 500
-            ? "../../assets/videos/9;16 Hero.mp4"
+            ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/rip 320 x 650.mov"
             : window.innerWidth < 1000
             ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/rip 640 x 480.mov"
             : "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Rip Finished Edit.mp4",
