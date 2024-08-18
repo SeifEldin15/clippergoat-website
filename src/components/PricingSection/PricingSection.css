@@ -305,8 +305,9 @@
 
   .pricing-card__features-list,
   .pricing-card__soon-to-come-list {
-    font-size: 12px;
+    font-size: 15px;
     padding: 10px;
+    line-height: 30px;
   }
 
   .pricing-card__get-started-btn {

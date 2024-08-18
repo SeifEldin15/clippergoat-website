@@ -24,7 +24,7 @@ const slides = [
   {
     
     title: 'Agency & Course Owners',
-    content: 'Elevate your educational content and promotional materials with ClipperGoats AI tools. Keep your training programs fresh and engaging by continuously updating your video content.',
+    content: "Elevate your educational content and promotional materials with ClipperGoat's AI tools. Keep your training programs fresh and engaging by continuously updating your video content.",
     image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/spencer__3_-THllFHyw.webp"
   },
   {
@@ -81,7 +81,7 @@ const slides = [
   {
     
     title: 'Gaming',
-    content: 'Repurpose gameplay highlights and tutorials to keep your content fresh. Engage your gaming community with ClipperGoats AI tools.',
+    content: "Repurpose gameplay highlights and tutorials to keep your content fresh. Engage your gaming community with ClipperGoat's AI tools.",
     image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Gaming Reels-Cxt6oR_t.png"
   },
   {
@@ -100,7 +100,7 @@ const slides = [
   {
     
     title: 'No Face Channels',
-    content: 'Create and edit videos without revealing your identity. Perfect for channels focusing on gaming, tutorials, and more, using ClipperGoats AI capabilities.',
+    content: "Create and edit videos without revealing your identity. Perfect for channels focusing on gaming, tutorials, and more, using ClipperGoat's AI capabilities.",
     image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/No Face Channels-BF6rTK4v.webp"
   },
   {

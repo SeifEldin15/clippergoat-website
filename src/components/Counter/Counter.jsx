@@ -30,25 +30,25 @@ const CounterWrapper = styled.div`
   `}
 
   @media screen and (max-width: 410px) {
-    margin-top: 15px;
+    margin-top: 5px;
+      padding: 0px;
+
   }
 `;
 
 const DigitBoxContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
+    gap: 10px;
+  margin:0px 0;
 
-  @media screen and (max-width: 700px) {
-    gap: 5px;
-    margin: 20px 0;
-  }
+  // @media screen and (max-width: 700px) {
+  //   gap: 5px;
+  //   margin: 5px 0;
+  // }
 
-  @media screen and (max-width: 400px) {
-    gap: 3px;
-    margin: 15px 0;
-  }
+  // @media screen and (max-width: 400px) {
+  // }
 `;
 
 const TimeUnit = styled.div`

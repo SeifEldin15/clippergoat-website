@@ -83,7 +83,7 @@
   }
   
   .landing-counter-container-header p {
-    font-size: 24px;
+    font-size: 25px;
   }
   .landing-leader-counter-container-header p:first-of-type {
     margin-top:50px;
@@ -97,10 +97,17 @@
     font-size: 14px;
   }
 }
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
 
   .landing-counter-container-header p{
-    font-size:22px ;
+    font-size:25px ;
+  }
+
+} */
+@media screen and (max-width: 374px) {
+
+  .landing-counter-container-header p{
+    font-size:21px ;
   }
 
 }

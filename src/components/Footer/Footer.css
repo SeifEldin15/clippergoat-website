@@ -4,7 +4,9 @@
   position: relative;
   padding: 4rem 1rem;
 }
- 
+ .LogoFooter{
+  width:170px;
+ }
 .footer-container {
   max-width: 90%;
   margin: 0 auto;

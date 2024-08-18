@@ -82,7 +82,7 @@ const InfoCard = () => {
 
         </p>
         <p>
-          <span className="check-circle">✓</span> that finallMetadata Cleaner: Clean data and repost old content to rejuvenate engagement.
+          <span className="check-circle">✓</span> that final Metadata Cleaner: Clean data and repost old content to rejuvenate engagement.
 
         </p>
         <p>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Footer.css";
-import Logo from "../Logo/Logo";
+import LogoFooter from "../../assets/NEW-GOAT222 (1).webp";
 
 const Footer = () => {
   const location = useLocation();
@@ -49,10 +49,10 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-info">
             <div className="footer-logo">
-              <Logo />
+              <img src={LogoFooter} className="LogoFooter" alt="" />
             </div>
             <p className="footer-description">
-              Clippergoat is an AI-powered software company specializing in editing social media content to enable seamless reposting without detection, helping creators maintain originality and engagement while efficiently managing content reuse.
+            Yes, we offer a 1$ trail that includes 30 credits. This allows you to start using Clippergoat's features at Virtually no cost and upgrade as you grow.
             </p>
 
             <div className="social-icons social-icons-normal">
