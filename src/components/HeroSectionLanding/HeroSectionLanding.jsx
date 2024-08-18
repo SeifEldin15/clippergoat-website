@@ -105,8 +105,8 @@ function HeroSectionLandingHero() {
       src: vid2,
       media: "(min-width: 601px)"
     }
-  ];
-
+  ]; 
+  
   return (
     <>
 
