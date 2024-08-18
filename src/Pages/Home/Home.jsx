@@ -15,8 +15,8 @@ const Slider = lazy(() => import('../../components/Slider/Slider'));
 
 // import ChallengeCard from "../../components/ChallengeCard/ChallengeCard";
 const Slideshow = lazy(() => import('../../components/Slideshow/Slideshow'));
+const SlideshowTop = lazy(() => import('../../components/SlideshowTop/SlideshowTop'));
 
-import SlideshowTop from "../../components/SlideshowTop/SlideshowTop";
 const Footer = lazy(() => import('../../components/Footer/Footer'));
 
 import "./Home.css";
@@ -198,7 +198,6 @@ const Home = () => {
     < 
     >
     <Suspense fallback={<div>Loading...</div>}>
-<div className="newoverlay"></div>
     
     <BackToTopPhone />
       <div className="home-hero-video">
