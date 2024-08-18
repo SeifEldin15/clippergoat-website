@@ -1,10 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import video1221 from "../../assets/videos/9;16 Hero.mp4";
-import video122121412 from "../../assets/videos/Updated Final.mp4";
 import "./HeroSectionLanding.css";
 import ChallengeCard from "../ChallengeCard/ChallengeCard";
-
 
 function Card3D({ children }) {
   const x = useMotionValue(0);
@@ -90,7 +87,7 @@ function HeroSectionLandingHero() {
         videoRef.current.play();
       }
     };
-// agsdgds
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -99,11 +96,11 @@ function HeroSectionLandingHero() {
 
   const heroVideoSources = [
     {
-      src: video1221,
+      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/9_16 hero-BSZAWict.mp4",
       media: "(max-width: 600px)"
     },
     {
-      src: video122121412,
+      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Updated final-BDiza0Ii.mp4",
       media: "(min-width: 601px)"
     }
   ];
