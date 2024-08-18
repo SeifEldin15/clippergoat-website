@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import React from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Footer.css";
 import Logo from "../Logo/Logo";
 
@@ -7,25 +7,16 @@ const Footer = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-
-
-  const scrollToSection = (largeScreenY, avgScreenY, mediumScreenY, smallScreenY) => {
-    const targetY =
-      screenSize === 'small' ? smallScreenY :
-      screenSize === 'medium' ? mediumScreenY :
-      screenSize === 'avg' ? avgScreenY :
-      largeScreenY;
-
-    // Scroll to top first, then navigate and scroll to section
-    window.scrollTo(0, 0); // Scroll to top immediately
+  const scrollToSection = (targetY) => {
+    window.scrollTo(0, 0);
     setTimeout(() => {
       if (location.pathname !== '/') {
         navigate('/');
         setTimeout(() => {
-          slowScrollTo(targetY, 1500); // 1.5 seconds duration for scrolling
+          slowScrollTo(targetY, 1500);
         }, 1000);
       } else {
-        slowScrollTo(targetY, 1500); // 1.5 seconds duration for scrolling
+        slowScrollTo(targetY, 1500);
       }
     }, 100);
   };
@@ -68,7 +59,7 @@ const Footer = () => {
               <a href="https://www.instagram.com/officialclippergoat" target="_blank" rel="noopener noreferrer" aria-label="Go to Instagram">
                 <i className="fa-brands fa-instagram"></i>
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61563942300945" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/profile.php?id=61563942300945" target="_blank" rel="noopener noreferrer" aria-label="Go to Facebook">
                 <i className="fa-brands fa-facebook-f"></i>
               </a>
               <a href="https://www.tiktok.com/@clippergoat.com" target="_blank" rel="noopener noreferrer" aria-label="Go to TikTok">
@@ -78,7 +69,7 @@ const Footer = () => {
                 <i className="fa-brands fa-twitter"></i>
               </a>
               <a href="https://www.youtube.com/@OFFICIALCLIPPERGOAT" target="_blank" rel="noopener noreferrer" aria-label="Go to YouTube">
-              <i class="fa-brands fa-youtube"></i>
+                <i className="fa-brands fa-youtube"></i>
               </a>
             </div>
           </div>
@@ -86,34 +77,34 @@ const Footer = () => {
 
         <ul className="footer-links hover-effect-links">
           <li>
-            <NavLink exact to="/leaderboard" onClick={() => scrollToSection(0)}>
+            <Link exact to="/leaderboard" onClick={() => scrollToSection(0)}>
               Affiliates
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink exact to="/investors" onClick={() => scrollToSection(0)}>
+            <Link exact to="/investors" onClick={() => scrollToSection(0)}>
               Investors
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink exact to="/terms" oonClick={() => scrollToSection(0)}>
+            <Link exact to="/terms" onClick={() => scrollToSection(0)}>
               Terms & Conditions
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink exact to="/privacy"onClick={() => scrollToSection(0)}>
+            <Link exact to="/privacy" onClick={() => scrollToSection(0)}>
               Privacy Policy
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink exact to="/refund" onClick={() => scrollToSection(0)}>
+            <Link exact to="/refund" onClick={() => scrollToSection(0)}>
               Refund Policy
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink exact to="/contactus" onClick={() => scrollToSection(0)}>
+            <Link exact to="/contactus" onClick={() => scrollToSection(0)}>
               Contact Us
-            </NavLink>
+            </Link>
           </li>
         </ul>
 
@@ -128,7 +119,7 @@ const Footer = () => {
           <a href="https://www.instagram.com/officialclippergoat" target="_blank" rel="noopener noreferrer" aria-label="Go to Instagram">
             <i className="fa-brands fa-instagram"></i>
           </a>
-          <a href="https://www.facebook.com/profile.php?id=61563942300945" target="_blank" rel="noopener noreferrer" aria-label="Go to FaceBook">
+          <a href="https://www.facebook.com/profile.php?id=61563942300945" target="_blank" rel="noopener noreferrer" aria-label="Go to Facebook">
             <i className="fa-brands fa-facebook-f"></i>
           </a>
           <a href="https://www.tiktok.com/@clippergoat.com" target="_blank" rel="noopener noreferrer" aria-label="Go to TikTok">
@@ -138,8 +129,8 @@ const Footer = () => {
             <i className="fa-brands fa-twitter"></i>
           </a>
           <a href="https://www.youtube.com/@OFFICIALCLIPPERGOAT" target="_blank" rel="noopener noreferrer" aria-label="Go to YouTube">
-              <i class="fa-brands fa-youtube"></i>
-              </a>
+            <i className="fa-brands fa-youtube"></i>
+          </a>
         </div>
 
         <p className="footer-copyright">
