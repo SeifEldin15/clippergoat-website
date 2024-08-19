@@ -30,7 +30,7 @@ const CounterWrapper = styled.div`
   `}
 
   @media screen and (max-width: 410px) {
-    margin-top: 15px;
+    // margin-top: 15px;
       padding: 0px;
 
   }
@@ -56,6 +56,7 @@ const TimeUnit = styled.div`
   box-shadow: 0 0 11px 5px rgba(20, 110, 255, 0.2);
   flex-direction: column;
   align-items: center;
+  text-align: center; // Add this line
 `;
 
 const DigitBox = styled.div`
@@ -68,6 +69,9 @@ const DigitBox = styled.div`
   min-width: 70px;
   text-align: center;
   transition: all 0.3s ease;
+  display: flex; // Add this line
+  justify-content: center; // Add this line
+  align-items: center; // Add this line
   
   @media screen and (max-width: 700px) {
     font-size: 1.4em;
@@ -76,9 +80,9 @@ const DigitBox = styled.div`
   }
 
   @media screen and (max-width: 400px) {
-    font-size: 1.1em;
+    font-size: 1.2em;
     min-width: 50px;
-    padding: 1px 0px;
+    padding: 2px 0px;
   }
 `;
 
@@ -86,15 +90,17 @@ const TimeLabel = styled.p`
   font-size: 0.7em;
   color: rgb(35, 119, 255);
   text-transform: uppercase;
+  text-align: center; // Add this line
+  width: 100%; // Add this line
 
   @media screen and (max-width: 700px) {
     font-size: 0.6em;
   }
 
-  @media screen and (max-width: 400px) {
-    font-size: 0.5em;
-  }
+
 `;
+
+
 
 const AnimatedCounter = ({ targetDate }) => {
   const [timeLeft, setTimeLeft] = useState({});
