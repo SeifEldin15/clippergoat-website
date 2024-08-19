@@ -23,20 +23,20 @@ const PricingCard = ({ title, price, description, features, soonToCome, popular 
    </div>
     <div className="pricing-card__features-list">
       {features.map((feature, index) => (
-        <div className="pricing-card__soon-to-come-container">
+        <div key={index} className="pricing-card__soon-to-come-container">
           <i className="fa-solid fa-check pricing-card__soon-to-come-check"></i>
-          <p key={index}>{feature}</p>
+          <p className='pricingfeatures'>{feature}</p>
         </div>
       ))}
     </div>
     <div className="pricing-card__soon-to-come-list">
       <div>
-        <strong>Soon to Come:</strong>
+        <strong>Soon to Come</strong>
       </div>
       {soonToCome.map((feature, index) => (
-        <div className="pricing-card__soon-to-come-container">
+        <div key={index} className="pricing-card__soon-to-come-container">
           <i className="fa-solid fa-check pricing-card__soon-to-come-check"></i>
-          <p key={index}>{feature}</p>
+          <p className='pricingfeatures'>{feature}</p>
         </div>
       ))}
     </div>
@@ -52,7 +52,7 @@ function PricingSection() {
       features: [
         "300 Credits",
         "300 Video Cleans or Downloads",
-        "Meta Magic: (Metadata Removal + AI Video Editor)",
+        "Meta Magic. (Metadata Removal + AI Video Editor)",
         "AI Advanced Photoshop Video Editor",
         "Bypass July 7th IG Patch on Content Detection",
         "25% Affiliate Commission",
@@ -100,13 +100,12 @@ function PricingSection() {
         "Advanced Analytics",
         "Full Suite of Automation Tools",
         "Includes Upcoming Features You Can Get in Clippreneur & in Agency",
-
       ],
     },
   ];
 
   return (
-    <div className="pricing-section Container-Spacing-Lg" id="pricing-section ">
+    <div className="pricing-section Container-Spacing-Lg" id="pricing-section">
       <h1 className="pricing-section__title custom-header-title">
         Choose Your <div className="break-div"><br /></div>
         <span className="information-container-header-span glow-text">Perfect Plan</span>
@@ -115,7 +114,7 @@ function PricingSection() {
       <div className="pricing-container">
         {plans.map((plan, index) => (
           <div 
-            className={`pricing-card-container ${plan.title !== 'Agency' ? 'pricing-card-container--with-normal' : ''}`} 
+            className={`pricing-card-container ${plan.title === 'Agency' ? 'pricing-card-container--highlight' : ''} ${plan.title !== 'Agency' ? 'pricing-card-container--with-normal' : ''}`} 
             key={index}
           >
             <PricingCard {...plan} />

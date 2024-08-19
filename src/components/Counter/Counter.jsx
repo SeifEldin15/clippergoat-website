@@ -30,7 +30,7 @@ const CounterWrapper = styled.div`
   `}
 
   @media screen and (max-width: 410px) {
-    margin-top: 5px;
+    margin-top: 15px;
       padding: 0px;
 
   }
@@ -40,7 +40,7 @@ const DigitBoxContainer = styled.div`
   display: flex;
   justify-content: center;
     gap: 10px;
-  margin:0px 0;
+  margin-top:10px;
 
   // @media screen and (max-width: 700px) {
   //   gap: 5px;

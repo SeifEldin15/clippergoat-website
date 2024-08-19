@@ -219,7 +219,7 @@ const Home = () => {
             </h1>
             <p className="custom-header-subtitle ">
               Top Influencers Using ClipperGoat Join the ranks of elite
-              influencers who trust ClipperGoat to maximize their content:
+              influencers who trust ClipperGoat to maximize their content.
             </p>
           </div>
           <div className="Container-Spacing">

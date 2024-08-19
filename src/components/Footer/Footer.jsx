@@ -52,7 +52,7 @@ const Footer = () => {
               <img src={LogoFooter} className="LogoFooter" alt="" />
             </div>
             <p className="footer-description">
-            Yes, we offer a 1$ trail that includes 30 credits. This allows you to start using Clippergoat's features at Virtually no cost and upgrade as you grow.
+            Clippergoat is an AI-powered software company specializing in editing social media content to enable seamless reposting without detection, helping creators maintain originality and engagement while efficiently managing content reuse.
             </p>
 
             <div className="social-icons social-icons-normal">

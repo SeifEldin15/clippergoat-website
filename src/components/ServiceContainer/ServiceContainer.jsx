@@ -89,7 +89,7 @@ const ServiceContainer = () => {
       icon: <i className="fa-regular fa-repeat service-i"></i>,
       title: "Repeat",
       description:
-        "Utilize the TTYM method to repost your content across top platforms: TikTok, Twitter, YouTube Shorts, and Meta. This multi-platform approach boosts your reach and engagement.",
+        "Utilize the TTYM method to repost your content across top platforms, TikTok, Twitter, YouTube Shorts, and Meta. This multi-platform approach boosts your reach and engagement.",
       videoSrc: videoSources.repeat,
       className: "text-repeat-color",
     },
