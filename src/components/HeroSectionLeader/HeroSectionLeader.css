@@ -1,6 +1,10 @@
 .leaderboard-getoffer-btn {
   width: 320px;
   margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 .clippergoat-app-header {
