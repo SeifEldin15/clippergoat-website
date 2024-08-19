@@ -139,8 +139,8 @@ function HeroSectionLandingHero() {
           className="StartClipping"
           onClick={scrollToPricing}
         >
-          Start Your Free Trial!
-        </button>
+          Start Your Trial for Just $1 <i className="fa-regular fa-arrow-right"></i>
+          </button>
       </div>
     </section>
   </div>
