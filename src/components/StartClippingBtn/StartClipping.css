@@ -18,7 +18,7 @@
   .StartClipping i{
     margin-left:15px;
     font-size:19px;
-    margin-bottom: -6px;  color: rgb(163, 198, 255);
+  color: rgb(163, 198, 255);
 
   }
 .StartClipping:hover {  color: white;
@@ -29,7 +29,7 @@ transform: scale(1.03);
  }
  @media screen and (max-width:500px) {
   .StartClipping {
-    max-width: 220px;
+    max-width: 250px;
     font-size: 13px;
   }
   
