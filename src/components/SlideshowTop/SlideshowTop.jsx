@@ -44,7 +44,7 @@ const ImageSlide = memo(({ src, title, description }) => {
   const handleLoad = useCallback(() => setIsLoaded(true), []);
 
   return (
-    <div className={`slide ${isLoaded ? 'loaded' : 'loading'}`}>
+    <div className={`slide ${isLoaded ? 'loaded' : 'loaded loading'}`}>
       {src.endsWith('.mp4') ? (
         <video
           src={src}
