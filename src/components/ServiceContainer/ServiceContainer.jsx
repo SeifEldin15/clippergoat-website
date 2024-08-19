@@ -29,26 +29,26 @@ const ServiceContainer = () => {
         rip:
           window.innerWidth < 500
             ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/rip 320 x 650.mov"
-            : window.innerWidth < 1000
-            ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/rip 640 x 480.mov"
+            // : window.innerWidth < 1000
+            // ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/rip 640 x 480.mov"
             : "https://clippergoat.nyc3.digitaloceanspaces.com/assets/rip finished edit-CHY1ESq7.mov",
         rinse:
           window.innerWidth < 500
             ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/rinse 320 x 650.mov"
-            : window.innerWidth < 1000
-            ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/rinse 640 x 480.mov"
+            // : window.innerWidth < 1000
+            // ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/rinse 640 x 480.mov"
             : "https://clippergoat.nyc3.digitaloceanspaces.com/assets/clean-D6zNrOsF.mov",
         repost:
           window.innerWidth < 500
             ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/post 320 x 650 size-SbuDCEKO.mov"
-            : window.innerWidth < 1000
-            ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/post 640 x 480 (1).mov"
+            // : window.innerWidth < 1000
+            // ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/post 640 x 480 (1).mov"
             : "https://clippergoat.nyc3.digitaloceanspaces.com/assets/post CG lp-Dyd8q8-O.mov",
         repeat:
           window.innerWidth < 500
             ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Repeat Fin Cg.mp4"
-            : window.innerWidth < 1000
-            ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/repeat 640 x 480-IiEjk4gY.mov"
+            // : window.innerWidth < 1000
+            // ? "https://clippergoat.nyc3.digitaloceanspaces.com/assets/repeat 640 x 480-IiEjk4gY.mov"
             : "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Repeat fin CG-BG2OotUr.mov",
       };
       setVideoSources(newVideoSources);
