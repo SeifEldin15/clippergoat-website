@@ -273,9 +273,13 @@
   .popular-tag {
     padding: 5px 12px;
     width: 170px;
-    font-size: 14px;
+    font-size: 16px !important;
   }
 }@media screen and (max-width: 400px) {
+  .pricing-card--custom-highlight .pricingfeatures {
+    font-size: 18px;
+    line-height: 30px;
+  }
   .pricing-card--custom-highlight .pricing-card__price{
     font-size: 2em;
   

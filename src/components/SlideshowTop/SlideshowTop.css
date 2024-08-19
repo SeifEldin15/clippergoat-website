@@ -43,7 +43,7 @@
 }
 
 .slide.loading {
-  box-shadow: 0 0 0 10px rgba(0, 0, 255, 0.5);
+  background: linear-gradient(rgba(0, 0, 0, 0), rgb(51, 90, 153));
 }
 
 .slide img, .slide video {
