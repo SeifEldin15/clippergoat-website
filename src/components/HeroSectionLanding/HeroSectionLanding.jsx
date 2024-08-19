@@ -70,7 +70,12 @@ function HeroSectionLandingHero() {
   const scrollToPricing = () => {
     const pricingSection = document.getElementById("pricing-section");
     if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: "smooth" });
+      pricingSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Or use window.scrollTo for more control
+      // window.scrollTo({
+      //   top: pricingSection.offsetTop,
+      //   behavior: "smooth"
+      // });
     }
   };
 

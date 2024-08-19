@@ -106,7 +106,7 @@ const slides = [
   {
     title: 'Prohibited Industries',
     content: 'safely repurpose content to avoid restrictions and keep your audience engaged. ClipperGoat provides effective solutions for shadow-banned industries.',
-    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/spencer__1_-Dm_cEp9R.webp<"
+    image: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/spencer__1_-Dm_cEp9R.webp"
   },
   {
     
