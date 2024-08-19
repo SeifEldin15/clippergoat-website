@@ -16,7 +16,7 @@ const InfiniteLoopSlider = memo(({ children, duration, direction }) => {
       const translateX = direction === 'right'
         ? -25 + progress * 25
         : -progress * 25;
-     
+      
       slider.style.transform = `translateX(${translateX}%)`;
       animationFrameId = requestAnimationFrame(animate);
     };
@@ -44,7 +44,7 @@ const ImageSlide = memo(({ src, title, description }) => {
   const handleLoad = useCallback(() => setIsLoaded(true), []);
 
   return (
-    <div className='slide'>
+    <div className={`slide ${isLoaded ? 'loaded' : 'loading'}`}>
       {src.endsWith('.mp4') ? (
         <video
           src={src}
@@ -54,7 +54,6 @@ const ImageSlide = memo(({ src, title, description }) => {
           playsInline
           className="slide-media"
           onLoadedData={handleLoad}
-          style={{ opacity: isLoaded ? 0.5 : 0 }}
         />
       ) : (
         <img
@@ -62,15 +61,12 @@ const ImageSlide = memo(({ src, title, description }) => {
           alt={`slidetop ${title}`}
           className="slide-media"
           onLoad={handleLoad}
-          style={{ opacity: isLoaded ? 0.5 : 0 }}
         />
       )}
-      {isLoaded && (
-        <div className="slidetopoverlay">
-          <p className="slidetopshow-container-title">{title}</p>
-          <p className="slidetopshow-container-extra">{description}</p>
-        </div>
-      )}
+      <div className="slidetopoverlay">
+        <p className="slidetopshow-container-title">{title}</p>
+        <p className="slidetopshow-container-extra">{description}</p>
+      </div>
     </div>
   );
 }, (prevProps, nextProps) => {

@@ -72,7 +72,7 @@
 .popular-tag__icon {
   margin-bottom: -1px;
   color: rgb(199, 199, 199);
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .pricing-card__header {
@@ -273,7 +273,7 @@
   .popular-tag {
     padding: 5px 12px;
     width: 170px;
-    font-size: 12px;
+    font-size: 14px;
   }
 }@media screen and (max-width: 400px) {
   .pricing-card--custom-highlight .pricing-card__price{
@@ -324,7 +324,7 @@
   .popular-tag {
     padding: 4px 10px;
     width: 150px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .pricing-card--custom-highlight .pricing-card__header {
     font-size: 2.5em !important;

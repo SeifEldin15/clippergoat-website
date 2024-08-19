@@ -92,8 +92,8 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Features', href: '/home', largeScreenScrollTo: 2200, avgScreenScrollTo: 2100, mediumScreenScrollTo: 2900, smallScreenScrollTo: 2300 },
-    { name: 'Pricing', href: '/home', largeScreenScrollTo: 5800, avgScreenScrollTo: 6500, mediumScreenScrollTo: 7200, smallScreenScrollTo: 6700 },
-    { name: 'FAQ', href: '/home', largeScreenScrollTo: 7700, avgScreenScrollTo: 9500, mediumScreenScrollTo: 1300, smallScreenScrollTo: 11300 },
+    { name: 'Pricing', href: '/home', largeScreenScrollTo: 6100, avgScreenScrollTo: 6500, mediumScreenScrollTo: 7200, smallScreenScrollTo: 6700 },
+    { name: 'FAQ', href: '/home', largeScreenScrollTo: 8100, avgScreenScrollTo: 9500, mediumScreenScrollTo: 10800, smallScreenScrollTo: 10300 },
     { name: 'Affiliates', href: '/leaderboard', link: '/leaderboard' },
     { name: 'Contact Us', href: '/contactus', link: '/contactus' },
   ];
