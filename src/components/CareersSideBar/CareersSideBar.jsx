@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './CareersSideBar.css';
 import UIUXIcon from '../../assets/careers/settings_2097378.png';
 import FrontIcon from '../../assets/careers/programming_2011760.png';
@@ -7,6 +7,21 @@ import Marketing from '../../assets/careers/social-media_2518048.png';
 import Sales from '../../assets/careers/businessman_646631.png';
 
 const CareersSideBar = () => {
+  const [isHeaderSticky, setIsHeaderSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsHeaderSticky(window.pageYOffset >= 500);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
   const jobs = [
     {
       companyLogo: UIUXIcon,
@@ -69,8 +84,8 @@ const CareersSideBar = () => {
   return (
 
     <div className='job-sidebar-container'>
-      <div className="job-background">
-          <div className="job-sidebar-header">
+      <div className={`job-background ${isHeaderSticky ? 'sticky' : ''}`}>
+          <div className={`job-sidebar-header ${isHeaderSticky ? 'sticky' : ''}`}>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <span className="glow-text-small" style={{ fontSize: '16px', color: 'white' }}>
           ClipperGOAT
