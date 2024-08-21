@@ -11,7 +11,7 @@ const CareersSideBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsHeaderSticky(window.pageYOffset >= 500);
+      setIsHeaderSticky(window.pageYOffset >= 400);
     };
 
     window.addEventListener('scroll', handleScroll);

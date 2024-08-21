@@ -146,11 +146,6 @@
     max-width: 98%;
     margin: 0 auto !important
   }
-  .sticky{
-    top:-150px;
-    transition-duration: 0.3s;
-  }
-  
   .job-background{
     position: fixed;
     top:0px;
@@ -228,4 +223,8 @@
     width: 92%;
  
   }
+}
+.sticky{
+  top:-150px;
+  transition-duration: 0.3s;
 }
