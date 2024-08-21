@@ -95,6 +95,8 @@ const Navbar = () => {
     { name: 'Pricing', href: '/home', largeScreenScrollTo: 6100, avgScreenScrollTo: 6500, mediumScreenScrollTo: 7200, smallScreenScrollTo: 6700 },
     { name: 'FAQ', href: '/home', largeScreenScrollTo: 8100, avgScreenScrollTo: 9500, mediumScreenScrollTo: 10800, smallScreenScrollTo: 10300 },
     { name: 'Affiliates', href: '/leaderboard', link: '/leaderboard' },
+    { name: 'Careers', href: '/careers', link: '/careers' },
+
     { name: 'Contact Us', href: '/contactus', link: '/contactus' },
   ];
 
