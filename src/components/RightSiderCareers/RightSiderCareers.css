@@ -1,0 +1,153 @@
+.product-designer {
+  background: linear-gradient(to right, #182F40, rgb(4, 37, 61));
+  padding: 20px;
+  margin-left: 470px;
+  margin-top: 35px;
+  border-radius: 8px;
+  width: 100%;
+  color: white;
+}
+
+.product-designer ul {
+  list-style: none !important;
+}
+
+.product-designer ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.product-designer i {
+  background-color: #1da1f2;
+  margin-right: 7px;
+  border-radius: 50%;
+  font-size: 8px;
+  width: 17px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 17px;
+}
+
+.product-designer button {
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #0077B6;
+}
+
+.header p {
+  color: rgb(200, 200, 200);
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.actions button {
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.job-overview h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.job-overview p {
+  margin-bottom: 20px;
+}
+
+.job-overview ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.about-twitter {
+  margin-top: 20px;
+}
+
+.about-twitter h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about-twitter p {
+  margin-bottom: 20px;
+}
+
+.about-twitter .follow {
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 968px) {
+  .product-designer {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header div {
+    margin-bottom: 10px;
+  }
+
+  .actions {
+    align-self: flex-end;
+  }
+
+  .actions button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .header p {
+    font-size: 10px;
+  }
+
+  .job-overview h2,
+  .about-twitter h2 {
+    font-size: 16px;
+  }
+
+  .actions button {
+    padding: 8px 16px;
+  }
+
+  .about-twitter .follow {
+    padding: 8px 16px;
+  }
+}

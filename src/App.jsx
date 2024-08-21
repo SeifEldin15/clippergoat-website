@@ -6,6 +6,8 @@ import Terms from "./Pages/InfoPages/Terms";
 import Refund from "./Pages/InfoPages/Refund";
 import Leaderboard from "./Pages/LeaderBoard/LeaderBoard";
 import ContactUs from "./Pages/ContactUs/ContactUs";
+import Careers from "./Pages/Careers/Careers";
+
 // import FontAwesome from "./components/FontAwesome/FontAwesome";
 import StarBackground from "./assets/star.mp4";
 
@@ -25,6 +27,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/Careers" element={<Careers />} />
+
         {/* <Route path="/Pricing" element={<Pricing />} /> */}
         <Route path="/terms" element={<Terms />} />
         <Route path="/refund" element={<Refund />} />

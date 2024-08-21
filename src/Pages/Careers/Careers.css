@@ -1,0 +1,19 @@
+.careers-page {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .careers-page::-webkit-scrollbar {
+    display: none;
+  }
+  
+  @media (max-width: 968px) {
+    .careers-page {
+      flex-direction: column;
+    }
+  
+
+  }  
