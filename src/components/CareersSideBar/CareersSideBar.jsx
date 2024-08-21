@@ -84,8 +84,8 @@ const CareersSideBar = () => {
   return (
 
     <div className='job-sidebar-container'>
-      <div className={`job-background ${isHeaderSticky ? 'sticky' : ''}`}>
-          <div className={`job-sidebar-header ${isHeaderSticky ? 'sticky' : ''}`}>
+      <div className={`job-background ${isHeaderSticky ? 'CustomeChnage' : ''}`}>
+          <div className={`job-sidebar-header ${isHeaderSticky ? 'CustomeChnage' : ''}`}>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <span className="glow-text-small" style={{ fontSize: '16px', color: 'white' }}>
           ClipperGOAT

@@ -7,11 +7,13 @@
   border-bottom: 1px solid #0077b6;
   position: fixed;
   z-index: 3;
-  top:30px;
+  top:110px;
   transition-duration: 0.3s;
-
+  margin-left:auto;
+  margin-right:auto;
   margin-bottom: 16px;
-  max-width: 450px; /* Set the max-width to the container width */
+  max-width: 400px;
+ /* Set the max-width to the container width */
 
 }
  
@@ -32,11 +34,11 @@
   padding: 4px 8px;
   border: 1px solid #0077b6;
   border-radius: 4px;
-  background: linear-gradient(to right, #182f40, rgb(4, 37, 61));
   cursor: pointer;
 }
 .job-sidebar-container {
-  max-width: 450px;
+  max-width: 300px;
+  margin-left:50px;
   position: relative;
 }
 
@@ -48,11 +50,11 @@
   margin: 0 auto;
   height: 100%;
   transition-duration: 0.3s;
-  top: 120px;
+  top: 190px;
   position: fixed;
   padding-bottom: 27px;
   overflow-y: scroll;
-  max-width: 450px; /* Set the max-width to the container width */
+  max-width: 400px;
   padding-bottom: 150px;
 }
 
@@ -143,34 +145,36 @@
 
 @media (max-width: 968px) {
   .job-cards-container {
-    max-width: 98%;
+    width: 99%;
     margin: 0 auto !important
   }
   .job-background{
     position: fixed;
     top:0px;
-    width: 98%;  transition-duration: 0.3s;
+    width: 91%;
+    transition-duration: 0.3s;
 
     margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.497);    
+    background-color: rgba(0, 50, 75, 1);    
     display: flex;
     justify-content: center;
+    border-bottom: solid #0077b6 ;
     height:100px;
     z-index: 2;
   }
   .job-sidebar-header {
     top:10px;
-    width: 100%;
     border-radius: 0px !important;
     margin: 0 auto;
-    width: 96%;
+    width: 78%;
     max-width: 100%;
-    background: linear-gradient(to right, #182f40, rgb(4, 37, 61));
     border-radius: 6px;
     border: 0px solid #0077b6;
  
   }.job-sidebar-container {
-    max-width: 100%;
+    max-width: 100%;    
+    width: 99%;
+    margin: 0 auto ;
     display: flex;
     justify-content: center;
   }
@@ -179,7 +183,7 @@
     position: relative;
     max-height: 500px;
     max-width: 100%;
-    width: 100%;
+    width: 93%;
     padding: 0;
       padding-bottom: 50px;
   }
@@ -191,7 +195,7 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .job-sidebar {
       position: relative;
       max-width: 95%;
@@ -201,12 +205,10 @@
       margin-bottom: 50px;
     }
 
-}
+} */
 
 @media (max-width: 480px) {
-  .job-background{
-    width: 95%;
-  }
+
   .job-card-content {
     flex-direction: column;
     align-items: flex-start;
@@ -219,12 +221,9 @@
     align-items: flex-start;
     gap: 8px;
   } 
-  .job-sidebar-header {
-    width: 92%;
- 
-  }
+
 }
-.sticky{
+.CustomeChnage{
   top:-150px;
   transition-duration: 0.3s;
 }

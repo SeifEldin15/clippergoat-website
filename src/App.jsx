@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import Privacy from "./Pages/InfoPages/Privacy";
@@ -11,7 +12,6 @@ import Careers from "./Pages/Careers/Careers";
 // import FontAwesome from "./components/FontAwesome/FontAwesome";
 import StarBackground from "./assets/star.mp4";
 
-import "./App.css";
 
 function App() {
   return (

@@ -4,8 +4,9 @@ import UIUXIcon from '../../assets/careers/settings_2097378.png';
 
 function RightSiderCareers() {
   return (
-    <div className="product-designer">
-      <div className="header">
+    <div className="right-siderbar-containerrrrr">
+      <div className="product-designer">
+      <div className="custom-rightside-header">
         <div style={{ display: 'flex', alignItems:'center'}}>
           <div style={{ display: 'flex', alignItems:'center' }}>
             <img 
@@ -59,7 +60,7 @@ function RightSiderCareers() {
         <p>
           Makro PRO is an exciting new digital venture by the iconic Makro. Our proud purpose is to build a technology platform that will help make business possible for restaurant owners, hotels, and independent retailers, and open the door for sellers. Makro PRO brings together the best talent across multi-nationals to transform.
         </p>
-      </div>
+      </div></div>
     </div>
   );
 }

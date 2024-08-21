@@ -1,16 +1,22 @@
 .product-designer {
+  position: relative;
   background: linear-gradient(to right, #182F40, rgb(4, 37, 61));
-  padding: 20px;
-  margin-left: 470px;
   margin-top: 35px;
   border-radius: 8px;
-  width: 100%;
+width:92%;
   z-index: 3;
+  overflow-x: hidden;
+  height:80vh;
   border: 1px solid #0077B6;
-height:100vh;
+overflow-y: scroll;
   color: white;
 }
-
+.right-siderbar-containerrrrr{
+  position: fixed;
+  /* padding: 0 20px; */
+  margin-right:10px;
+  margin-left: 470px;  
+}
 .product-designer ul {
   list-style: none !important;
 }
@@ -38,26 +44,35 @@ height:100vh;
   font-weight: bold;
 }
 
-.header {
+.custom-rightside-header {
+  padding-top: 10px;
+  padding-right:20px;
+  margin: 0 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
   padding-bottom: 20px;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(to right, #182F40, rgb(4, 37, 61));
+  width: 100%;
   border-bottom: 1px solid #0077B6;
+  z-index: 2; /* Ensure it stays on top of other content */
 }
 
-.header p {
+
+.custom-rightside-header p {
   color: rgb(200, 200, 200);
   font-size: 12px;
   margin-top: 6px;
 }
 
-.header h1 {
+.custom-rightside-header h1 {
   font-size: 24px;
   font-weight: bold;
 }
-
+ 
 .actions button {
   background-color: #1da1f2;
   color: white;
@@ -67,7 +82,9 @@ height:100vh;
   cursor: pointer;
   margin-left: 10px;
 }
-
+.job-overview{
+  padding:20px;
+}
 .job-overview h2 {
   font-size: 18px;
   font-weight: bold;
@@ -86,6 +103,8 @@ height:100vh;
 
 .about-twitter {
   margin-top: 20px;
+  padding: 0 20px;
+
 }
 
 .about-twitter h2 {
@@ -108,23 +127,33 @@ height:100vh;
 }
 
 @media (max-width: 968px) {
-  .product-designer {
+  .apply-now{
+    margin-top:20px !important;
+  }
+  .right-siderbar-containerrrrr{
+position: relative;
     margin-left: 0;
-    margin-top: 110px;
-    max-width: 98%;
-    padding:10px;
+    z-index: 124;
+    margin-top:120px;
+    margin-right:  auto;
+    margin-left:  auto;
+
+  }
+  .product-designer {
+    width: 91%;
+    padding:0px;
+    padding-top:0px;
+    margin:0px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .header {
+  .custom-rightside-header {
+    padding-top:45px;
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .header div {
-    margin-bottom: 10px;
-  }
 
   .actions {
     align-self: flex-end;
@@ -137,16 +166,12 @@ height:100vh;
 }
 
 @media (max-width: 480px) {
-  .product-designer {
-    height: auto;
-    max-width: 95%;
 
-  }
-  .header h1 {
+  .custom-rightside-header h1 {
     font-size: 20px;
   }
 
-  .header p {
+  .custom-rightside-header p {
     font-size: 10px;
   }
 
