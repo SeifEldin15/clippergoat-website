@@ -209,6 +209,7 @@
 @media (max-width: 768px) {
   .job-sidebar {
       position: relative;
+      max-width: 95%;
 
       padding:0px;
       padding-bottom: 50px;

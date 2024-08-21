@@ -137,6 +137,11 @@ height:100vh;
 }
 
 @media (max-width: 480px) {
+  .product-designer {
+    height: auto;
+    max-width: 95%;
+
+  }
   .header h1 {
     font-size: 20px;
   }
