@@ -67,11 +67,13 @@ const CareersSideBar = () => {
   ];
 
   return (
-    <div className="job-sidebar">
-      <div className="job-sidebar-header">
+
+    <div className='job-sidebar-container'>
+      <div className="job-background">
+          <div className="job-sidebar-header">
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <span className="glow-text-small" style={{ fontSize: '16px', color: 'white' }}>
-            Related to "UI/UX Designer"
+          ClipperGOAT
           </span>
           <span style={{ fontSize: '12px', color: 'rgb(200, 200, 200)', marginTop: '10px' }}>28 Job Posting Available</span>
         </div>
@@ -81,6 +83,9 @@ const CareersSideBar = () => {
           </div>
         </div>
       </div>
+      </div>
+    <div className="job-sidebar">
+
       <div className="job-cards-container">
         {jobs.map((job, index) => (
           <div key={index} className="job-card">
@@ -105,6 +110,7 @@ const CareersSideBar = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

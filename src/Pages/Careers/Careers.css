@@ -12,7 +12,9 @@
   
   @media (max-width: 968px) {
     .careers-page {
-      flex-direction: column;
+    padding-top:1px;
+    padding: 0px;
+    flex-direction: column;
     }
   
 

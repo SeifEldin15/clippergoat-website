@@ -2,11 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0px;
+  padding: 16px 8px;
+  width: 100%;
   border-bottom: 1px solid #0077b6;
-  margin-bottom: 16px;
-}
+  position: fixed;
+  z-index: 3;
+  top:30px;
 
+  margin-bottom: 16px;
+  max-width: 450px; /* Set the max-width to the container width */
+
+}
+ 
 .job-sidebar-header span {
   font-weight: bold;
   font-size: 11px;
@@ -27,17 +34,24 @@
   background: linear-gradient(to right, #182f40, rgb(4, 37, 61));
   cursor: pointer;
 }
+.job-sidebar-container {
+  max-width: 450px;
+  position: relative;
+}
+
+
 
 .job-sidebar {
   padding: 10px;
-  width: 100%;
-  max-width: 450px;
+  max-width: 100%;
   margin: 0 auto;
   height: 100%;
-  top: 10px;
+  top: 120px;
   position: fixed;
   padding-bottom: 27px;
   overflow-y: scroll;
+  max-width: 450px; /* Set the max-width to the container width */
+  padding-bottom: 150px;
 }
 
 .job-sidebar::-webkit-scrollbar {
@@ -126,13 +140,45 @@
 }
 
 @media (max-width: 968px) {
+  .job-cards-container {
+    max-width: 98%;
+    margin: 0 auto !important
+  }
+  .job-background{
+    position: fixed;
+    top:0px;
+    width: 98%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 1);    
+    display: flex;
+    justify-content: center;
+    height:100px;
+    z-index: 2;
+  }
+  .job-sidebar-header {
+    top:10px;
+    width: 100%;
+    border-radius: 0px !important;
+    margin: 0 auto;
+    width: 96%;
+    max-width: 100%;
+    background: linear-gradient(to right, #182f40, rgb(4, 37, 61));
+    border-radius: 6px;
+    border: 0px solid #0077b6;
+ 
+  }.job-sidebar-container {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   .job-sidebar {
     position: relative;
-    max-height: 430px;
+    max-height: 500px;
     max-width: 100%;
     width: 100%;
-    padding: 0 10px;
-    margin: 0 auto;
+    padding: 0;
+      padding-bottom: 50px;
   }
   .sort-dropdown {
     font-size: 12px;
@@ -144,6 +190,7 @@
 }
 
 @media (max-width: 480px) {
+
   .job-card-content {
     flex-direction: column;
     align-items: flex-start;
@@ -162,10 +209,10 @@
 @media (max-width: 768px) {
   .job-sidebar {
       position: relative;
-      max-height: 490px;
 
       padding:0px;
-      margin:0 auto;
-  }
+      padding-bottom: 50px;
+      margin-bottom: 50px;
+    }
 
 }
