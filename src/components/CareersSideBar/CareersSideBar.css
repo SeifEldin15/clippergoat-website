@@ -156,7 +156,7 @@
 
 .rating {
   font-size: 14px;
-  color: #f39c12;
+  color: #ffffff;
 }
 
 .star-icon {
@@ -170,7 +170,7 @@
 
 .verified {
   font-size: 14px;
-  color: #007bff;
+  color: #ffffff;
 }
 
 @media (max-width: 968px) {
