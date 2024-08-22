@@ -71,6 +71,9 @@ const Footer = () => {
               <a href="https://www.youtube.com/@OFFICIALCLIPPERGOAT" target="_blank" rel="noopener noreferrer" aria-label="Go to YouTube">
                 <i className="fa-brands fa-youtube"></i>
               </a>
+              <a href="https://discord.gg/uawJjJD5Ks" target="_blank" rel="noopener noreferrer" aria-label="Go to YouTube">
+          <i class="fa-brands fa-discord"></i>
+          </a>
             </div>
           </div>
         </div>
@@ -130,6 +133,9 @@ const Footer = () => {
           </a>
           <a href="https://www.youtube.com/@OFFICIALCLIPPERGOAT" target="_blank" rel="noopener noreferrer" aria-label="Go to YouTube">
             <i className="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://discord.gg/uawJjJD5Ks" target="_blank" rel="noopener noreferrer" aria-label="Go to YouTube">
+          <i class="fa-brands fa-discord"></i>
           </a>
         </div>
 

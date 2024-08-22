@@ -2,6 +2,19 @@ import React, { useState, useEffect } from 'react';
 import './CareersSideBar.css';
 
 const CareersSideBar = ({ jobs, onJobSelect, selectedJob }) => {
+  const handleJobCardClick = (job) => {
+    onJobSelect(job);
+    
+    if (window.innerWidth < 968) {
+      const careerOfferElement = document.getElementById('career-offer');
+      if (careerOfferElement) {
+        const yOffset = -100; // 100px before the element
+        const y = careerOfferElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <div className='job-sidebar-container'>
       <div className={"job-sidebar-header"}>
@@ -15,16 +28,15 @@ const CareersSideBar = ({ jobs, onJobSelect, selectedJob }) => {
           {/* <div className="sort-dropdown">
             Sort by: <strong className="glow-text-small">Relevance</strong>
           </div> */}
-        </div>
+         </div>
       </div>
-      {/* </div> */}
       <div className="job-sidebar">
         <div className="job-cards-container">
           {jobs.map((job, index) => (
             <div
               key={index}
-              className={`job-card ${job === selectedJob ? 'selected' : ''}`}
-              onClick={() => onJobSelect(job)}
+              className={`job-card ${selectedJob && job.title === selectedJob.title ? 'selected' : ''}`}
+              onClick={() => handleJobCardClick(job)}
             >
               <div className="job-card-content">
                 <div className="company-logo">
@@ -52,6 +64,5 @@ const CareersSideBar = ({ jobs, onJobSelect, selectedJob }) => {
     </div>
   );
 };
-
 
 export default CareersSideBar;

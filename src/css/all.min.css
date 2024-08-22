@@ -75,6 +75,9 @@
 .fa-duotone.fa-arrow-right-long:after,.fa-duotone.fa-long-arrow-right:after,.fad.fa-arrow-right-long:after,.fad.fa-long-arrow-right:after{
     content:"\10f178"
 }
+.fa-discord:before{
+    content:"\f392"
+}
 .fa-duotone.fa-arrow-right-to-bracket:after,.fa-duotone.fa-sign-in:after,.fad.fa-arrow-right-to-bracket:after,.fad.fa-sign-in:after{
     content:"\10f090"
 }
@@ -174,7 +177,7 @@
     font-style:normal;
     font-weight:400;
     font-display:block;
-    src:url(../webfonts/fa-brands-400.woff2) format("woff2"),url(../webfonts/fa-brands-400.woff) format("woff"),url(../webfonts/fa-brands-400.ttf) format("truetype")
+    src:url(../webfonts2/fa-brands-400.woff2) format("woff2"),url(../webfonts2/fa-brands-400.woff) format("woff"),url(../webfonts2/fa-brands-400.ttf) format("truetype"),url(../webfonts/fa-brands-400.woff2) format("woff2"),url(../webfonts/fa-brands-400.woff) format("woff"),url(../webfonts/fa-brands-400.ttf) format("truetype")
 }
 .fa-brands,.fab{
     font-family:"Font Awesome 6 Brands";

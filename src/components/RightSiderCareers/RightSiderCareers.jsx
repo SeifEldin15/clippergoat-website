@@ -6,14 +6,11 @@ function RightSiderCareers({ selectedJob }) {
     return <div className="right-siderbar-containerrrrr">Select a job to view details</div>;
   }
 
-  // Update these lines
   const responsibilities = selectedJob.responsibilities || [];
-  const qualifications = selectedJob.qualifications || []; // Changed from 'Qualifications'
-  const whatWeOffer = selectedJob.whatWeOffer || []; // Changed from 'WhatWeOffer'
-
+  const whatWeOffer = selectedJob.whatWeOffer || [];
 
   return (
-    <div className="right-siderbar-containerrrrr">
+    <div className="right-siderbar-containerrrrr" id="career-offer">
       <div className="product-designer">
         <div className="custom-rightside-header">
           <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -35,6 +32,16 @@ function RightSiderCareers({ selectedJob }) {
         </div>
 
         <div className="job-overview">
+          <h2 className=''>Company <span className="plus-icon glow-text-small">+</span></h2>
+          <p>ClipperGOAT</p>
+
+          <h2 className=''>Location <span className="plus-icon glow-text-small">+</span></h2>
+          <p>Multiple Locations (Arizona, Dallas, Austin)</p>
+          <h2 className=''>Job Type <span className="plus-icon glow-text-small">+</span></h2>
+          <p>Full-Time</p>
+          <h2 className=''>Salary <span className="plus-icon glow-text-small">+</span></h2>
+          <p>{selectedJob.salary}</p>
+
           <h2 className=''>Job Description <span className="plus-icon glow-text-small">+</span></h2>
           <p>{selectedJob.jobdesc}</p>
           
@@ -47,15 +54,21 @@ function RightSiderCareers({ selectedJob }) {
               </li>
             ))}
           </ul>
-          <h2 className=''>Qualifications <span className="plus-icon glow-text-small">+</span></h2>
-          <ul>
-            {qualifications.map((qualification, index) => (
-              <li key={index} className="">
-                <i className="fa-solid fa-check "></i>
-                {qualification}
-              </li>
-            ))}
-          </ul>
+
+          {selectedJob.title !== 'Developers' && (
+            <>
+              <h2 className=''>Qualifications <span className="plus-icon glow-text-small">+</span></h2>
+              <ul>
+                {selectedJob.qualifications && selectedJob.qualifications.map((qualification, index) => (
+                  <li key={index} className="">
+                    <i className="fa-solid fa-check "></i>
+                    {qualification}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+
           <h2 className=''>What We Offer <span className="plus-icon glow-text-small">+</span></h2>
           <ul>
             {whatWeOffer.map((offer, index) => (
@@ -75,9 +88,7 @@ function RightSiderCareers({ selectedJob }) {
             <h2 className=''>About Company <span className="plus-icon glow-text-small">+</span></h2>
             <button className="follow box-custom-smaller">Follow</button>
           </div>
-          <p>
           <p>{selectedJob.about}</p>
-          </p>
         </div>
       </div>
     </div>
