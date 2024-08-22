@@ -112,23 +112,23 @@ width:92%;
   margin-bottom: 20px;
 }
 
-.about-twitter {
+.about-Company {
   margin-top: 20px;
   padding: 0 20px;
 
 }
 
-.about-twitter h2 {
+.about-Company h2 {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.about-twitter p {
+.about-Company p {
   margin-bottom: 20px;
 }
 
-.about-twitter .follow {
+.about-Company .follow {
   background-color: #1da1f2;
   color: white;
   border: none;
@@ -187,7 +187,7 @@ position: relative;
   }
 
   .job-overview h2,
-  .about-twitter h2 {
+  .about-Company h2 {
     font-size: 16px;
   }
 
@@ -195,7 +195,7 @@ position: relative;
     padding: 8px 16px;
   }
 
-  .about-twitter .follow {
+  .about-Company .follow {
     padding: 8px 16px;
   }
 }
