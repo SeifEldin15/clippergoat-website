@@ -1,9 +1,10 @@
 .careers-page {
-    position: relative;
+  position: relative;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding: 10px;
+    padding: 10px;  height:100vh;
+
   }
   
   .careers-page::-webkit-scrollbar {

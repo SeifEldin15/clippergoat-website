@@ -83,9 +83,8 @@ const CareersSideBar = () => {
 
   return (
 
-    <div className='job-sidebar-container'>
-      <div className={`job-background ${isHeaderSticky ? 'CustomeChnage' : ''}`}>
-          <div className={`job-sidebar-header ${isHeaderSticky ? 'CustomeChnage' : ''}`}>
+<div className='job-sidebar-container'>
+<div className={`job-sidebar-header ${isHeaderSticky ? 'CustomeChnage' : ''}`}>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <span className="glow-text-small" style={{ fontSize: '16px', color: 'white' }}>
           ClipperGOAT
@@ -93,16 +92,15 @@ const CareersSideBar = () => {
           <span style={{ fontSize: '12px', color: 'rgb(200, 200, 200)', marginTop: '10px' }}>28 Job Posting Available</span>
         </div>
         <div className="job-sidebar-sort">
-          <div className="sort-dropdown">
+          {/* <div className="sort-dropdown">
             Sort by: <strong className="glow-text-small">Relevance</strong>
-          </div>
+          </div> */}
         </div>
       </div>
-      </div>
-    <div className="job-sidebar">
-
+      {/* </div> */}
+      <div className="job-sidebar">
       <div className="job-cards-container">
-        {jobs.map((job, index) => (
+                {jobs.map((job, index) => (
           <div key={index} className="job-card">
             <div className="job-card-content">
               <div className="company-logo">

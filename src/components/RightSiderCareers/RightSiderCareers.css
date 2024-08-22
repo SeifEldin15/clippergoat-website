@@ -1,18 +1,29 @@
 .product-designer {
   position: relative;
+  padding-right:10px;
   background: linear-gradient(to right, #182F40, rgb(4, 37, 61));
   margin-top: 35px;
-  border-radius: 8px;
 width:92%;
   z-index: 3;
   overflow-x: hidden;
   height:80vh;
   border: 1px solid #0077B6;
-overflow-y: scroll;
   color: white;
 }
+
+.product-designer::-webkit-scrollbar {
+  width: 5px;
+}
+
+.product-designer::-webkit-scrollbar-track {
+  background-color: rgb(4, 52, 87);  margin-right: 12px; 
+}
+
+.product-designer::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
 .right-siderbar-containerrrrr{
-  position: fixed;
+  position: absolute;
   /* padding: 0 20px; */
   margin-right:10px;
   margin-left: 470px;  
@@ -134,16 +145,17 @@ overflow-y: scroll;
 position: relative;
     margin-left: 0;
     z-index: 124;
-    margin-top:120px;
+    margin-top:720px;
     margin-right:  auto;
     margin-left:  auto;
 
   }
   .product-designer {
-    width: 91%;
+    width: 90%;
     padding:0px;
     padding-top:0px;
-    margin:0px;
+  height:100vh;
+  margin:0px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -166,7 +178,6 @@ position: relative;
 }
 
 @media (max-width: 480px) {
-
   .custom-rightside-header h1 {
     font-size: 20px;
   }
