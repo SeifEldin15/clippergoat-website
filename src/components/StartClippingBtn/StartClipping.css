@@ -29,7 +29,7 @@ transform: scale(1.03);
  }
  @media screen and (max-width:500px) {
   .StartClipping {
-    max-width: 250px;
+    max-width: 270px !important;
     font-size: 13px;
   }
   
@@ -37,7 +37,7 @@ transform: scale(1.03);
 @media screen and (min-width: 1900px) {
   .StartClipping {
     font-size: 14px;
-    max-width: 350px;
+    max-width: 390px !important;
     font-size: 22px;
   }
 }

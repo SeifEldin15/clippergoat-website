@@ -54,6 +54,8 @@ const DigitBoxContainer = styled.div`
 const TimeUnit = styled.div`
   display: flex;
   box-shadow: 0 0 11px 5px rgba(20, 110, 255, 0.2);
+  border-radius: 15px;
+  padding:5px;
   flex-direction: column;
   align-items: center;
   text-align: center; // Add this line
