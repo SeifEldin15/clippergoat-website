@@ -159,6 +159,7 @@ width:92%;
 @media (max-width: 968px) {
   .apply-now{
     margin-top:20px !important;
+    width:100% !important;
   }
   .right-siderbar-containerrrrr{
 position: relative;
@@ -186,7 +187,10 @@ position: relative;
 
 
   .actions {
-    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .actions button {
@@ -198,9 +202,10 @@ position: relative;
  display: flex;
   justify-content: space-around;
    align-items: center; 
-   margin: 30px 0;
+   margin:20px 0;
 }
 @media (max-width: 480px) {
+  
   .job-overview{
     padding:0px;
   }
@@ -227,13 +232,26 @@ position: relative;
   .actions button {
     padding: 8px 16px;
   }
-
-  .about-Company .follow {
-    padding: 8px 8px;
-    font-size: 15px;
-    white-space: nowrap;
+  .custom-rightside-header {
+    padding-right:0px;
+    padding-top:20px;
   }
+  
   .about-header{
-
+    display: block;
+    justify-content: space-around;
+     align-items: center; 
+     margin: 20px 0
+  }
+  .discord-career-btn{
+    display: flex;
+    width:100%;
+    justify-content: center;
+  }
+  .discord-career-btn .follow{
+    width:90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

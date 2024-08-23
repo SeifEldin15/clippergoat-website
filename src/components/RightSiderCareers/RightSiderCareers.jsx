@@ -86,8 +86,10 @@ function RightSiderCareers({ selectedJob }) {
         <div className="about-Company">
           <div className='about-header'>
             <h2 className=''><span className="plus-icon glow-text-small">+</span> About Company </h2>
+            <div className='discord-career-btn'>
             <a href="https://discord.gg/uawJjJD5Ks" className="follow box-custom-smaller">Join    Discord
             </a>
+            </div>
           </div>
           <p className='job-info-p'>{selectedJob.about}</p>
         </div>
