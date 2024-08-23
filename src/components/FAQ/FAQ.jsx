@@ -77,7 +77,7 @@ const FAQ = () => {
     },
     {
       question: "I don't have any money, can I get access for free?",
-      answer: "            Yes, we offer a 1$ trail that includes 30 credits. This allows you to start using Clippergoat's features at Virtually no cost and upgrade as you grow."
+      answer: "            Yes, we offer a 1$ trial that includes 30 credits. This allows you to start using Clippergoat's features at Virtually no cost and upgrade as you grow."
     },
     {
       question: "Is ClipperGoat really guaranteed to work?",
