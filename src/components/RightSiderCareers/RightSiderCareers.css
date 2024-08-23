@@ -1,6 +1,8 @@
 .product-designer {
   position: relative;
   padding-right:10px;
+  padding-left:10px;
+
   background: linear-gradient(to right, #182F40, rgb(4, 37, 61));
   margin-top: 35px;
 width:92%;
@@ -11,11 +13,21 @@ width:92%;
   color: white;
   border-radius: 9px;
 }
-
+.careers-headlline{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 .product-designer::-webkit-scrollbar {
   width: 5px;
 }
+.job-info-p{
+  margin-left:30px
+}
+.job-info-li{
+  margin-left:5px
 
+}
 .product-designer::-webkit-scrollbar-track {
    margin-right: 12px; 
    margin-top: 2px; 
@@ -46,7 +58,7 @@ width:92%;
 
 .product-designer i {
   background-color: #1da1f2;
-  margin-right: 7px;
+  margin-right: 11px;
   border-radius: 50%;
   font-size: 8px;
   width: 17px;

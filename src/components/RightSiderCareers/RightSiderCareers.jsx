@@ -22,8 +22,8 @@ function RightSiderCareers({ selectedJob }) {
               />
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <h1 className=''>{selectedJob.title} <span className="plus-icon glow-text-small">+</span></h1>
-              <p>{selectedJob.description}</p>
+              <h1 className='careers-headlline'><span className="plus-icon glow-text-small">+</span> {selectedJob.title} </h1>
+              <p className=''>{selectedJob.description}</p>
             </div>
           </div>
           <div className="actions">
@@ -32,23 +32,23 @@ function RightSiderCareers({ selectedJob }) {
         </div>
 
         <div className="job-overview">
-          <h2 className=''>Company <span className="plus-icon glow-text-small">+</span></h2>
-          <p>ClipperGOAT</p>
+          <h2 className='careers-headlline'><span className="plus-icon glow-text-small">+</span> Company </h2>
+          <p className='job-info-p'>ClipperGOAT</p>
 
-          <h2 className=''>Location <span className="plus-icon glow-text-small">+</span></h2>
-          <p>Multiple Locations (Arizona, Dallas, Austin)</p>
-          <h2 className=''>Job Type <span className="plus-icon glow-text-small">+</span></h2>
-          <p>Full-Time</p>
-          <h2 className=''>Salary <span className="plus-icon glow-text-small">+</span></h2>
-          <p>{selectedJob.salary}</p>
+          <h2 className='careers-headlline'><span className="plus-icon glow-text-small">+</span> Location </h2>
+          <p className='job-info-p'>Multiple Locations (Arizona, Dallas, Austin)</p>
+          <h2 className='careers-headlline'><span className="plus-icon glow-text-small">+</span> Job Type </h2>
+          <p className='job-info-p'>Full-Time</p>
+          <h2 className='careers-headlline'><span className="plus-icon glow-text-small">+</span> Salary </h2>
+          <p className='job-info-p'>{selectedJob.salary}</p>
 
-          <h2 className=''>Job Description <span className="plus-icon glow-text-small">+</span></h2>
-          <p>{selectedJob.jobdesc}</p>
+          <h2 className='careers-headlline'><span className="plus-icon glow-text-small">+</span> Job Description </h2>
+          <p className='job-info-p'>{selectedJob.jobdesc}</p>
           
-          <h2 className=''>Key Responsibilities <span className="plus-icon glow-text-small">+</span></h2>
+          <h2 className='careers-headlline'><span className="plus-icon glow-text-small">+</span> Key Responsibilities </h2>
           <ul>
             {responsibilities.map((responsibility, index) => (
-              <li key={index} className="">
+              <li key={index} className='job-info-li'>
                 <i className="fa-solid fa-check "></i>
                 {responsibility}
               </li>
@@ -57,10 +57,10 @@ function RightSiderCareers({ selectedJob }) {
 
           {selectedJob.title !== 'Developers' && (
             <>
-              <h2 className=''>Qualifications <span className="plus-icon glow-text-small">+</span></h2>
+              <h2 className='careers-headlline'><span className="plus-icon glow-text-small">+</span> Qualifications </h2>
               <ul>
                 {selectedJob.qualifications && selectedJob.qualifications.map((qualification, index) => (
-                  <li key={index} className="">
+                  <li key={index} className='job-info-li'>
                     <i className="fa-solid fa-check "></i>
                     {qualification}
                   </li>
@@ -69,27 +69,27 @@ function RightSiderCareers({ selectedJob }) {
             </>
           )}
 
-          <h2 className=''>What We Offer <span className="plus-icon glow-text-small">+</span></h2>
+          <h2 className='careers-headlline'><span className="plus-icon glow-text-small">+</span> What We Offer </h2>
           <ul>
             {whatWeOffer.map((offer, index) => (
-              <li key={index} className="">
+              <li key={index} className='job-info-li'>
                 <i className="fa-solid fa-check "></i>
                 {offer}
               </li>
             ))}
           </ul>
           
-          <h2 className=''>How to apply <span className="plus-icon glow-text-small">+</span></h2>
-          <p>{selectedJob.apply}</p>
+          <h2 className='careers-headlline'><span className="plus-icon glow-text-small">+</span> How to apply </h2>
+          <p className='job-info-p'>{selectedJob.apply}</p>
         </div>
 
         <div className="about-Company">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: "center", margin: "30px 0" }}>
-            <h2 className=''>About Company <span className="plus-icon glow-text-small">+</span></h2>
+            <h2 className=''><span className="plus-icon glow-text-small">+</span> About Company </h2>
             <a href="https://discord.gg/uawJjJD5Ks" className="follow box-custom-smaller">Join    Discord
             </a>
           </div>
-          <p>{selectedJob.about}</p>
+          <p className='job-info-p'>{selectedJob.about}</p>
         </div>
       </div>
     </div>

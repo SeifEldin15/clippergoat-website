@@ -1,11 +1,11 @@
 .careers-page {
-  position: relative;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     max-width:98%;
-  height:85vh;
+    height:85vh;
     margin:0 auto;
-  padding-left:10px;
+    padding-left:10px;
   }
   
   .careers-page::-webkit-scrollbar {
@@ -14,15 +14,14 @@
   .footer-career{
     margin-top: 100px;
   }
+
   @media (max-width: 968px) {
     .careers-page {
-    padding-top:1px;
-    padding: 0px;
-    flex-direction: column;
+      padding-top:1px;
+      padding: 0px;
+      flex-direction: column;
     }
     .footer-career{
       margin-top: 910px;
     }
-
   }  
-
