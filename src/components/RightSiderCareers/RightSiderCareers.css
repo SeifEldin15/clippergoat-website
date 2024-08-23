@@ -189,7 +189,7 @@ position: relative;
   .actions {
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
   }
 
@@ -250,6 +250,9 @@ position: relative;
   }
   .discord-career-btn .follow{
     width:90%;
+      padding: 8px 16px;
+      padding-top: 8px;
+font-size: 13px;
     display: flex;
     align-items: center;
     justify-content: center;
