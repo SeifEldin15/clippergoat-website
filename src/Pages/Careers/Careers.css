@@ -2,23 +2,26 @@
   position: relative;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    padding: 10px;  height:100vh;
-
+    max-width:98%;
+  height:85vh;
+    margin:0 auto;
+  padding-left:10px;
   }
   
   .careers-page::-webkit-scrollbar {
     display: none;
   }
-  
+  .footer-career{
+    margin-top: 100px;
+  }
   @media (max-width: 968px) {
     .careers-page {
     padding-top:1px;
     padding: 0px;
     flex-direction: column;
     }
-    .teststewgfdvf{
-      margin-top: 900px;
+    .footer-career{
+      margin-top: 910px;
     }
 
   }  

@@ -13,8 +13,6 @@
   border: 1px solid #0077b6;
 }
 
-
-
 .sort-dropdown {
   color: white;
   font-size: 14px;
@@ -189,14 +187,15 @@
   .job-sidebar-container {
     max-width: 100%;
     width: 99%;
+    max-height: 600px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column; /* Add this line */
-    align-items: center; /* Add this line */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .job-sidebar-header {
-    position: sticky; /* Change from fixed to sticky */
+    position: sticky; 
     top:30px;
     width: 90%;
     max-width: 100%;
@@ -205,9 +204,9 @@
   }
 
   .job-sidebar {
-    position: static; /* Change from relative to static */
-    top: auto; /* Remove top property */
-    max-height: none; /* Remove max-height */
+    position: static; 
+    top: auto; 
+    max-height: none; 
     width: 100%;
     max-width: 90%;
     padding: 10px 0;
@@ -233,16 +232,46 @@
     }
 
 } */
+
+
 @media (min-width: 1800px) {
   .job-cards-container {
     min-height: 80vh;
   }
+  .job-position{
+    top:-14px;
+    right:-5px;
+    font-size: 16px;
+  }
+   
+ 
+.job-sidebar-header span {
+  font-weight: bold;
+  font-size: 17px !important;
+}
+  .job-info h3 {
+    font-size: 21px;
+  }
+  .rating {
+    color: #ffffff;
+  }
+  .applicants {
+    color: #ffffff;
+  }
+  
+  .verified {
+    font-size: 19px;
+  }
+.job-info p {
+  font-size: 19px;
+}
+.job-meta {
+  margin-top: 20px;;
+} 
+
 }
 @media (max-width: 480px) {
 
- .job-card {
-  min-height: 250px;;
- }
   .company-logo img {
     margin-bottom: 0;
   }
@@ -251,7 +280,9 @@
     align-items: flex-start;
     gap: 8px;
   } 
-
+  .job-sidebar-container {
+    max-height: 610px;
+  }
 }
 .CustomeChnage{
   top:-150px;

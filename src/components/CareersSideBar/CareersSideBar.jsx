@@ -45,7 +45,8 @@ const CareersSideBar = ({ jobs, onJobSelect, selectedJob }) => {
                 <p className="job-position">{job.position}</p>
                 <div className="job-info">
                   <h3 className="">
-                    {job.title} <span className="plus-icon glow-text-small">+</span>
+                    {job.title}
+                     {/* <span className="plus-icon glow-text-small">+</span> */}
                   </h3>
                   <p>{job.description}</p>
                 </div>

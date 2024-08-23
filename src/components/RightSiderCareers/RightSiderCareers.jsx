@@ -86,7 +86,8 @@ function RightSiderCareers({ selectedJob }) {
         <div className="about-Company">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: "center", margin: "30px 0" }}>
             <h2 className=''>About Company <span className="plus-icon glow-text-small">+</span></h2>
-            <button className="follow box-custom-smaller">Follow</button>
+            <a href="https://discord.gg/uawJjJD5Ks" className="follow box-custom-smaller">Join    Discord
+            </a>
           </div>
           <p>{selectedJob.about}</p>
         </div>

@@ -157,14 +157,14 @@ const Careers = () => {
     <>
     <BackToTopPhone />
       <Navbar />
-      <div className='careers-page'>
+      <div className='careers-page Container-Spacing'>
         <div className='Container-Spacing '>
           <CareersSideBar jobs={jobs} onJobSelect={handleJobSelect} selectedJob={selectedJob} />
           <br />
           <RightSiderCareers selectedJob={selectedJob} />
         </div>
       </div>
-      <div className="teststewgfdvf"></div>
+      <div className="footer-career "></div>
       <Footer />
     </>
   )

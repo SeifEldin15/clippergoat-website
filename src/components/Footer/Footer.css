@@ -23,7 +23,6 @@
 }
 .footer-info {
   text-align: center;
-  margin-bottom: 2rem;
 }
  .footer-logo{
     margin-bottom: 20px;;
@@ -35,7 +34,7 @@
   line-height: 1.5;
 }
 .footer ul {
-  margin-top:-13rem !important;
+  margin-top:-17rem !important;
 }
 .footer-links {
   display: flex;
