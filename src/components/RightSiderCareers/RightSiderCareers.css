@@ -194,8 +194,16 @@ position: relative;
     margin-top: 10px;
   }
 }
-
+.about-header{
+ display: flex;
+  justify-content: space-around;
+   align-items: center; 
+   margin: 30px 0;
+}
 @media (max-width: 480px) {
+  .job-overview{
+    padding:0px;
+  }
   .job-info-p{
     margin-left:20px
   }
@@ -221,6 +229,11 @@ position: relative;
   }
 
   .about-Company .follow {
-    padding: 8px 16px;
+    padding: 8px 8px;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+  .about-header{
+
   }
 }
