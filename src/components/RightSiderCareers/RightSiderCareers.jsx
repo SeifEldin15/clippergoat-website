@@ -23,7 +23,7 @@ function RightSiderCareers({ selectedJob }) {
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <h1 className='careers-headlline'><span className="plus-icon glow-text-small">+</span> {selectedJob.title} </h1>
-              <p className=''>{selectedJob.description}</p>
+              <p className='job-info-p'>{selectedJob.description}</p>
             </div>
           </div>
           <div className="actions">
