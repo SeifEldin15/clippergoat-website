@@ -8,7 +8,7 @@ const CareersSideBar = ({ jobs, onJobSelect, selectedJob }) => {
     if (window.innerWidth < 968) {
       const careerOfferElement = document.getElementById('career-offer');
       if (careerOfferElement) {
-        const yOffset = -100; // 100px before the element
+        const yOffset = -100; 
         const y = careerOfferElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }

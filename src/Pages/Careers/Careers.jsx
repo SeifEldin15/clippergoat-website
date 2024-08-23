@@ -67,7 +67,6 @@ const Careers = () => {
       apply: "Submit your resume and a portfolio of your work (if applicable) along with a cover letter explaining why you’re the ideal fit for the role. Highlight your relevant experience, technical skills, and any projects that demonstrate your ability to contribute to ClipperGOAT’s success.",
 
       responsibilities: [
-        // New Developer Responsibilities
         "Front-End Developers: Focus on creating intuitive and responsive user interfaces, ensuring cross-platform compatibility.",
         "Back-End Developers: Develop server-side logic, manage databases, and ensure data security and application scalability.",
         "Full-Stack Developers: Handle both front-end and back-end development tasks, providing complete solutions from design to deployment.",
@@ -78,7 +77,6 @@ const Careers = () => {
       ],
     
       qualifications: [
-        // New Developer Qualifications
         "Front-End Developers: Proficiency in React, Angular, Vue.js, HTML/CSS, and JavaScript/TypeScript. Experience in UI/UX design is a plus.",
         "Back-End Developers: Strong experience with Node.js, Python, Java, PHP, or Ruby on Rails. Knowledge of MySQL, PostgreSQL, or MongoDB is preferred.",
         "Full-Stack Developers: Expertise in full-stack development, with proficiency in both front-end and back-end technologies.",
@@ -90,7 +88,6 @@ const Careers = () => {
       ],
     
       whatWeOffer: [
-        // New Developer Offerings
         "Competitive Salary: Base salary with performance-based bonuses.",
         "Career Growth: Opportunities for advancement into specialized roles or leadership positions within the development team.",
         "Cutting-Edge Technology: Work with the latest tools and technologies in a fast-paced, innovative environment.",
@@ -115,7 +112,6 @@ const Careers = () => {
       apply: "If you are ready to take your marketing career to the next level and be a part of an innovative and fast-growing company, submit your resume and a cover letter explaining why you’re the ideal fit for this role.",
 
       responsibilities: [
-        // Marketing Responsibilities
         "Content Creation: Develop 40 high-quality videos per month focusing on general marketing, influencer promotion, and AI-generated sales.",
         "Lead Generation: Utilize social media platforms (TikTok, Twitter, YouTube Shorts, Meta) and SEO operations (LinkedIn, Reddit, Pinterest, Google My Business) to generate leads and drive engagement.",
         "SEO Optimization: Create and manage backlinks, generate reviews, and optimize content for search engines.",
@@ -125,7 +121,6 @@ const Careers = () => {
       ],
       
       qualifications: [
-        // Marketing Qualifications
         "Experience: Previous experience in digital marketing, content creation, or social media management is preferred but not required. We provide comprehensive training.",
         "Skills: Strong creativity, communication, and content creation skills.",
         "Tech Savvy: Comfortable with social media platforms, SEO tools, and marketing automation software.",
@@ -134,7 +129,6 @@ const Careers = () => {
       ],
       
       whatWeOffer: [
-        // Marketing Offers
         "Competitive Salary: Base salary with performance-based bonuses.",
         "Career Growth: Opportunities for advancement to Marketing Lead or Marketing Manager positions based on performance.",
         "Training & Development: Continuous learning opportunities with regular workshops, coaching sessions, and peer learning activities.",
