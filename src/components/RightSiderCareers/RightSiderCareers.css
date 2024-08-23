@@ -200,7 +200,7 @@ position: relative;
 }
 .about-header{
  display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
    align-items: center; 
    margin:20px 0;
 }
