@@ -196,6 +196,13 @@ position: relative;
 }
 
 @media (max-width: 480px) {
+  .job-info-p{
+    margin-left:20px
+  }
+  .job-info-li{
+    margin-left:1px
+  
+  }
   .custom-rightside-header h1 {
     font-size: 20px;
   }
