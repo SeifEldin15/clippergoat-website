@@ -67,18 +67,6 @@ function HeroSectionLandingHero() {
     setIsLoaded(true);
   };
 
-  const scrollToPricing = () => {
-    const pricingSection = document.getElementById("pricing-section");
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: "smooth", block: "start" });
-      // Or use window.scrollTo for more control
-      // window.scrollTo({
-      //   top: pricingSection.offsetTop,
-      //   behavior: "smooth"
-      // });
-    }
-  };
-
   useEffect(() => {
     const handleScroll = () => {
       const position = window.pageYOffset;
@@ -135,12 +123,12 @@ function HeroSectionLandingHero() {
           AI-powered Short Form Editor. Perfect for any industry, ClipperGoat
           AI transforms your content into fresh, engaging videos in minutes.
         </p>
-        <button
-          className="StartClipping"
-          onClick={scrollToPricing}
-        >
-          Start Your Trial for Just $1 <i className="fa-regular fa-arrow-right"></i>
-          </button>
+        <a
+  className="StartClipping"
+  href="https://app.clippergoat.com/checkout"
+>
+  Start Your Trial<i className="fa-regular fa-arrow-right"></i>
+</a>
       </div>
     </section>
   </div>
