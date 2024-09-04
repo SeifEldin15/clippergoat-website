@@ -19,12 +19,12 @@ function LeaderboardHero() {
   return (
     <>
       <section className="clippergoat-leaderboard-hero">
-        <AnimateCounterLeader targetDate="2024-08-31T23:59:59" />
+        <AnimateCounterLeader targetDate="2024-09-31T23:59:59" />
         <div className="leaderboard-getoffer-btn">
           <StartClippingBtn
             style={{ marginTop: '30px' }}
             text="Become an Affiliate"
-            to="/reviving-clips"
+            to="https://affiliate.clippergoat.com/create-account"
           />
         </div>
         <div>

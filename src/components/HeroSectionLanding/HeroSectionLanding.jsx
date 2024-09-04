@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import "./HeroSectionLanding.css";
 import ChallengeCard from "../ChallengeCard/ChallengeCard";
-
 function Card3D({ children }) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -61,22 +60,12 @@ function HeroSectionLandingHero() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [videoWidth, setVideoWidth] = useState(50);
+  const [isVideoVisible, setIsVideoVisible] = useState(false);
   const videoRef = useRef(null);
+  const videoContainerRef = useRef(null);
 
   const handleVideoLoad = () => {
     setIsLoaded(true);
-  };
-
-  const scrollToPricing = () => {
-    const pricingSection = document.getElementById("pricing-section");
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: "smooth", block: "start" });
-      // Or use window.scrollTo for more control
-      // window.scrollTo({
-      //   top: pricingSection.offsetTop,
-      //   behavior: "smooth"
-      // });
-    }
   };
 
   useEffect(() => {
@@ -87,15 +76,45 @@ function HeroSectionLandingHero() {
       // Calculate new width based on scroll position
       const newWidth = Math.min(50 + (position / 15), 72);
       setVideoWidth(newWidth);
-
-      if (videoRef.current && position > 350) {
-        videoRef.current.play();
-      }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5, // Adjust this value to change when the video starts/stops
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVideoVisible(true);
+          if (videoRef.current) {
+            videoRef.current.play();
+          }
+        } else {
+          setIsVideoVisible(false);
+          if (videoRef.current) {
+            videoRef.current.pause();
+          }
+        }
+      });
+    }, options);
+
+    if (videoContainerRef.current) {
+      observer.observe(videoContainerRef.current);
+    }
+
+    return () => {
+      if (videoContainerRef.current) {
+        observer.unobserve(videoContainerRef.current);
+      }
     };
   }, []);
 
@@ -135,12 +154,12 @@ function HeroSectionLandingHero() {
           AI-powered Short Form Editor. Perfect for any industry, ClipperGoat
           AI transforms your content into fresh, engaging videos in minutes.
         </p>
-        <button
-          className="StartClipping"
-          onClick={scrollToPricing}
-        >
-          Start Your Trial for Just $1 <i className="fa-regular fa-arrow-right"></i>
-          </button>
+        <a
+  className="StartClipping"
+  href="https://app.clippergoat.com/checkout"
+>
+  Start Your Trial<i className="fa-regular fa-arrow-right"></i>
+</a>
       </div>
     </section>
   </div>
@@ -152,27 +171,27 @@ function HeroSectionLandingHero() {
   </div>
   </div>
         
-  <div className="hero-video-container2">
+  <div className="hero-video-container2" ref={videoContainerRef}>
         <Card3D>
-        <video
-  ref={videoRef}
-  poster=""
-  preload="true"
-  className={`video-hero ${isLoaded ? "loaded" : "blurred"}`}
-  autoPlay
-  onLoadedData={handleVideoLoad}
-  loop
-  muted
-  playsInline
-  style={{
-    width: `${videoWidth}%`,
-    transition: 'width 0.3s ease-out',
-    maxWidth: '100%', // Add this line
-    height: 'auto', // Add this line
-    display: 'block', // Add this line
-    margin: '0 auto', // Add this line
-  }}
->
+          <video
+            ref={videoRef}
+            poster=""
+            preload="true"
+            className={`video-hero ${isLoaded ? "loaded" : "blurred"}`}
+            autoPlay={isVideoVisible}
+            onLoadedData={handleVideoLoad}
+            loop
+            muted
+            playsInline
+            style={{
+              width: `${videoWidth}%`,
+              transition: 'width 0.3s ease-out',
+              maxWidth: '100%',
+              height: 'auto',
+              display: 'block',
+              margin: '0 auto',
+            }}
+          >
             {heroVideoSources.map((source, index) => (
               <source key={index} src={source.src} media={source.media} type="video/mp4" />
             ))}

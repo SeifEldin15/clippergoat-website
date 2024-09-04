@@ -2,7 +2,7 @@ import React from 'react';
 import './PricingSection.css';
 import StartClippingBtn from '../StartClippingBtn/StartClippingBtn';
 
-const PricingCard = ({ title, price, description, features, soonToCome, popular }) => (
+const PricingCard = ({ title, price, description, features, soonToCome, popular, planCode }) => (
   <div className={`pricing-card ${popular ? 'pricing-card--popular' : ''} ${title === 'Agency' ? 'pricing-card--custom-highlight' : 'pricing-card--custom-normal'}`}>
     {popular && (
       <div className="popular-tag">
@@ -18,7 +18,7 @@ const PricingCard = ({ title, price, description, features, soonToCome, popular 
    <div className="pricing-section-btn">
    <StartClippingBtn
       text="Get Started!" 
-      to="/reviving-clips" 
+      to={`https://app.clippergoat.com/checkout?plan_code=${planCode}`} 
     />
    </div>
     <div className="pricing-card__features-list">
@@ -62,7 +62,8 @@ function PricingSection() {
         "Auto-Poster",
         "Auto-DM'er",
         "Account Warmer",
-      ]
+      ],
+      planCode: "6EUO9EWU" // Plan code for Clippreneur
     },
     {
       title: "Agency",
@@ -82,7 +83,8 @@ function PricingSection() {
         "GUI Web Builder",
         "Custom Sites",
       ],
-      popular: true
+      popular: true,
+      planCode: "YW6KNFRO" // Plan code for Agency
     },
     {
       title: "Enterprise",
@@ -101,6 +103,7 @@ function PricingSection() {
         "Full Suite of Automation Tools",
         "Includes Upcoming Features You Can Get in Clippreneur & in Agency",
       ],
+      planCode: "QWIJHFYU" // Plan code for Enterprise
     },
   ];
 

@@ -5,13 +5,23 @@ const DURATION = 29000;
 
 const InfiniteLoopSlider = memo(({ children, duration, direction }) => {
   const sliderRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const slider = sliderRef.current;
     let start = performance.now();
     let animationFrameId;
 
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        setIsVisible(entry.isIntersecting);
+      });
+    }, { threshold: 0.1 });
+
+    observer.observe(slider);
+
     const animate = (time) => {
+      if (!isVisible) return;
       const progress = ((time - start) % duration) / duration;
       const translateX = direction === 'right'
         ? -25 + progress * 25
@@ -22,8 +32,11 @@ const InfiniteLoopSlider = memo(({ children, duration, direction }) => {
     };
 
     animationFrameId = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [duration, direction]);
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      observer.disconnect();
+    };
+  }, [duration, direction, isVisible]);
 
   return (
     <div className='loop-slider'>

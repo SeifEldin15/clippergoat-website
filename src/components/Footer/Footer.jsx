@@ -84,11 +84,11 @@ const Footer = () => {
               Affiliates
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link exact to="/investors" onClick={() => scrollToSection(0)}>
               Investors
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link exact to="/terms" onClick={() => scrollToSection(0)}>
               Terms & Conditions
