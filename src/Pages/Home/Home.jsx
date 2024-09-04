@@ -1,185 +1,184 @@
 import React, { useRef, useState, Suspense, lazy } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import HeroSectionLanding from "../../components/HeroSectionLanding/HeroSectionLanding";
+import FAQ from "../../components/FAQ/FAQ";
+import SlideshowTop from "../../components/SlideshowTop/SlideshowTop";
+import Footer from "../../components/Footer/Footer";
+import PricingSection from "../../components/PricingSection/PricingSection";
+import BackToTopPhone from "../../components/BackToTopPhone/BackToTopPhone";
 
-const PricingSection = lazy(() => import('../../components/PricingSection/PricingSection'));
+import MrBeast from "../../assets/sliders/Mr Beast-DHAPQQbD.webp";
+import RusselBrunson from "../../assets/sliders/Russel Brunson-CvFx6znF.webp";
+import Ishowspeed from "../../assets/sliders/Ishowspeed-DNkkjSEJ.mp4";
+import Fresh from "../../assets/sliders/Fresh-CSVHH5YB.webp";
+import BradleyMartin from "../../assets/sliders/bradly Martin -BqweTirb.webp";
+import Drake from "../../assets/sliders/drake -BIhWYZKE.mp4";
+import AdinRoss from "../../assets/sliders/Adin Ross-Df2R3QaL.webp";
+import MiamiSwimWeek from "../../assets/sliders/Miami Swim week-DJrbIFG-.mp4";
+import Neon from "../../assets/sliders/Neon-BVKQ2nZB.mp4";
+import KaiCent from "../../assets/sliders/KaiCent-04R6l1vw.webp";
+import HaukThua from "../../assets/sliders/HUAK THUA-DtY9w-5c.mp4";
+import AndrewTate from "../../assets/sliders/Andrew Tate-Bqj0NtsO.webp";
+
+import SophieRain from "../../assets/sliders/Sophie Rain-C5eOe590.mp4";
+import AlexHormozi from "../../assets/sliders/Alex Hormozi-Dez3mz4W.webp";
+import DonaldTrump from "../../assets/sliders/Donald Trump -CDN_E9WQ.webp";
+import JoeRogan from "../../assets/sliders/joe Rogan-B-qcs-7u.mp4";
+import JackDoherty from "../../assets/sliders/Jack Doherty -BGBFZ6V8.webp";
+import ElonMusk from "../../assets/sliders/Elon Musk-D5VfVzCf.webp";
+import MyronGains from "../../assets/sliders/myron Gains-DHymw1N3.mp4";
+import Ninja from "../../assets/sliders/Nija-B-PKZugA.webp";
+import SteveWillDoIt from "../../assets/sliders/Stevewilldoit-DoHoI41C.mp4";
+import SeanOMalley from "../../assets/sliders/Suga Sean Omalley-pNc5QJCo.webp";
+import YoditYemane from "../../assets/sliders/Yodit Yemane -DCw_I_w4.webp";
+import XQC from "../../assets/sliders/XQC-BVVmBF74.mp4";
 
 const LogoSlideshow = lazy(() => import('../../components/LogoSlideshow/LogoSlideshow'));
-
-const BackToTopPhone = lazy(() => import('../../components/BackToTopPhone/BackToTopPhone'));
 const ServiceContainer = lazy(() => import('../../components/ServiceContainer/ServiceContainer'));
-
-const FAQ = lazy(() => import('../../components/FAQ/FAQ'));
-
 const Slider = lazy(() => import('../../components/Slider/Slider'));
-
-// import ChallengeCard from "../../components/ChallengeCard/ChallengeCard";
 const Slideshow = lazy(() => import('../../components/Slideshow/Slideshow'));
-const SlideshowTop = lazy(() => import('../../components/SlideshowTop/SlideshowTop'));
 
-const Footer = lazy(() => import('../../components/Footer/Footer'));
 
 import "./Home.css";
 
 const Home = () => {
   const heroVideoSources = [
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/9_16 hero-BSZAWict.mp4",
+      src: "../../assets/videos/9;16 Hero.mp4",
       media: "(max-width: 600px)"
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Updated final-BDiza0Ii.mp4",
+      src: "../../assets/videos/Updated final.mp4",
       media: "(min-width: 601px)"
     }
   ];
 
   const INFLUENCERS = [
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Mr Beast-DHAPQQbD.webp",
+      src: MrBeast,
       title: "@MrBeast",
-      description:
-        "Gained popularity through high-budget, philanthropic, and viral YouTube videos.",
+      description: "Gained popularity through high-budget, philanthropic, and viral YouTube videos.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Russel Brunson-CvFx6znF.webp",
-
+      src: RusselBrunson,
       title: "@Russell Brunson",
-      description:
-        "Used social media to share marketing strategies, building a large online community.",
+      description: "Used social media to share marketing strategies, building a large online community.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Ishowspeed-DNkkjSEJ.mp4",
-
+      src: Ishowspeed,
       title: "@IShowSpeed",
-      description:
-        "Built influence through energetic and humorous gaming content on YouTube and Twitch.",
+      description: "Built influence through energetic and humorous gaming content on YouTube and Twitch.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Fresh-CSVHH5YB.webp",
+      src: Fresh,
       title: "@FreshPrinceCeo",
-      description:
-        "Built influence sharing dating and self-improvement content on social media.",
+      description: "Built influence sharing dating and self-improvement content on social media.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/bradly Martin -BqweTirb.webp",
-
+      src: BradleyMartin,
       title: "@Bradley Martin",
-      description:
-        " Shared workout routines and fitness tips on social media, promoting his gym business.",
+      description: "Shared workout routines and fitness tips on social media, promoting his gym business.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/drake -BIhWYZKE.mp4",
+      src: Drake,
       title: "@Drake",
-      description:
-        "Used Instagram, Twitter, and Kick to promote music, connect with fans, and gambling.",
+      description: "Used Instagram, Twitter, and Kick to promote music, connect with fans, and gambling.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Adin Ross-Df2R3QaL.webp",
+      src: AdinRoss,
       title: "@Adin Ross",
-      description:
-        "Built following by streaming games and live chats with celebrities on Twitch.",
+      description: "Built following by streaming games and live chats with celebrities on Twitch.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Miami Swim week-DJrbIFG-.mp4",
+      src: MiamiSwimWeek,
       title: "@Miami Swim Week",
-      description:
-        "Promoted shows and designers on Instagram and YouTube, creating global buzz.",
+      description: "Promoted shows and designers on Instagram and YouTube, creating global buzz.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Neon-BVKQ2nZB.mp4",
+      src: Neon,
       title: "@Neon",
-      description:
-        "Gained popularity with entertaining gaming content on YouTube and Twitch.",
+      description: "Gained popularity with entertaining gaming content on YouTube and Twitch.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/KaiCent-04R6l1vw.webp",
+      src: KaiCent,
       title: "@Kai Cenat",
-      description:
-        "Grew influence with engaging Twitch and YouTube streams, often collaborating.",
+      description: "Grew influence with engaging Twitch and YouTube streams, often collaborating.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/HUAK THUA-DtY9w-5c.mp4",
+      src: HaukThua,
       title: "@Hauk Thua Girl",
-      description:
-        "Grew influence with relatable beauty and lifestyle content on Instagram and TikTok..",
+      description: "Grew influence with relatable beauty and lifestyle content on Instagram and TikTok.",
     },
     {
-  src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Andrew Tate-Bqj0NtsO.webp",
+      src: AndrewTate,
       title: "@Andrew Tate",
-      description:
-        "Used controversial content on Instagram and YouTube to build a large following.",
+      description: "Used controversial content on Instagram and YouTube to build a large following.",
     },
   ];
+  
   const IMAGES = [
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Sophie Rain-C5eOe590.mp4",
+      src: SophieRain,
       title: "@Sophie Rain",
-      description:
-        "Grew presence by sharing lifestyle, beauty, and travel content on Instagram and TikTok.",
+      description: "Grew presence by sharing lifestyle, beauty, and travel content on Instagram and TikTok.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Alex Hormozi-Dez3mz4W.webp",
+      src: AlexHormozi,
       title: "@Alex Hormozi",
       description: "Business growth strategist and entrepreneur.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Donald Trump -CDN_E9WQ.webp",
+      src: DonaldTrump,
       title: "@Donald Trump",
       description: "45th President of the United States.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/joe Rogan-B-qcs-7u.mp4",
+      src: JoeRogan,
       title: "@Joe Rogan",
       description: "Comedian, podcast host, and UFC commentator.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Jack Doherty -BGBFZ6V8.webp",
+      src: JackDoherty,
       title: "@Jack Doherty",
-      description:
-        "Built influence with daring challenge videos, pranks, and vlogs on YouTube.",
+      description: "Built influence with daring challenge videos, pranks, and vlogs on YouTube.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Elon Musk-D5VfVzCf.webp",
+      src: ElonMusk,
       title: "@Elon Musk",
       description: "CEO of SpaceX and Tesla.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/myron Gains-DHymw1N3.mp4",
+      src: MyronGains,
       title: "@Myron Gaines",
-      description:
-        "Grew following with dating advice and lifestyle content on social media.",
+      description: "Grew following with dating advice and lifestyle content on social media.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Nija-B-PKZugA.webp",
+      src: Ninja,
       title: "@Ninja",
-      description:
-        "Gained massive fame through Fortnite streams on Twitch and YouTube.",
+      description: "Gained massive fame through Fortnite streams on Twitch and YouTube.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Stevewilldoit-DoHoI41C.mp4",
+      src: SteveWillDoIt,
       title: "@SteveWillDoIt",
-      description:
-        "Gained popularity through outrageous challenges and stunts on YouTube and Instagram.",
+      description: "Gained popularity through outrageous challenges and stunts on YouTube and Instagram.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Suga Sean Omalley-pNc5QJCo.webp",
+      src: SeanOMalley,
       title: "@Sean O'Malley",
-      description:
-        "Used social media to share training routines and fight highlights, connecting with fans.",
+      description: "Used social media to share training routines and fight highlights, connecting with fans.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Yodit Yemane -DCw_I_w4.webp",
+      src: YoditYemane,
       title: "@Yodit Yemane",
       description: "Model and Instagram influencer.",
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/XQC-BVVmBF74.mp4",
+      src: XQC,
       title: "@XQC",
-      description:
-        "Became one of the most-watched streamers by engaging Twitch audiences with various games.",
+      description: "Became one of the most-watched streamers by engaging Twitch audiences with various games.",
     },
   ];
-
+  
   const containerRef = useRef(null);
   const items = [
     { name: "Chloe", description: "Crypto Investing", content: "asgdasgs" },
