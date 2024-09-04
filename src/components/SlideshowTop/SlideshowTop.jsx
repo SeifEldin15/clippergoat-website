@@ -5,23 +5,13 @@ const DURATION = 29000;
 
 const InfiniteLoopSlider = memo(({ children, duration, direction }) => {
   const sliderRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const slider = sliderRef.current;
     let start = performance.now();
     let animationFrameId;
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        setIsVisible(entry.isIntersecting);
-      });
-    }, { threshold: 0.1 });
-
-    observer.observe(slider);
-
     const animate = (time) => {
-      if (!isVisible) return;
       const progress = ((time - start) % duration) / duration;
       const translateX = direction === 'right'
         ? -25 + progress * 25
@@ -34,9 +24,8 @@ const InfiniteLoopSlider = memo(({ children, duration, direction }) => {
     animationFrameId = requestAnimationFrame(animate);
     return () => {
       cancelAnimationFrame(animationFrameId);
-      observer.disconnect();
     };
-  }, [duration, direction, isVisible]);
+  }, [duration, direction]);
 
   return (
     <div className='loop-slider'>
@@ -54,12 +43,23 @@ const InfiniteLoopSlider = memo(({ children, duration, direction }) => {
 
 const ImageSlide = memo(({ src, title, description }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const videoRef = useRef(null);
+
   const handleLoad = useCallback(() => setIsLoaded(true), []);
 
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.error("Error attempting to play video:", error);
+      });
+    }
+  }, []);
+
   return (
-    <div className={`slide ${isLoaded ? 'loaded' : 'loaded loading'}`}>
+    <div className={`slide ${isLoaded ? 'loaded' : 'loading'}`}>
       {src.endsWith('.mp4') ? (
         <video
+          ref={videoRef}
           src={src}
           autoPlay
           loop
