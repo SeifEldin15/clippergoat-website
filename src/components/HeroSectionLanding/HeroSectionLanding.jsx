@@ -158,7 +158,7 @@ function HeroSectionLandingHero() {
   className="StartClipping"
   href="https://app.clippergoat.com/checkout"
 >
-  Start Your Trial<i className="fa-regular fa-arrow-right"></i>
+  Start Your Free Trial!<i className="fa-regular fa-arrow-right"></i>
 </a>
       </div>
     </section>
