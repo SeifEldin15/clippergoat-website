@@ -1,6 +1,7 @@
 import React, { useRef, useState, Suspense, lazy } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import HeroSectionLanding from "../../components/HeroSectionLanding/HeroSectionLanding";
+import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 import FAQ from "../../components/FAQ/FAQ";
 import SlideshowTop from "../../components/SlideshowTop/SlideshowTop";
 import Footer from "../../components/Footer/Footer";
@@ -196,7 +197,7 @@ const Home = () => {
 
     < 
     >
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<LoadingScreen />}>
     
     <BackToTopPhone />
       <div className="home-hero-video">

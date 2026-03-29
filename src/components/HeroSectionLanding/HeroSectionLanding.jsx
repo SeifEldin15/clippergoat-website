@@ -2,6 +2,8 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import "./HeroSectionLanding.css";
 import ChallengeCard from "../ChallengeCard/ChallengeCard";
+import heroVideoMobile from "../../assets/videos/9;16 Hero.mp4";
+import heroVideoDesktop from "../../assets/videos/Updated final.mp4";
 function Card3D({ children }) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -120,11 +122,11 @@ function HeroSectionLandingHero() {
 
   const heroVideoSources = [
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/9_16 hero-BSZAWict.mp4",
+      src: heroVideoMobile,
       media: "(max-width: 600px)"
     },
     {
-      src: "https://clippergoat.nyc3.digitaloceanspaces.com/assets/Updated final-BDiza0Ii.mp4",
+      src: heroVideoDesktop,
       media: "(min-width: 601px)"
     }
   ];

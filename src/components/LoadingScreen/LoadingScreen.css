@@ -1,0 +1,162 @@
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Aurora blobs matching site hero */
+.loading-screen::before,
+.loading-screen::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  animation: auroraPulse 10s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.loading-screen::before {
+  width: 45%;
+  height: 40%;
+  background: linear-gradient(120deg, rgba(0, 162, 255, 0.6) 20%, rgba(0, 255, 200, 0) 70%),
+              linear-gradient(300deg, rgba(0, 86, 161, 0.63) 20%, rgba(255, 0, 200, 0) 70%);
+  background-blend-mode: screen;
+  top: -10%;
+  left: 5%;
+}
+
+.loading-screen::after {
+  width: 40%;
+  height: 35%;
+  background: linear-gradient(120deg, rgba(0, 162, 255, 0.5) 20%, rgba(0, 255, 200, 0) 70%),
+              linear-gradient(300deg, rgba(0, 86, 161, 0.5) 20%, rgba(255, 0, 200, 0) 70%);
+  background-blend-mode: screen;
+  bottom: -10%;
+  right: 5%;
+  animation-delay: 5s;
+}
+
+@keyframes auroraPulse {
+  0%   { transform: translateY(-20%) rotate(10deg) scaleX(1.7); }
+  50%  { transform: translateY(10%)  rotate(10deg) scaleX(1.7); }
+  100% { transform: translateY(-20%) rotate(10deg) scaleX(1.7); }
+}
+
+/* Center content */
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Logo wrapper */
+.loading-logo-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+}
+
+.loading-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  animation: logoPulse 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 18px rgba(59, 130, 246, 0.8));
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes logoPulse {
+  0%, 100% { transform: scale(1);    filter: drop-shadow(0 0 14px rgba(59, 130, 246, 0.6)); }
+  50%       { transform: scale(1.08); filter: drop-shadow(0 0 30px rgba(59, 130, 246, 1));   }
+}
+
+/* Spinning ring — site blue */
+.loading-glow-ring {
+  position: absolute;
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: conic-gradient(from 0deg, #1467db, #00a2ff, #1d7bff, #1467db) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  animation: spinRing 2s linear infinite;
+}
+
+@keyframes spinRing {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Brand name — white with blue glow matching .glow-text */
+.loading-brand-name {
+  font-size: 1.6rem;
+  font-weight: 1000;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 0 5px rgba(59, 130, 246, 0.5),
+               0 0 19px rgba(59, 130, 246, 0.4),
+               0 0 30px rgba(59, 130, 246, 0.3),
+               0 0 20px rgba(59, 130, 246, 0.2);
+  animation: glowPulse 2s ease-in-out infinite;
+  margin: 0;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(59, 130, 246, 0.5),
+                 0 0 10px rgba(59, 130, 246, 0.4),
+                 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.8),
+                 0 0 25px rgba(59, 130, 246, 0.6),
+                 0 0 45px rgba(59, 130, 246, 0.4),
+                 0 0 60px rgba(29, 123, 255, 0.3);
+  }
+}
+
+/* Progress bar */
+.loading-bar-track {
+  width: 220px;
+  height: 4px;
+  background: #1F2937;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.loading-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1467db, #00a2ff, #1d7bff);
+  border-radius: 99px;
+  animation: barSlide 1.8s ease-in-out infinite;
+  width: 40%;
+}
+
+@keyframes barSlide {
+  0%   { transform: translateX(-100%); }
+  50%  { transform: translateX(150%); }
+  100% { transform: translateX(400%); }
+}
+
+/* Label */
+.loading-label {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.06em;
+  margin: 0;
+}
