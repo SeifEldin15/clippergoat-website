@@ -34,10 +34,10 @@ import SeanOMalley from "../../assets/sliders/Suga Sean Omalley-pNc5QJCo.webp";
 import YoditYemane from "../../assets/sliders/Yodit Yemane -DCw_I_w4.webp";
 import XQC from "../../assets/sliders/XQC-BVVmBF74.mp4";
 
-const LogoSlideshow = lazy(() => import('../../components/LogoSlideshow/LogoSlideshow'));
-const ServiceContainer = lazy(() => import('../../components/ServiceContainer/ServiceContainer'));
-const Slider = lazy(() => import('../../components/Slider/Slider'));
-const Slideshow = lazy(() => import('../../components/Slideshow/Slideshow'));
+import LogoSlideshow from '../../components/LogoSlideshow/LogoSlideshow';
+import ServiceContainer from '../../components/ServiceContainer/ServiceContainer';
+import Slider from '../../components/Slider/Slider';
+import Slideshow from '../../components/Slideshow/Slideshow';
 
 
 import "./Home.css";
@@ -197,7 +197,7 @@ const Home = () => {
 
     < 
     >
-    <Suspense fallback={<LoadingScreen />}>
+    
     
     <BackToTopPhone />
       <div className="home-hero-video">
@@ -271,7 +271,6 @@ const Home = () => {
         </div>
       </div>
       <Footer />
-    </Suspense>
     </>
   );
 };
