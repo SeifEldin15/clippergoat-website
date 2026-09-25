@@ -90,7 +90,7 @@ const Slider = () => {
               <div className="slide-content212">
                 <div className="slideoverlay"></div>
                 <img 
-                loading="lazy"                
+                loading="eager"                
                 src={image.src} alt={`Slide212 ${index + 1}`} />
               </div>
             </div>

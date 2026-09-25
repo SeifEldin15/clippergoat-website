@@ -144,7 +144,7 @@ const ServiceContainer = () => {
               <div className="video-box">
                 <video
                   className={isLoaded ? "" : "blurred"}
-                  loading="lazy"
+                  loading="eager"
                   src={item.videoSrc}
                   loop
                   muted

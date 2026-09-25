@@ -179,7 +179,7 @@ const Slideshow = () => {
           >
             <div className='Slideshowimgcontainer'>
               <img 
-                loading="lazy"
+                loading="eager"
                 src={slide.image} alt={slide.title} className='Slideshowimg'/>
             </div>
             <div className="SlideShow-Overlay">

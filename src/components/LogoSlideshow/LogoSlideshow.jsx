@@ -89,7 +89,7 @@ const LogoSlideshow = () => {
         >
           {tripleLogos.map((logo, index) => (
             <img
-              loading="lazy"
+              loading="eager"
               key={index}
               src={logo.src}
               alt={`Logo ${index + 1}`}

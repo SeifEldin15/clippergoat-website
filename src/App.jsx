@@ -11,11 +11,11 @@ import Careers from "./Pages/Careers/Careers";
 
 // import FontAwesome from "./components/FontAwesome/FontAwesome";
 import StarBackground from "./assets/star.mp4";
-
+import Preloader from "./components/Preloader/Preloader";
 
 function App() {
   return (
-    <>
+    <Preloader>
     <div className="custogsgweew"></div>
     {/* <FontAwesome /> */}
       <div className="video-container">
@@ -35,7 +35,7 @@ function App() {
         <Route path="/refund" element={<Refund />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
       </Routes>
-    </>
+    </Preloader>
   );
 }
 
